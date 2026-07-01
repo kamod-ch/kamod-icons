@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function MastodonIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M7 13.5V9c0-3 5-3 5 0v3m5 1.5V9c0-3-5-3-5 0v3"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M8 17c7.5 1 13 0 13-4V9c0-5.5-4-6.5-6-6.5H9c-3 0-6.067 1-5.863 6.5.074 1.987.036 4.385.363 7 1 8 10.5 5.5 12 5v-1.5S7.5 21 8 17"/>
+    </svg>
+  );
+}

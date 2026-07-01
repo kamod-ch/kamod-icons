@@ -1,0 +1,22 @@
+import type { IconProps } from "../../../shared/types";
+
+export function MicroscopeIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path fill="currentColor" fillRule="evenodd" d="M19.75 22a.75.75 0 0 1-.75.75H5a.75.75 0 0 1 0-1.5h1.25V19a.75.75 0 0 1 1.5 0v2.25H19a.75.75 0 0 1 .75.75m0-6a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1 0-1.5h9a.75.75 0 0 1 .75.75m-3-14a.75.75 0 0 1-.75.75h-4a.75.75 0 0 1 0-1.5h4a.75.75 0 0 1 .75.75m-4 5a.75.75 0 0 1-.75.75c-1.443 0-2.503.245-3.19.735-.635.454-1.06 1.2-1.06 2.515v2a.75.75 0 0 1-1.5 0v-2c0-1.685.575-2.94 1.69-3.735C9.002 6.505 10.442 6.25 12 6.25a.75.75 0 0 1 .75.75" clipRule="evenodd"/><path fill="currentColor" fillRule="evenodd" d="M16.75 11.4a1.35 1.35 0 0 1-1.35 1.35h-2.8a1.35 1.35 0 0 1-1.35-1.35V4.6c0-.746.604-1.35 1.35-1.35h2.8c.746 0 1.35.604 1.35 1.35zm-6 4.6a3.75 3.75 0 1 0-7.5 0 3.75 3.75 0 0 0 7.5 0" clipRule="evenodd"/>
+    </svg>
+  );
+}

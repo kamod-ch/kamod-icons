@@ -1,0 +1,22 @@
+import type { IconProps } from "../../../shared/types";
+
+export function CompassIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path fill="currentColor" fillRule="evenodd" d="M12 1.25c5.937 0 10.75 4.813 10.75 10.75S17.937 22.75 12 22.75 1.25 17.937 1.25 12 6.063 1.25 12 1.25m5.605 6.164a.75.75 0 0 0-1.02-1.02L10.221 9.93a.75.75 0 0 0-.291.291l-3.536 6.364a.75.75 0 0 0 1.02 1.02l6.364-3.535a.75.75 0 0 0 .291-.292z" clipRule="evenodd"/>
+    </svg>
+  );
+}

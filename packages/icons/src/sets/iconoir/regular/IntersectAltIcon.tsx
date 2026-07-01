@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function IntersectAltIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="m15.01 3-.01.011M11.01 3l-.01.011M7.01 3 7 3.011M3.01 3 3 3.011M3.01 7 3 7.011M3.01 11l-.01.011M3.01 15l-.01.011m6 5.999.01-.011m3.99.011.01-.011m3.99.011.01-.011m3.99.011.01-.011M21 17.01l.01-.011M21 13.01l.01-.011M21 9.01l.01-.011M9 17v-7a1 1 0 0 1 1-1h7"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M15 7v7a1 1 0 0 1-1 1H7"/>
+    </svg>
+  );
+}

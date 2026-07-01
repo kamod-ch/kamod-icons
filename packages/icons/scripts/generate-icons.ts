@@ -2,6 +2,7 @@ import { mkdir, readdir, readFile, rm, stat, writeFile } from "node:fs/promises"
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { optimize, type Config } from "svgo";
+import { generateMeta } from "./generate-meta.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const packageRoot = path.resolve(__dirname, "..");
@@ -281,6 +282,8 @@ async function main() {
     const count = await generateSet(setName);
     console.log(`Generated ${count} icon${count === 1 ? "" : "s"} for ${setName}`);
   }
+
+  await generateMeta();
 }
 
 await main();

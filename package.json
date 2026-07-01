@@ -1,0 +1,23 @@
+{
+  "name": "kamod-icons",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo for @kamod/icons and its PreactPress documentation.",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ],
+  "scripts": {
+    "icons:sync": "npm run icons:sync --workspace @kamod/icons",
+    "icons:generate": "npm run icons:generate --workspace @kamod/icons",
+    "build:icons": "npm run build --workspace @kamod/icons",
+    "build:docs": "npm run build --workspace @kamod/icons-docs",
+    "build": "npm run build:icons && npm run build:docs",
+    "dev:icons": "npm run dev --workspace @kamod/icons",
+    "dev:docs": "npm run dev --workspace @kamod/icons-docs",
+    "check:docs": "npm run check --workspace @kamod/icons-docs",
+    "preview:docs": "npm run preview --workspace @kamod/icons-docs",
+    "clean": "npm run clean --workspace @kamod/icons && rm -rf docs/dist"
+  }
+}

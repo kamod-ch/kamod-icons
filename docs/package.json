@@ -1,0 +1,19 @@
+{
+  "name": "@kamod/icons-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "preactpress dev",
+    "check": "preactpress check",
+    "build": "preactpress build",
+    "preview": "preactpress preview"
+  },
+  "dependencies": {
+    "@kamod/icons": "file:../packages/icons",
+    "preact": ">=10"
+  },
+  "devDependencies": {
+    "@kamod-ch/preactpress": "^1.0.3",
+    "typescript": "^5.5.0"
+  }
+}

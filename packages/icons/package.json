@@ -6,12 +6,18 @@
   "sideEffects": false,
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "ATTRIBUTION.md",
+    "icon-sources.json"
   ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./meta": {
+      "types": "./dist/meta.d.ts",
+      "import": "./dist/meta.js"
     },
     "./shadcn": {
       "types": "./dist/sets/shadcn/index.d.ts",
@@ -36,11 +42,21 @@
     "./tabler/filled": {
       "types": "./dist/sets/tabler/filled/index.d.ts",
       "import": "./dist/sets/tabler/filled/index.js"
+    },
+    "./iconoir/regular": {
+      "types": "./dist/sets/iconoir/regular/index.d.ts",
+      "import": "./dist/sets/iconoir/regular/index.js"
+    },
+    "./iconoir/solid": {
+      "types": "./dist/sets/iconoir/solid/index.d.ts",
+      "import": "./dist/sets/iconoir/solid/index.js"
     }
   },
   "scripts": {
+    "icons:sync": "tsx scripts/sync-icons.ts",
     "icons:generate": "tsx scripts/generate-icons.ts",
-    "build": "tsup",
+    "icons:meta": "tsx scripts/generate-meta.ts",
+    "build": "npm run icons:meta && tsup",
     "dev": "tsup --watch",
     "clean": "rm -rf dist"
   },
@@ -48,7 +64,13 @@
     "preact": ">=10"
   },
   "devDependencies": {
+    "@heroicons/react": "2.2.0",
+    "@tabler/icons": "3.44.0",
     "@types/node": "^20.14.0",
+    "heroicons": "2.2.0",
+    "iconoir": "7.11.1",
+    "lucide": "1.22.0",
+    "lucide-static": "1.22.0",
     "preact": "^10.22.0",
     "svgo": "^3.3.2",
     "tsup": "^8.1.0",

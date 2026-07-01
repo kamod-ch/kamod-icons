@@ -3,12 +3,15 @@ import { defineConfig } from "tsup";
 export default defineConfig({
   entry: [
     "src/index.ts",
+    "src/meta.ts",
     "src/sets/shadcn/index.ts",
     "src/sets/lucide/index.ts",
     "src/sets/heroicons/outline/index.ts",
     "src/sets/heroicons/solid/index.ts",
     "src/sets/tabler/outline/index.ts",
     "src/sets/tabler/filled/index.ts",
+    "src/sets/iconoir/regular/index.ts",
+    "src/sets/iconoir/solid/index.ts",
   ],
   format: ["esm"],
   dts: true,

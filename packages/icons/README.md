@@ -133,3 +133,29 @@ To add icons to one of these sets, place SVG files in `raw/<set-name>/` and run 
 4. an entry in `tsup.config.ts`
 
 Keep set-specific imports to avoid naming conflicts between icon sets.
+
+## Icon sources
+
+Each bundled set tracks its upstream npm package in `icon-sources.json`. Sync raw SVGs from upstream, regenerate components, then build:
+
+```bash
+npm run icons:sync
+npm run icons:generate
+npm run build
+```
+
+Sync one set only:
+
+```bash
+npm run icons:sync -- --set heroicons
+```
+
+Read tracked metadata at runtime:
+
+```tsx
+import { iconSources } from "@kamod/icons/meta";
+
+console.log(iconSources.heroicons.upstream.version);
+```
+
+See `ATTRIBUTION.md` for upstream licenses and repositories.
