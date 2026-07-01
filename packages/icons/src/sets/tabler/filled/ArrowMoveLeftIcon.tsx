@@ -1,0 +1,22 @@
+import type { IconProps } from "../../../shared/types";
+
+export function ArrowMoveLeftIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="M6.707 8.293a1 1 0 0 1 0 1.414L5.415 11H13a1 1 0 0 1 0 2H5.415l1.292 1.293a1 1 0 0 1 .083 1.32l-.083.094a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1-.097-.112l-.071-.11-.054-.114-.035-.105-.025-.118-.007-.058L2 12l.003-.075.017-.126.03-.111.044-.111.052-.098.067-.096.08-.09 3-3a1 1 0 0 1 1.414 0M19 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6"/>
+    </svg>
+  );
+}

@@ -1,0 +1,23 @@
+import type { IconProps } from "../../shared/types";
+
+export function ThermometerSnowflakeIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="m10 20-1.25-2.5L6 18m4-14L8.75 6.5 6 6m4.585 9H10m-8-3h6.5L10 9m10 5.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/><path d="m4 10 1.5 2L4 14m3 7 3-6-1.5-3M7 3l3 6h2"/>
+    </svg>
+  );
+}

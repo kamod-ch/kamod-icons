@@ -1,0 +1,23 @@
+import type { IconProps } from "../../shared/types";
+
+export function TextCursorInputIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 20h-1a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1M5 4h1a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H5m8.1-12.1h6.8A2.18 2.18 0 0 1 22 10v4a2.11 2.11 0 0 1-2.1 2.1h-6.8m-8.3 0h-.7A2.18 2.18 0 0 1 2 14v-4a2.18 2.18 0 0 1 2.1-2.1h.7"/>
+    </svg>
+  );
+}

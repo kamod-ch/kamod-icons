@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function BubbleTextIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="M7 10h10m-8 4h5M12.4 3a5.34 5.34 0 0 1 4.906 3.239 5.333 5.333 0 0 1-1.195 10.6 4.26 4.26 0 0 1-5.28 1.863L7 21v-3.134a2.668 2.668 0 0 1-1.795-3.773A4.8 4.8 0 0 1 8.113 5.16 5.33 5.33 0 0 1 12.4 3"/>
+    </svg>
+  );
+}

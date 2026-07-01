@@ -1,0 +1,23 @@
+import type { IconProps } from "../../shared/types";
+
+export function Unlink2Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 7h2a5 5 0 1 1 0 10h-2m-6 0H7A5 5 0 0 1 7 7h2"/>
+    </svg>
+  );
+}

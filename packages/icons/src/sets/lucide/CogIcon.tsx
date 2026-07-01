@@ -1,0 +1,23 @@
+import type { IconProps } from "../../shared/types";
+
+export function CogIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="M11 10.27 7 3.34m4 10.39-4 6.93M12 22v-2m0-18v2m2 8h8m-5 8.66-1-1.73m1-15.59-1 1.73M2 12h2m16.66 5-1.73-1m1.73-9-1.73 1M3.34 17l1.73-1M3.34 7l1.73 1"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="8"/>
+    </svg>
+  );
+}

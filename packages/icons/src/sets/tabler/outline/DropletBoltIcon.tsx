@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function DropletBoltIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="M18.628 12.076a6.7 6.7 0 0 0-.564-1.199l-4.89-7.26c-.42-.625-1.287-.803-1.936-.397a1.4 1.4 0 0 0-.41.397l-4.893 7.26C4.24 13.715 4.9 17.318 7.502 19.423c1.7 1.375 3.906 1.852 5.958 1.431M19 16l-2 3h4l-2 3"/>
+    </svg>
+  );
+}

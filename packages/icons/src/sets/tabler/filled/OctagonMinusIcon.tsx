@@ -1,0 +1,22 @@
+import type { IconProps } from "../../../shared/types";
+
+export function OctagonMinusIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="m13.196 1.246 5.575 2.39a3.04 3.04 0 0 1 1.595 1.594l2.388 5.573c.328.764.328 1.63 0 2.393l-2.39 5.575a3.04 3.04 0 0 1-1.594 1.595l-5.573 2.388a3.03 3.03 0 0 1-2.393 0L5.23 20.365a3.04 3.04 0 0 1-1.595-1.595l-2.388-5.574a3.04 3.04 0 0 1 0-2.392l2.39-5.575A3.04 3.04 0 0 1 5.23 3.634l5.574-2.388a3.04 3.04 0 0 1 2.392 0M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2"/>
+    </svg>
+  );
+}

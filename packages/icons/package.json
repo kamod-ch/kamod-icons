@@ -1,0 +1,58 @@
+{
+  "name": "@kamod/icons",
+  "version": "1.0.0",
+  "description": "Tree-shakeable Preact icon components for Kamod.",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./shadcn": {
+      "types": "./dist/sets/shadcn/index.d.ts",
+      "import": "./dist/sets/shadcn/index.js"
+    },
+    "./lucide": {
+      "types": "./dist/sets/lucide/index.d.ts",
+      "import": "./dist/sets/lucide/index.js"
+    },
+    "./heroicons/outline": {
+      "types": "./dist/sets/heroicons/outline/index.d.ts",
+      "import": "./dist/sets/heroicons/outline/index.js"
+    },
+    "./heroicons/solid": {
+      "types": "./dist/sets/heroicons/solid/index.d.ts",
+      "import": "./dist/sets/heroicons/solid/index.js"
+    },
+    "./tabler/outline": {
+      "types": "./dist/sets/tabler/outline/index.d.ts",
+      "import": "./dist/sets/tabler/outline/index.js"
+    },
+    "./tabler/filled": {
+      "types": "./dist/sets/tabler/filled/index.d.ts",
+      "import": "./dist/sets/tabler/filled/index.js"
+    }
+  },
+  "scripts": {
+    "icons:generate": "tsx scripts/generate-icons.ts",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "preact": ">=10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "preact": "^10.22.0",
+    "svgo": "^3.3.2",
+    "tsup": "^8.1.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}

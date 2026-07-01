@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function PointerUpIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="m15.984 13.428-1.206-1.206 3.113-2.09a1.2 1.2 0 0 0-.309-2.228L4 4l3.904 13.563a1.2 1.2 0 0 0 2.228.308l2.09-3.093 1.217 1.217M19 22v-6m3 3-3-3-3 3"/>
+    </svg>
+  );
+}

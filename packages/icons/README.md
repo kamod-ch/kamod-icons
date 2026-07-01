@@ -1,0 +1,135 @@
+# @kamod/icons
+
+Tree-shakeable Preact icon components for Kamod. The package is prepared for multiple independent icon sets (`shadcn`, `lucide`, `heroicons`, `tabler`) via stable subpath exports.
+
+## Installation
+
+```bash
+npm install @kamod/icons preact
+```
+
+`preact` is a peer dependency. There is no React runtime dependency.
+
+## Usage
+
+### Default set
+
+The root export currently points to the `shadcn` set:
+
+```tsx
+import { SearchIcon } from "@kamod/icons";
+
+export function Example() {
+  return <SearchIcon size={20} />;
+}
+```
+
+### Explicit icon set
+
+```tsx
+import { SearchIcon } from "@kamod/icons/shadcn";
+import { SearchIcon as LucideSearchIcon } from "@kamod/icons/lucide";
+```
+
+### Heroicons (outline and solid)
+
+Heroicons are split into separate subpath exports, matching the upstream `outline` / `solid` layout:
+
+```tsx
+import { MagnifyingGlassIcon } from "@kamod/icons/heroicons/outline";
+import { MagnifyingGlassIcon as MagnifyingGlassSolidIcon } from "@kamod/icons/heroicons/solid";
+```
+
+Raw SVGs live in variant subfolders:
+
+```txt
+raw/heroicons/outline/magnifying-glass.svg
+raw/heroicons/solid/magnifying-glass.svg
+```
+
+### Tabler (outline and filled)
+
+```tsx
+import { SearchIcon } from "@kamod/icons/tabler/outline";
+import { SearchIcon as SearchFilledIcon } from "@kamod/icons/tabler/filled";
+```
+
+Raw SVGs:
+
+```txt
+raw/tabler/outline/search.svg
+raw/tabler/filled/search.svg
+```
+
+### Tailwind classes
+
+```tsx
+import { SearchIcon } from "@kamod/icons/shadcn";
+
+export function Example() {
+  return (
+    <button class="inline-flex items-center gap-2">
+      <SearchIcon class="h-4 w-4 text-muted-foreground" />
+      Search
+    </button>
+  );
+}
+```
+
+### Accessibility title
+
+Without `title`, icons are rendered with `aria-hidden`. Provide `title` for meaningful standalone icons:
+
+```tsx
+<SearchIcon title="Search" class="h-5 w-5" />
+```
+
+All icons use `currentColor`, accept `class`, `style`, `size`, `title`, and normal SVG props. `size` sets both `width` and `height`.
+
+## Adding new Figma SVGs
+
+1. Export SVGs from Figma.
+2. Put them into the matching raw folder, for example:
+
+   ```txt
+   raw/shadcn/search.svg
+   raw/shadcn/calendar-days.svg
+   ```
+
+3. Generate components:
+
+   ```bash
+   npm run icons:generate
+   ```
+
+   Or generate one set only:
+
+   ```bash
+   npm run icons:generate -- --set shadcn
+   ```
+
+4. Build the package:
+
+   ```bash
+   npm run build
+   ```
+
+File names are converted to PascalCase with an `Icon` suffix, e.g. `arrow-left.svg` becomes `ArrowLeftIcon`.
+
+## Adding another icon set
+
+The package already contains raw and source folders plus subpath exports for:
+
+- `shadcn`
+- `lucide`
+- `heroicons`
+- `tabler`
+
+To add icons to one of these sets, place SVG files in `raw/<set-name>/` and run the generator. Heroicons use variant subfolders (`raw/heroicons/outline/`, `raw/heroicons/solid/`) and export via `@kamod/icons/heroicons/outline` and `@kamod/icons/heroicons/solid`. Tabler uses `outline` / `filled` the same way via `@kamod/icons/tabler/outline` and `@kamod/icons/tabler/filled`. To add a brand-new set later, add:
+
+1. `raw/<set-name>/`
+2. `src/sets/<set-name>/index.ts`
+3. a matching subpath export in `package.json`
+4. an entry in `tsup.config.ts`
+
+Keep set-specific imports to avoid naming conflicts between icon sets.

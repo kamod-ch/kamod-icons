@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function DeviceSimIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="M6 3h8.5L19 7.5V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1"/><path d="M9 11h3v6m3 0v.01M15 14v.01M15 11v.01M9 14v.01M9 17v.01"/>
+    </svg>
+  );
+}

@@ -1,0 +1,23 @@
+import type { IconProps } from "../../shared/types";
+
+export function RecycleIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.79 1.79 0 0 1-.004-1.784L7.196 9.5M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.78 1.78 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3m-5.707-8.404L7.196 9.5 3.1 10.598m6.244-4.787 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.78 1.78 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/>
+    </svg>
+  );
+}
