@@ -3,6 +3,8 @@ title: Kamod UI Integration
 description: Use @kamod/icons with kamod-ui without tight coupling.
 ---
 
+import "../components/icons-docs.css";
+
 # Kamod UI Integration
 
 `@kamod/icons` is independent from `kamod-ui`. Kamod UI components can use these icons, but should not require this package unless a component explicitly needs it.

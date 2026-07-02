@@ -3,6 +3,8 @@ title: Theming
 description: Style @kamod/icons with currentColor, CSS and Tailwind.
 ---
 
+import "../components/icons-docs.css";
+
 # Theming
 
 `@kamod/icons` uses `currentColor`. The icon inherits its color from the CSS `color` property, just like text.

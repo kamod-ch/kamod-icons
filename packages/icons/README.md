@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="../../.github/assets/logo-kamod-icons-dark.svg#gh-light-mode-only" alt="kamod Icons" width="280" />
+  <img src="../../.github/assets/logo-kamod-icons-light.svg#gh-dark-mode-only" alt="kamod Icons" width="280" />
+</p>
+
 # @kamod/icons
 
 Tree-shakeable Preact icon components for Kamod. The package is prepared for multiple independent icon sets (`shadcn`, `lucide`, `heroicons`, `tabler`) via stable subpath exports.

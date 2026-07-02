@@ -3,6 +3,8 @@ title: Figma Workflow
 description: Add SVG icons from Figma to @kamod/icons.
 ---
 
+import "../components/icons-docs.css";
+
 # Figma Workflow
 
 New icons start as SVG exports and are generated into typed Preact components.

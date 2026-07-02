@@ -3,6 +3,8 @@ title: Accessibility
 description: Make @kamod/icons decorative or accessible by title.
 ---
 
+import "../components/icons-docs.css";
+
 # Accessibility
 
 Icons are decorative by default. That is the correct behavior when the icon repeats nearby text, for example a search icon inside a button that already says “Search”.

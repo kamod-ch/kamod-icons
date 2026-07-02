@@ -1,3 +1,8 @@
+<p align="center">
+  <img src=".github/assets/logo-kamod-icons-dark.svg#gh-light-mode-only" alt="kamod Icons" width="280" />
+  <img src=".github/assets/logo-kamod-icons-light.svg#gh-dark-mode-only" alt="kamod Icons" width="280" />
+</p>
+
 # Kamod Icons
 
 Monorepo for `@kamod/icons` and the PreactPress documentation site.

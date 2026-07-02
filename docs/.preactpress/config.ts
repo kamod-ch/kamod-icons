@@ -1,27 +1,19 @@
 import { defineConfig } from "@kamod-ch/preactpress/config";
 
 export default defineConfig({
+  theme: "./theme/Layout.tsx",
   site: {
     title: "Kamod Icons",
-    description:
-      "A small, tree-shakeable Preact icon package for Kamod UI, PreactPress and modern Preact apps.",
+    description: "Icons that make Preact interfaces easier to understand.",
   },
   markdown: {
     html: false,
     emoji: true,
   },
   themeConfig: {
-    outline: true,
-    search: true,
-    lastUpdated: true,
-    footer: "Built with PreactPress for Kamod.",
-    socialLinks: [
-      {
-        icon: "github",
-        link: "https://github.com/kamod-ch",
-        ariaLabel: "Kamod on GitHub",
-      },
-    ],
+    outline: false,
+    search: false,
+    lastUpdated: false,
   },
   locales: {
     root: {
@@ -29,21 +21,20 @@ export default defineConfig({
       lang: "en",
       themeConfig: {
         nav: [
-          { text: "Overview", link: "/icons/" },
-          { text: "Installation", link: "/icons/installation" },
-          { text: "Usage", link: "/icons/usage" },
+          { text: "Icons", link: "/#icon-browser" },
+          { text: "Docs", link: "/icons/installation" },
         ],
         sidebar: [
           {
             text: "Kamod Icons",
             items: [
-              { text: "Overview", link: "/icons/" },
+              { text: "Overview", link: "/" },
               { text: "Installation", link: "/icons/installation" },
               { text: "Usage", link: "/icons/usage" },
-              { text: "Icon Sets", link: "/icons/icon-sets" },
-              { text: "Figma Workflow", link: "/icons/figma-workflow" },
-              { text: "Accessibility", link: "/icons/accessibility" },
               { text: "Theming", link: "/icons/theming" },
+              { text: "Accessibility", link: "/icons/accessibility" },
+              { text: "Icon sets", link: "/icons/icon-sets" },
+              { text: "Figma workflow", link: "/icons/figma-workflow" },
               { text: "Kamod UI", link: "/icons/kamod-ui" },
             ],
           },

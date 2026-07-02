@@ -1,2 +1,4 @@
 node_modules/
 dist/
+public/icon-assets/
+public/data/icon-catalog.json

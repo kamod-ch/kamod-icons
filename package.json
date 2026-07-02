@@ -9,15 +9,15 @@
     "docs"
   ],
   "scripts": {
-    "icons:sync": "npm run icons:sync --workspace @kamod/icons",
-    "icons:generate": "npm run icons:generate --workspace @kamod/icons",
-    "build:icons": "npm run build --workspace @kamod/icons",
-    "build:docs": "npm run build --workspace @kamod/icons-docs",
-    "build": "npm run build:icons && npm run build:docs",
-    "dev:icons": "npm run dev --workspace @kamod/icons",
-    "dev:docs": "npm run dev --workspace @kamod/icons-docs",
-    "check:docs": "npm run check --workspace @kamod/icons-docs",
-    "preview:docs": "npm run preview --workspace @kamod/icons-docs",
-    "clean": "npm run clean --workspace @kamod/icons && rm -rf docs/dist"
+    "icons:sync": "pnpm --filter @kamod/icons icons:sync",
+    "icons:generate": "pnpm --filter @kamod/icons icons:generate",
+    "build:icons": "pnpm --filter @kamod/icons build",
+    "build:docs": "pnpm --filter @kamod/icons-docs build",
+    "build": "pnpm run build:icons && pnpm run build:docs",
+    "dev:icons": "pnpm --filter @kamod/icons dev",
+    "dev:docs": "pnpm --filter @kamod/icons-docs dev",
+    "check:docs": "pnpm --filter @kamod/icons-docs check",
+    "preview:docs": "pnpm --filter @kamod/icons-docs preview",
+    "clean": "pnpm --filter @kamod/icons clean && rm -rf docs/dist"
   }
 }

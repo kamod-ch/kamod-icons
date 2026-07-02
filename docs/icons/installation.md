@@ -3,6 +3,8 @@ title: Installation
 description: Install @kamod/icons and render your first Preact icon.
 ---
 
+import "../components/icons-docs.css";
+
 # Installation
 
 `@kamod/icons` is independent from `kamod-ui`. It only needs Preact as a peer dependency and has no React runtime dependency.
