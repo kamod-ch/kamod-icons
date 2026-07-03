@@ -33,7 +33,7 @@
   "author": "Klaus Zahiragic <watzak>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kamod-ch/preactpress.git"
+    "url": "git+https://github.com/kamod-ch/kamod-icons.git"
   },
   "type": "module",
   "packageManager": "pnpm@11.8.0",

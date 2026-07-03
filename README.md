@@ -7,7 +7,7 @@
   <a href="https://www.npmjs.com/package/@kamod/icons"><img src="https://img.shields.io/npm/v/@kamod/icons" alt="npm version" /></a>
   <a href="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml"><img src="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml/badge.svg" alt="Docs deploy" /></a>
   <a href="https://github.com/kamod-ch/kamod-icons/stargazers"><img src="https://img.shields.io/github/stars/kamod-ch/kamod-icons?style=social" alt="GitHub stars" /></a>
-  <a href="https://github.com/kamod-ch/kamod-icons/blob/main/packages/icons/LICENSE"><img src="https://img.shields.io/github/license/kamod-ch/kamod-icons" alt="license" /></a>
+  <a href="https://github.com/kamod-ch/kamod-icons/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" /></a>
 </p>
 
 <p align="center">

@@ -13,24 +13,6 @@ export default defineConfig({
     emoji: true,
   },
   head: [
-    [
-      "link",
-      {
-        rel: "icon",
-        href: "/kamod-icons/favicon-light.svg",
-        type: "image/svg+xml",
-        media: "(prefers-color-scheme: light)",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "icon",
-        href: "/kamod-icons/favicon-dark.svg",
-        type: "image/svg+xml",
-        media: "(prefers-color-scheme: dark)",
-      },
-    ],
     ["link", { rel: "icon", href: "/kamod-icons/favicon.svg", type: "image/svg+xml" }],
     ["link", { rel: "apple-touch-icon", href: "/kamod-icons/favicon.svg" }],
   ],
