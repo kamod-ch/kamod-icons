@@ -2,12 +2,35 @@
   "name": "@kamod/icons",
   "version": "1.0.0",
   "description": "Tree-shakeable Preact icon components for Kamod.",
+  "license": "MIT",
+  "homepage": "https://kamod-ch.github.io/kamod-icons/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamod-ch/kamod-icons.git",
+    "directory": "packages/icons"
+  },
+  "bugs": {
+    "url": "https://github.com/kamod-ch/kamod-icons/issues"
+  },
+  "keywords": [
+    "icons",
+    "preact",
+    "svg",
+    "lucide",
+    "heroicons",
+    "tabler",
+    "iconoir",
+    "shadcn"
+  ],
   "type": "module",
   "sideEffects": false,
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "README.md",
     "ATTRIBUTION.md",
+    "LICENSE",
     "icon-sources.json"
   ],
   "exports": {
@@ -62,6 +85,9 @@
   },
   "peerDependencies": {
     "preact": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@heroicons/react": "2.2.0",

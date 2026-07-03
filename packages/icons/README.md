@@ -1,11 +1,24 @@
 <p align="center">
-  <img src="../../.github/assets/logo-kamod-icons-dark.svg#gh-light-mode-only" alt="kamod Icons" width="280" />
-  <img src="../../.github/assets/logo-kamod-icons-light.svg#gh-dark-mode-only" alt="kamod Icons" width="280" />
+  <img src="https://raw.githubusercontent.com/kamod-ch/kamod-icons/main/.github/assets/logo-kamod-icons-dark.svg" alt="Kamod Icons" width="280" />
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@kamod/icons"><img src="https://img.shields.io/npm/v/@kamod/icons" alt="npm version" /></a>
+  <a href="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml"><img src="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml/badge.svg" alt="Docs deploy" /></a>
+  <a href="https://github.com/kamod-ch/kamod-icons/stargazers"><img src="https://img.shields.io/github/stars/kamod-ch/kamod-icons?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/kamod-ch/kamod-icons/blob/main/packages/icons/LICENSE"><img src="https://img.shields.io/npm/l/@kamod/icons" alt="license" /></a>
+</p>
+
+<p align="center">
+  <strong><a href="https://kamod-ch.github.io/kamod-icons/">Docs</a></strong> ·
+  <strong><a href="https://www.npmjs.com/package/@kamod/icons">npm</a></strong> ·
+  <strong><a href="https://github.com/kamod-ch/kamod-icons">GitHub</a></strong> ·
+  <strong><a href="https://github.com/kamod-ch/kamod-icons/issues">Issues</a></strong>
 </p>
 
 # @kamod/icons
 
-Tree-shakeable Preact icon components for Kamod. The package is prepared for multiple independent icon sets (`shadcn`, `lucide`, `heroicons`, `tabler`) via stable subpath exports.
+Tree-shakeable Preact icon components for Kamod. The package contains multiple independent icon sets (`shadcn`, `lucide`, `heroicons`, `tabler`, `iconoir`) via stable subpath exports.
 
 ## Installation
 
@@ -64,6 +77,20 @@ Raw SVGs:
 ```txt
 raw/tabler/outline/search.svg
 raw/tabler/filled/search.svg
+```
+
+### Iconoir (regular and solid)
+
+```tsx
+import { SearchIcon } from "@kamod/icons/iconoir/regular";
+import { AlarmIcon as AlarmSolidIcon } from "@kamod/icons/iconoir/solid";
+```
+
+Raw SVGs:
+
+```txt
+raw/iconoir/regular/search.svg
+raw/iconoir/solid/alarm.svg
 ```
 
 ### Tailwind classes
@@ -129,8 +156,9 @@ The package already contains raw and source folders plus subpath exports for:
 - `lucide`
 - `heroicons`
 - `tabler`
+- `iconoir`
 
-To add icons to one of these sets, place SVG files in `raw/<set-name>/` and run the generator. Heroicons use variant subfolders (`raw/heroicons/outline/`, `raw/heroicons/solid/`) and export via `@kamod/icons/heroicons/outline` and `@kamod/icons/heroicons/solid`. Tabler uses `outline` / `filled` the same way via `@kamod/icons/tabler/outline` and `@kamod/icons/tabler/filled`. To add a brand-new set later, add:
+To add icons to one of these sets, place SVG files in `raw/<set-name>/` and run the generator. Heroicons use variant subfolders (`raw/heroicons/outline/`, `raw/heroicons/solid/`) and export via `@kamod/icons/heroicons/outline` and `@kamod/icons/heroicons/solid`. Tabler uses `outline` / `filled`; Iconoir uses `regular` / `solid`. To add a brand-new set later, add:
 
 1. `raw/<set-name>/`
 2. `src/sets/<set-name>/index.ts`

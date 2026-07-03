@@ -1,23 +1,12 @@
-<p align="center">
-  <img src=".github/assets/logo-kamod-icons-dark.svg#gh-light-mode-only" alt="Kamod Icons" width="280" />
-  <img src=".github/assets/logo-kamod-icons-light.svg#gh-dark-mode-only" alt="Kamod Icons" width="280" />
-</p>
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/@kamod/icons"><img src="https://img.shields.io/npm/v/@kamod/icons" alt="npm version" /></a>
-  <a href="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml"><img src="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml/badge.svg" alt="Docs deploy" /></a>
-  <a href="https://github.com/kamod-ch/kamod-icons/stargazers"><img src="https://img.shields.io/github/stars/kamod-ch/kamod-icons?style=social" alt="GitHub stars" /></a>
-  <a href="https://github.com/kamod-ch/kamod-icons/blob/main/LICENSE"><img src="https://img.shields.io/github/license/kamod-ch/kamod-icons" alt="license" /></a>
-</p>
 
-<p align="center">
-  <strong><a href="https://kamod-ch.github.io/kamod-icons/">Live docs</a></strong> ·
-  <strong><a href="https://www.npmjs.com/package/@kamod/icons">npm</a></strong> ·
-  <strong><a href="https://github.com/kamod-ch/kamod-icons">GitHub</a></strong> ·
-  <strong><a href="https://github.com/kamod-ch/kamod-icons/issues">Issues</a></strong>
-</p>
+
+
+**[Live docs](https://kamod-ch.github.io/kamod-icons/)** · **[npm](https://www.npmjs.com/package/@kamod/icons)** · **[GitHub](https://github.com/kamod-ch/kamod-icons)** · **[Issues](https://github.com/kamod-ch/kamod-icons/issues)**
 
 > If Kamod Icons saves you time, **[star the repo](https://github.com/kamod-ch/kamod-icons)** — it helps others discover the project.
+
+
 
 # Kamod Icons
 
@@ -79,31 +68,12 @@ This runs:
 
 The docs build depends on the icon package build because the package exports point to `packages/icons/dist/*`.
 
-## Add icons from Figma
-
-```bash
-cp ~/Downloads/figma-icons/*.svg packages/icons/raw/shadcn/
-pnpm run icons:generate
-pnpm run build:icons
-```
-
-File names are converted to PascalCase with an `Icon` suffix, e.g. `arrow-left.svg` becomes `ArrowLeftIcon`.
-
-## Edit the documentation
-
-- Navigation: `docs/.preactpress/config.ts`
-- Icons overview page: `docs/icons/index.mdx`
-- Home page component: `docs/components/IconsHome.tsx`
-- Interactive catalog: `docs/components/IconCatalogBrowser.tsx`
-- Visual styling: `docs/components/icons-docs.css`
-
 ---
 
-<div align="center">
 
-Built by Klaus Zahiragic &lt;watzak&gt; | Kamod GmbH
 
-<a href="https://www.kamod.ch">Website</a> ·
-<a href="https://www.linkedin.com/in/klauszahiragic/">LinkedIn</a>
+Built by Klaus Zahiragic  | Kamod GmbH
 
-</div>
+[Website](https://www.kamod.ch) ·
+[LinkedIn](https://www.linkedin.com/in/klauszahiragic/)
+

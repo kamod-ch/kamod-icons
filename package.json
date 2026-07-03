@@ -2,7 +2,39 @@
   "name": "kamod-icons",
   "private": true,
   "version": "1.0.0",
-  "description": "Monorepo for @kamod/icons and its PreactPress documentation.",
+  "description": "ightweight, tree-shakeable SVG icon library for Preact, Kamod UI and modern frontend apps.",
+  "keywords": [
+    "preact",
+    "icons",
+    "svg-icons",
+    "icon-library",
+    "typescript",
+    "tree-shaking",
+    "tree-shakeable",
+    "preact-components",
+    "ui-components",
+    "design-system",
+    "kamod-ui",
+    "kamod-icons",
+    "preactpress",
+    "figma-icons",
+    "npm-package",
+    "monorepo",
+    "frontend",
+    "webdev",
+    "developer-tools",
+    "shadcn"
+  ],
+  "homepage": "https://kamod-ch.github.io/kamod-icons/",
+  "bugs": {
+    "url": "https://github.com/kamod-ch/kamod-icons/issues"
+  },
+  "license": "MIT",
+  "author": "Klaus Zahiragic <watzak>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamod-ch/preactpress.git"
+  },
   "type": "module",
   "packageManager": "pnpm@11.8.0",
   "workspaces": [
