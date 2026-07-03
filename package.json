@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Monorepo for @kamod/icons and its PreactPress documentation.",
   "type": "module",
+  "packageManager": "pnpm@11.8.0",
   "workspaces": [
     "packages/*",
     "docs"

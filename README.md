@@ -80,3 +80,14 @@ File names are converted to PascalCase with an `Icon` suffix, e.g. `arrow-left.s
 - Home page component: `docs/components/IconsHome.tsx`
 - Preview grid: `docs/components/IconGrid.tsx`
 - Visual styling: `docs/components/icons-docs.css`
+
+---
+
+<div align="center">
+
+Built by Klaus Zahiragic <watzak> | Kamod GmbH
+
+<a href="https://www.kamod.ch">Website</a> ·
+<a href="https://www.linkedin.com/in/klauszahiragic/">LinkedIn</a>
+
+</div>
