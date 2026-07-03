@@ -1,8 +1,6 @@
 ---
 title: Icon Sets
-description: Understand @kamod/icons subpath exports for multiple icon sets.
-pageClass: kamod-icons-home
-markdownStyles: false
+description: Choose the right @kamod/icons subpath export for each project.
 ---
 
 import "../components/icons-docs.css";
@@ -10,29 +8,41 @@ import IconSourcesTable from "../components/IconSourcesTable.tsx";
 
 # Icon Sets
 
-`@kamod/icons` is designed for more than one icon family. Sets are exposed through subpath exports so each source stays separated.
+`@kamod/icons` groups every upstream family behind explicit subpath exports. This keeps imports readable, avoids name collisions, and makes upgrades easier to review.
+
+## Available imports
 
 ```txt
+@kamod/icons
 @kamod/icons/shadcn
 @kamod/icons/lucide
 @kamod/icons/heroicons/outline
 @kamod/icons/heroicons/solid
 @kamod/icons/tabler/outline
 @kamod/icons/tabler/filled
-@kamod/icons/kamod
+@kamod/icons/iconoir/regular
+@kamod/icons/iconoir/solid
 ```
 
-`@kamod/icons/kamod` is the intended home for future custom Kamod icons. Add it when the package contains that set and a matching package export.
+The root import currently maps to the preferred `shadcn` set. For long-lived app code, prefer explicit subpaths.
+
+## Choosing a set
+
+| Set | Best for |
+| --- | --- |
+| `shadcn` | App UI based on shadcn-style icon names |
+| `lucide` | Lightweight line icons and broad UI coverage |
+| `heroicons` | Friendly dashboard, marketing, and app icons |
+| `tabler` | Large product surfaces, admin tools, and dense UIs |
+| `iconoir` | Distinctive geometric product moments |
 
 ## Why subpath exports?
 
-Subpath exports make icon usage predictable:
-
-- no hidden name conflicts between sets
-- clear origin for every imported icon
-- stable imports for long-lived apps
-- simple extension when new sets are added
-- better package maintenance and generated output
+- Clear origin for every imported icon.
+- No hidden name conflicts between sets.
+- Stable imports for long-lived apps and libraries.
+- Variant support for outline/solid or regular/solid families.
+- Smaller generated entry points that are easier to maintain.
 
 ## Example
 
@@ -51,13 +61,11 @@ export function SavedLabel() {
 
 ## Root import vs set import
 
-The root import points to the preferred default set:
-
 ```tsx
 import { SearchIcon } from "@kamod/icons";
 ```
 
-Use it when you want the package default. Use explicit subpaths when API stability matters:
+Use the root import when you intentionally accept the package default. Use explicit subpaths when API stability matters:
 
 ```tsx
 import { SearchIcon } from "@kamod/icons/shadcn";
@@ -65,11 +73,11 @@ import { SearchIcon } from "@kamod/icons/shadcn";
 
 ## Upstream versions
 
-Each set vendors SVGs from an upstream npm package. Versions, icon counts and last sync dates are tracked in `icon-sources.json` and exposed through `@kamod/icons/meta`.
+Each set vendors SVGs from an upstream npm package. Versions, icon counts, and sync dates are tracked in `icon-sources.json` and exposed through `@kamod/icons/meta`.
 
 <IconSourcesTable />
 
-### Sync from upstream
+## Sync from upstream
 
 ```bash
 npm run icons:sync

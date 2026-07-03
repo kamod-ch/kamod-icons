@@ -323,8 +323,57 @@
   color: var(--ki-accent);
 }
 
-.ki-catalog-sentinel {
-  height: 1px;
+.ki-catalog-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--ki-border);
+  border-radius: 10px;
+  background: var(--ki-surface);
+}
+
+.ki-catalog-pagination-meta {
+  margin: 0;
+  color: var(--ki-muted);
+  font-size: 0.8125rem;
+}
+
+.ki-catalog-pagination-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ki-catalog-pagination-controls button {
+  min-height: 2rem;
+  padding: 0 0.85rem;
+  border: 1px solid var(--ki-border-strong);
+  border-radius: 8px;
+  background: var(--ki-bg);
+  color: var(--ki-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ki-catalog-pagination-controls button:hover:not(:disabled) {
+  border-color: var(--ki-accent);
+  color: var(--ki-accent);
+}
+
+.ki-catalog-pagination-controls button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ki-catalog-pagination-status {
+  color: var(--ki-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
 }
 
 .ki-catalog-loading,
@@ -457,5 +506,162 @@
   .ki-catalog-control input[type="search"],
   .ki-catalog-control select {
     flex: 1;
+  }
+}
+
+/* Polished documentation and landing surfaces */
+.ki-home {
+  position: relative;
+}
+
+.ki-home::before {
+  content: "";
+  position: absolute;
+  inset: -1rem -1rem auto;
+  height: 22rem;
+  z-index: -1;
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at 18% 22%, color-mix(in srgb, var(--ki-accent) 18%, transparent), transparent 16rem),
+    radial-gradient(circle at 82% 8%, color-mix(in srgb, #f9a620 18%, transparent), transparent 18rem);
+  opacity: .9;
+}
+
+.ki-hero {
+  padding: clamp(3rem, 7vw, 5.75rem) 1rem 1.25rem;
+}
+
+.ki-hero-inner {
+  position: relative;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid color-mix(in srgb, var(--ki-accent) 16%, var(--ki-border));
+  border-radius: calc(var(--ki-radius) + 14px);
+  background: color-mix(in srgb, var(--ki-bg) 72%, transparent);
+  box-shadow: 0 22px 70px color-mix(in srgb, var(--ki-accent) 11%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+
+.ki-hero-eyebrow,
+.ki-catalog-label {
+  letter-spacing: .095em;
+}
+
+.ki-btn {
+  min-height: 2.75rem;
+  border-radius: 999px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.12) inset;
+}
+
+.ki-btn:focus-visible,
+.ki-catalog-cell:focus-visible,
+.ki-catalog-tabs button:focus-visible,
+.ki-catalog-control input:focus-visible,
+.ki-catalog-control select:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--ki-accent) 32%, transparent);
+  outline-offset: 2px;
+}
+
+.ki-catalog-toolbar,
+.ki-request,
+.ki-feature-card,
+.ki-community-card {
+  border-color: color-mix(in srgb, var(--ki-accent) 16%, var(--ki-border));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--ki-bg) 96%, transparent), color-mix(in srgb, var(--ki-surface) 84%, transparent));
+}
+
+.ki-feature-card,
+.ki-community-card,
+.ki-catalog-cell {
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+
+.ki-feature-card:hover,
+.ki-community-card:hover,
+.ki-catalog-cell:hover {
+  transform: translateY(-2px);
+}
+
+.ki-request {
+  position: relative;
+  overflow: hidden;
+  border-style: solid;
+}
+
+.ki-request::after {
+  content: "";
+  position: absolute;
+  inset: auto -4rem -7rem auto;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ki-accent) 10%, transparent);
+}
+
+/* Documentation content polish */
+.kiw-content p {
+  margin: .75rem 0 1rem;
+}
+
+.kiw-content ul,
+.kiw-content ol {
+  padding-left: 1.2rem;
+}
+
+.kiw-content li + li {
+  margin-top: .35rem;
+}
+
+.kiw-content li::marker {
+  color: var(--kiw-violet);
+}
+
+.kiw-content blockquote {
+  position: relative;
+  border-left-width: 0;
+  border-radius: 16px;
+  padding: .9rem 1rem .9rem 1.15rem;
+  color: var(--kiw-ink);
+  box-shadow: inset 4px 0 0 var(--kiw-violet);
+}
+
+.kiw-content table code,
+.ki-sources-table code {
+  white-space: nowrap;
+}
+
+.ki-sources {
+  margin: 1.25rem 0;
+}
+
+.ki-sources-table th {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.ki-sources-table td:last-child,
+.ki-sources-table td:nth-child(4) {
+  white-space: nowrap;
+}
+
+.ki-sources-note {
+  margin: .25rem 0 0;
+  color: var(--kiw-muted);
+  font-size: .85rem;
+  line-height: 1.45;
+}
+
+.kiw-pager a:hover {
+  border-color: color-mix(in srgb, var(--kiw-violet) 38%, var(--kiw-line));
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .ki-home::before {
+    inset-inline: -.5rem;
+    height: 18rem;
+  }
+
+  .ki-hero {
+    padding-top: 2rem;
   }
 }

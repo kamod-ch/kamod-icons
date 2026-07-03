@@ -9,6 +9,7 @@ import {
   type LayoutProps,
 } from "@kamod-ch/preactpress/client";
 import Logo from "./Logo.js";
+import Footer from "./Footer.js";
 import "./logo.css";
 import "./studio.css";
 
@@ -273,7 +274,7 @@ const Layout: FunctionalComponent<LayoutProps> = ({
         ) : null}
       </div>
 
-      {themeConfig.footer ? <footer class="kiw-footer">{themeConfig.footer}</footer> : null}
+      <Footer base={site.base} />
     </div>
   );
 };

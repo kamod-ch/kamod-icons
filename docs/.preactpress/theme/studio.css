@@ -348,7 +348,54 @@ a { color: inherit; }
 .kiw-pager span { color: var(--kiw-muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; }
 .kiw-meta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; color: var(--kiw-muted); font-size: .9rem; }
 .kiw-meta a { color: var(--kiw-violet); }
-.kiw-footer { width: min(100% - 2rem, 1320px); margin: 0 auto; padding: 2rem 0 3rem; color: var(--kiw-muted); text-align: center; }
+.kiw-footer {
+  width: min(100% - 2rem, 1320px);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+  color: var(--kiw-muted);
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.kiw-footer-built,
+.kiw-footer-copy {
+  margin: 0;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.kiw-footer-built a,
+.kiw-footer-copy a {
+  color: var(--kiw-violet);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.kiw-footer-built a:hover,
+.kiw-footer-copy a:hover {
+  color: var(--kiw-coral);
+}
+
+.kiw-footer-logo {
+  display: inline-flex;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.kiw-footer-logo .ki-logo__kamod-wrap {
+  height: auto;
+  width: min(9.5rem, 52vw);
+}
+
+.kiw-footer-logo .ki-logo__kamod {
+  display: block;
+  height: auto;
+  width: 100%;
+  max-width: none;
+  justify-self: center;
+}
 
 .kiw-home-canvas { min-width: 0; }
 .kiw-home-canvas .ki-home { max-width: var(--ki-max, 1120px); margin: 0 auto; }

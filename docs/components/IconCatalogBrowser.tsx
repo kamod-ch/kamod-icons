@@ -4,7 +4,7 @@ import {
   setSupportsStroke,
   variantLabel,
 } from "./iconCatalog.ts";
-import { IconCatalogCell, useInfiniteBatch } from "./IconCatalogParts.tsx";
+import { IconCatalogCell, IconCatalogPagination, usePagination } from "./IconCatalogParts.tsx";
 import { useIconCatalog } from "./useIconCatalog.ts";
 
 export default function IconCatalogBrowser() {
@@ -19,10 +19,16 @@ export default function IconCatalogBrowser() {
     categories,
   } = useIconCatalog();
   const [copiedId, setCopiedId] = useState<string | null>(null);
-  const { visibleItems, sentinelRef, hasMore } = useInfiniteBatch(filteredIcons);
+  const { visibleItems, page, totalPages, totalItems, startIndex, endIndex, setPage } =
+    usePagination(filteredIcons);
   const showVariants = availableVariants.length > 1 && availableVariants[0] !== "default";
   const strokeEnabled = activeSet ? setSupportsStroke(activeSet.id, filters.variant) : false;
   const showCategories = categories.length > 1;
+
+  function goToPage(nextPage: number) {
+    setPage(nextPage);
+    document.getElementById("icon-browser")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
   async function copyImport(icon: Parameters<typeof formatImportSnippet>[0]) {
     const snippet = formatImportSnippet(icon);
@@ -175,6 +181,15 @@ export default function IconCatalogBrowser() {
         </p>
       </div>
 
+      <IconCatalogPagination
+        page={page}
+        totalPages={totalPages}
+        totalItems={totalItems}
+        startIndex={startIndex}
+        endIndex={endIndex}
+        onPageChange={goToPage}
+      />
+
       <div class="ki-catalog-grid" role="list">
         {visibleItems.map((icon) => (
           <IconCatalogCell
@@ -190,7 +205,15 @@ export default function IconCatalogBrowser() {
         ))}
       </div>
 
-      {hasMore ? <div ref={sentinelRef} class="ki-catalog-sentinel" aria-hidden="true" /> : null}
+      <IconCatalogPagination
+        page={page}
+        totalPages={totalPages}
+        totalItems={totalItems}
+        startIndex={startIndex}
+        endIndex={endIndex}
+        onPageChange={goToPage}
+      />
+
       {!filteredIcons.length ? <p class="ki-catalog-empty">No icons match your filters.</p> : null}
     </section>
   );

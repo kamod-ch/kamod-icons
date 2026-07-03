@@ -1,9 +1,9 @@
 export default function IconRequestCTA() {
   return (
     <section class="ki-request" aria-labelledby="icon-request-title">
-      <h2 id="icon-request-title">Can&apos;t find what you&apos;re looking for?</h2>
+      <h2 id="icon-request-title">Missing an icon or a set?</h2>
       <p>
-        We&apos;re happy to add new icons as soon as possible. Open an issue and tell us what you need.
+        Open an issue with the name, SVG source, or upstream set you need. Clear requests help us add icons faster.
       </p>
       <a
         class="ki-btn ki-btn-secondary"

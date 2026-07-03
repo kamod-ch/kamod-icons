@@ -1,23 +1,23 @@
 const pillars = [
   {
-    title: "Ready-to-use",
+    title: "Typed components",
     description:
-      "Import typed Preact components and render icons directly in your UI — no sprite sheets or manual SVG wiring.",
+      "Import icons as real Preact components with SVG props, title support, and predictable JSX behavior.",
   },
   {
-    title: "Multiple formats",
+    title: "Stable subpaths",
     description:
-      "Choose from shadcn, Lucide, Heroicons, Tabler, and Iconoir with stable subpath exports for each family.",
+      "Choose shadcn, Lucide, Heroicons, Tabler, or Iconoir explicitly so long-lived apps never lose icon provenance.",
   },
   {
-    title: "Customizable",
+    title: "Design-token friendly",
     description:
-      "Every icon uses currentColor, so size, stroke, and color stay aligned with your design tokens.",
+      "Icons inherit currentColor and scale with class names or the size prop, making them easy to theme.",
   },
   {
-    title: "Free and open source",
+    title: "Lean by default",
     description:
-      "MIT-licensed icon components with tree-shakeable imports — use them freely in personal and commercial projects.",
+      "ESM exports, no React runtime dependency, and tree-shakeable imports keep bundles focused on the icons you use.",
   },
 ] as const;
 

@@ -1,17 +1,17 @@
 ---
 title: Kamod UI Integration
-description: Use @kamod/icons with kamod-ui without tight coupling.
+description: Use @kamod/icons with Kamod UI while keeping components loosely coupled.
 ---
 
 import "../components/icons-docs.css";
 
 # Kamod UI Integration
 
-`@kamod/icons` is independent from `kamod-ui`. Kamod UI components can use these icons, but should not require this package unless a component explicitly needs it.
+`@kamod/icons` is independent from `kamod-ui`. Kamod UI components can use these icons, but reusable UI packages should avoid requiring one icon set unless the component explicitly depends on it.
 
-## Variante 1: Icon direkt verwenden
+## Option 1: Use icons at app level
 
-Use icons directly in app-level UI composition:
+Use icons directly in product composition when the icon choice belongs to the screen or feature.
 
 ```tsx
 import { SearchIcon } from "@kamod/icons/shadcn";
@@ -26,11 +26,11 @@ export function SearchInput() {
 }
 ```
 
-This keeps the icon decision close to the product UI.
+This keeps visual decisions close to the product UI.
 
-## Variante 2: Icons als Props
+## Option 2: Accept icons as slots
 
-For reusable components, accept icons as slots or props:
+Reusable components should accept icons as children, slots, or props.
 
 ```tsx
 import type { ComponentChildren } from "preact";
@@ -60,4 +60,10 @@ import { SearchIcon } from "@kamod/icons/shadcn";
 </Button>
 ```
 
-This variant is more flexible because users can bring their own icon package or a different `@kamod/icons` set.
+This is more flexible because users can bring their own icon package or choose a different `@kamod/icons` set.
+
+## Recommendation
+
+- App code: import concrete icons directly.
+- Reusable components: accept icons as slots or props.
+- Documentation examples: use explicit subpath imports so examples stay clear.

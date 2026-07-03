@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import type { CatalogIcon } from "./iconCatalog.ts";
 
 const svgCache = new Map<string, string>();
@@ -112,34 +112,66 @@ export function IconCatalogCell({
   );
 }
 
-export function useInfiniteBatch<T>(items: T[], batchSize = 120) {
-  const [visibleCount, setVisibleCount] = useState(batchSize);
-  const sentinelRef = useRef<HTMLDivElement>(null);
+export const ICONS_PER_PAGE = 100;
+
+export function usePagination<T>(items: T[], pageSize = ICONS_PER_PAGE) {
+  const [requestedPage, setRequestedPage] = useState(1);
 
   useEffect(() => {
-    setVisibleCount(batchSize);
-  }, [items, batchSize]);
+    setRequestedPage(1);
+  }, [items, pageSize]);
 
-  useEffect(() => {
-    const node = sentinelRef.current;
-    if (!node || visibleCount >= items.length) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setVisibleCount((current) => Math.min(current + batchSize, items.length));
-        }
-      },
-      { rootMargin: "240px 0px" },
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, [items.length, visibleCount, batchSize]);
+  const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
+  const page = Math.min(requestedPage, totalPages);
+  const startIndex = items.length ? (page - 1) * pageSize : 0;
+  const endIndex = Math.min(page * pageSize, items.length);
 
   return {
-    visibleItems: items.slice(0, visibleCount),
-    sentinelRef,
-    hasMore: visibleCount < items.length,
+    visibleItems: items.slice(startIndex, endIndex),
+    page,
+    totalPages,
+    totalItems: items.length,
+    startIndex: items.length ? startIndex + 1 : 0,
+    endIndex,
+    setPage: setRequestedPage,
   };
+}
+
+type IconCatalogPaginationProps = {
+  page: number;
+  totalPages: number;
+  totalItems: number;
+  startIndex: number;
+  endIndex: number;
+  onPageChange: (page: number) => void;
+};
+
+export function IconCatalogPagination({
+  page,
+  totalPages,
+  totalItems,
+  startIndex,
+  endIndex,
+  onPageChange,
+}: IconCatalogPaginationProps) {
+  if (totalItems <= ICONS_PER_PAGE) return null;
+
+  return (
+    <nav class="ki-catalog-pagination" aria-label="Icon list pagination">
+      <p class="ki-catalog-pagination-meta">
+        Showing {startIndex.toLocaleString()}–{endIndex.toLocaleString()} of {totalItems.toLocaleString()}
+      </p>
+      <div class="ki-catalog-pagination-controls">
+        <button type="button" disabled={page <= 1} onClick={() => onPageChange(page - 1)}>
+          Previous
+        </button>
+        <span class="ki-catalog-pagination-status">
+          Page {page.toLocaleString()} of {totalPages.toLocaleString()}
+        </span>
+        <button type="button" disabled={page >= totalPages} onClick={() => onPageChange(page + 1)}>
+          Next
+        </button>
+      </div>
+    </nav>
+  );
 }

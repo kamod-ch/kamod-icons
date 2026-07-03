@@ -11,9 +11,10 @@ export default defineConfig({
     emoji: true,
   },
   themeConfig: {
-    outline: false,
+    outline: true,
     search: false,
     lastUpdated: false,
+    footer: "Built with PreactPress.",
   },
   locales: {
     root: {
@@ -21,21 +22,23 @@ export default defineConfig({
       lang: "en",
       themeConfig: {
         nav: [
-          { text: "Icons", link: "/#icon-browser" },
-          { text: "Docs", link: "/icons/installation" },
+          { text: "Browser", link: "/#icon-browser" },
+          { text: "Install", link: "/icons/installation" },
+          { text: "Usage", link: "/icons/usage" },
+          { text: "Sets", link: "/icons/icon-sets" },
         ],
         sidebar: [
           {
             text: "Kamod Icons",
             items: [
               { text: "Overview", link: "/" },
-              { text: "Installation", link: "/icons/installation" },
-              { text: "Usage", link: "/icons/usage" },
-              { text: "Theming", link: "/icons/theming" },
+              { text: "Install", link: "/icons/installation" },
+              { text: "Use icons", link: "/icons/usage" },
+              { text: "Theme & style", link: "/icons/theming" },
               { text: "Accessibility", link: "/icons/accessibility" },
-              { text: "Icon sets", link: "/icons/icon-sets" },
+              { text: "Choose a set", link: "/icons/icon-sets" },
               { text: "Figma workflow", link: "/icons/figma-workflow" },
-              { text: "Kamod UI", link: "/icons/kamod-ui" },
+              { text: "Kamod UI integration", link: "/icons/kamod-ui" },
             ],
           },
         ],
