@@ -1,9 +1,3 @@
-<!--
-category: Text
-tags: [tongue, country, speech, speak, translate, communication, communicate, english, dialect, dictionary, word]
-version: "1.45"
-unicode: "ef77"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ef77"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-language-hiragana"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 5h7" />
   <path d="M7 4c0 4.846 0 7 .5 8" />
   <path d="M10 8.5c0 2.286 -2 4.5 -3.5 4.5s-2.5 -1.135 -2.5 -2c0 -2 1 -3 3 -3s5 .57 5 2.857c0 1.524 -.667 2.571 -2 3.143" />

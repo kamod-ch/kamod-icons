@@ -1,9 +1,3 @@
-<!--
-tags: [award, license, document, achievement, course, complete, certificate, off, disabled, inactive]
-category: Document
-version: "1.63"
-unicode: "f0cb"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f0cb"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-certificate-2-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M12 12a3 3 0 1 0 3 3" />
   <path d="M11 7h3" />
   <path d="M10 18v4l2 -1l2 1v-4" />

@@ -1,9 +1,3 @@
-<!--
-category: Shapes
-tags: [circle, plus, minus, add, remove, expand, collapse, round, control]
-unicode: "10205"
-version: "3.40"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.40"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-plus-minus"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
   <path d="M9 10h6" />
   <path d="M9 16h6" />

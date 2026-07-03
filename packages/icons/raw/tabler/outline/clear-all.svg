@@ -1,9 +1,3 @@
-<!--
-category: System
-tags: [app, clear, all, emails, phone]
-version: "1.39"
-unicode: "ee41"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ee41"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-clear-all"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8 6h12" />
   <path d="M6 12h12" />
   <path d="M4 18h12" />

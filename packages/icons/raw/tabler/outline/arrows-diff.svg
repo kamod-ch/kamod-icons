@@ -1,9 +1,3 @@
-<!--
-tags: [direction, right, left, west, east, arrows, diff, navigation, flow, movement]
-category: Arrows
-version: "1.79"
-unicode: "f296"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f296"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-arrows-diff"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M11 16h10" />
   <path d="M11 16l4 4" />
   <path d="M11 16l4 -4" />

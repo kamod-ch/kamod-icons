@@ -1,9 +1,3 @@
-<!--
-tags: [main, text, headline, style, styling, html, heading, typography, writing, font]
-category: Text
-version: "1.39"
-unicode: "ee9b"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ee9b"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-heading"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M7 12h10" />
   <path d="M7 5v14" />
   <path d="M17 5v14" />

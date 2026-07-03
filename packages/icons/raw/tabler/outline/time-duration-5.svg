@@ -1,9 +1,3 @@
-<!--
-tags: [five, minutes, interval, timer, duration, short, quick, brief, span, clock]
-category: System
-version: "2.22"
-unicode: "fad9"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fad9"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-time-duration-5"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M10 15h2a1.5 1.5 0 0 0 0 -3h-2v-3h3.5" />
   <path d="M3 12v.01" />
   <path d="M21 12v.01" />

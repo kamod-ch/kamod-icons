@@ -1,9 +1,3 @@
-<!--
-tags: [tv, channels, film, movie, serials, brand, hbo, logo, company, trademark]
-category: Brand
-version: "1.119"
-unicode: "f657"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f657"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-hbo"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M2 16v-8" />
   <path d="M6 8v8" />
   <path d="M2 12h4" />

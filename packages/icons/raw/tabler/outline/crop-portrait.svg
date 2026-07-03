@@ -1,9 +1,3 @@
-<!--
-tags: [portrait-crop, aspect-ratio-portrait, vertical-crop, portrait-mode, tall-crop, portrait-format, vertical-aspect, vertical-frame, portrait, crop]
-category: Design
-version: "2.43"
-unicode: "fd56"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,6 +8,8 @@ unicode: "fd56"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-crop-portrait"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -12" />
 </svg>

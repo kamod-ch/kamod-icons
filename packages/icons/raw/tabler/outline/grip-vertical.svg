@@ -1,9 +1,3 @@
-<!--
-tags: [picture, abstract, design, upright, dots, drag, grip, vertical, control, operation]
-category: System
-version: "1.8"
-unicode: "ec01"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ec01"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-grip-vertical"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
   <path d="M8 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
   <path d="M8 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />

@@ -1,9 +1,3 @@
-<!--
-tags: [arrow, archer, hunt, hunter, bow, athletic, fitness, exercise, game, physical]
-category: Sport
-version: "1.61"
-unicode: "f096"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f096"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-bow"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M17 3h4v4" />
   <path d="M21 3l-15 15" />
   <path d="M3 18h3v3" />

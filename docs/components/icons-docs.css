@@ -55,7 +55,8 @@
 }
 
 .ki-hero-inner {
-  max-width: 760px;
+  width: 100%;
+  max-width: var(--ki-max);
   margin: 0 auto;
 }
 
@@ -663,5 +664,237 @@
 
   .ki-hero {
     padding-top: 2rem;
+  }
+}
+
+/* Clean, readable code blocks */
+.kiw-content pre {
+  position: relative;
+  margin: 1rem 0 1.35rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid color-mix(in srgb, var(--kiw-violet) 20%, var(--kiw-line));
+  border-radius: 14px;
+  padding: 1rem;
+  color: var(--kiw-code-text);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--kiw-code) 96%, #ffffff 4%), var(--kiw-code));
+  box-shadow: none;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--kiw-muted) 58%, transparent) transparent;
+}
+
+.kiw-content pre::-webkit-scrollbar {
+  height: .65rem;
+}
+
+.kiw-content pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.kiw-content pre::-webkit-scrollbar-thumb {
+  border: .2rem solid transparent;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--kiw-muted) 58%, transparent);
+  background-clip: content-box;
+}
+
+.kiw-content pre code {
+  display: block;
+  min-width: max-content;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font-family: "Geist Mono", "SFMono-Regular", Consolas, ui-monospace, monospace;
+  font-size: .875rem;
+  line-height: 1.65;
+  tab-size: 2;
+}
+
+.kiw-content :not(pre) > code {
+  border-color: color-mix(in srgb, var(--kiw-violet) 18%, var(--kiw-line));
+  border-radius: 6px;
+  padding: .1rem .32rem;
+  color: color-mix(in srgb, var(--kiw-violet) 82%, var(--kiw-ink));
+  background: color-mix(in srgb, var(--kiw-violet) 9%, transparent);
+  font-family: "Geist Mono", "SFMono-Regular", Consolas, ui-monospace, monospace;
+  font-size: .88em;
+  white-space: break-spaces;
+}
+
+.kiw-content table :not(pre) > code,
+.ki-sources-table code {
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .kiw-content pre {
+    margin-inline: -.15rem;
+    border-radius: 12px;
+    padding: .85rem;
+  }
+
+  .kiw-content pre code {
+    font-size: .82rem;
+  }
+}
+
+/* PreactPress code blocks: header, copy button, and code lines */
+.kiw-content .pp-code-block {
+  position: relative;
+  margin: 1.15rem 0 1.45rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--kiw-violet) 22%, var(--kiw-line));
+  border-radius: 16px;
+  background: var(--kiw-code);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .14);
+}
+
+.kiw-content .pp-code-block::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2.55rem;
+  z-index: 1;
+  border-bottom: 1px solid color-mix(in srgb, var(--kiw-code-text) 10%, transparent);
+  background: color-mix(in srgb, var(--kiw-code) 88%, var(--kiw-violet) 12%);
+  pointer-events: none;
+}
+
+.kiw-content .pp-code-lang {
+  position: absolute;
+  top: .58rem;
+  left: .8rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.35rem;
+  border: 1px solid color-mix(in srgb, var(--kiw-code-text) 14%, transparent);
+  border-radius: 999px;
+  padding: 0 .55rem;
+  color: color-mix(in srgb, var(--kiw-code-text) 74%, transparent);
+  background: color-mix(in srgb, var(--kiw-code-text) 8%, transparent);
+  font-family: "Geist Mono", "SFMono-Regular", Consolas, ui-monospace, monospace;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.kiw-content .pp-code-copy {
+  position: absolute;
+  top: .46rem;
+  right: .55rem;
+  z-index: 3;
+  display: inline-grid;
+  place-items: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border: 1px solid color-mix(in srgb, var(--kiw-code-text) 14%, transparent);
+  border-radius: 9px;
+  padding: 0;
+  color: color-mix(in srgb, var(--kiw-code-text) 78%, transparent);
+  background: color-mix(in srgb, var(--kiw-code-text) 7%, transparent);
+  cursor: pointer;
+  transition: color .15s ease, background .15s ease, border-color .15s ease, transform .15s ease;
+}
+
+.kiw-content .pp-code-copy:hover {
+  border-color: color-mix(in srgb, var(--kiw-code-text) 26%, transparent);
+  color: var(--kiw-code-text);
+  background: color-mix(in srgb, var(--kiw-code-text) 12%, transparent);
+  transform: translateY(-1px);
+}
+
+.kiw-content .pp-code-copy:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--kiw-violet) 42%, transparent);
+  outline-offset: 2px;
+}
+
+.kiw-content .pp-code-copy svg {
+  width: .95rem;
+  height: .95rem;
+  fill: currentColor;
+}
+
+.kiw-content .pp-code-block pre,
+.kiw-content .pp-code-block pre.shiki {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 3.25rem 0 1rem;
+  color: var(--kiw-code-text) !important;
+  background: transparent !important;
+  box-shadow: none;
+  line-height: 1.65;
+  scrollbar-gutter: stable;
+}
+
+.kiw-content .pp-code-block code {
+  display: block;
+  min-width: max-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: "Geist Mono", "SFMono-Regular", Consolas, ui-monospace, monospace;
+  font-size: .875rem;
+  line-height: inherit;
+  tab-size: 2;
+}
+
+.kiw-content .pp-code-block .line {
+  display: block;
+  min-height: 1.65em;
+  padding: 0 1rem;
+  border-left: 3px solid transparent;
+}
+
+.kiw-content .pp-code-block .line:hover {
+  background: color-mix(in srgb, var(--kiw-code-text) 4%, transparent);
+}
+
+.kiw-content .pp-code-block .line:empty:last-child {
+  display: none;
+}
+
+.kiw-content .pp-code-block .line.highlighted,
+.kiw-content .pp-code-block .line.focused {
+  border-left-color: var(--kiw-violet);
+  background: color-mix(in srgb, var(--kiw-violet) 16%, transparent);
+}
+
+.kiw-content .pp-code-block .line.diff.add {
+  border-left-color: #22c55e;
+  background: color-mix(in srgb, #22c55e 14%, transparent);
+}
+
+.kiw-content .pp-code-block .line.diff.remove {
+  border-left-color: #ef4444;
+  background: color-mix(in srgb, #ef4444 14%, transparent);
+}
+
+:root[data-theme="dark"] .kiw-content .pp-code-block .shiki span,
+.dark .kiw-content .pp-code-block .shiki span {
+  color: var(--shiki-dark, inherit) !important;
+}
+
+@media (max-width: 560px) {
+  .kiw-content .pp-code-block {
+    margin-inline: -.2rem;
+    border-radius: 13px;
+  }
+
+  .kiw-content .pp-code-block pre,
+  .kiw-content .pp-code-block pre.shiki {
+    padding-top: 3rem;
+  }
+
+  .kiw-content .pp-code-block code {
+    font-size: .82rem;
+  }
+
+  .kiw-content .pp-code-block .line {
+    padding-inline: .85rem;
   }
 }

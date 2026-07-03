@@ -1,5 +1,17 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 4H8C6.89543 4 6 4.89543 6 6V15C6 16.1046 6.89543 17 8 17H20C21.1046 17 22 16.1046 22 15V6C22 4.89543 21.1046 4 20 4Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M22 7L14.9 10.78C14.33 11.08 13.67 11.08 13.1 10.78L6 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2 8V19C2 20.1 2.9 21 4 21H18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- @license lucide-static v1.23.0 - ISC -->
+<svg
+  class="lucide lucide-mails"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 1-1.732" />
+  <path d="m22 5.5-6.419 4.179a2 2 0 0 1-2.162 0L7 5.5" />
+  <rect x="7" y="3" width="15" height="12" rx="2" />
 </svg>

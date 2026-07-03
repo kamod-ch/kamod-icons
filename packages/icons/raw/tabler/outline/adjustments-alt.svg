@@ -1,9 +1,3 @@
-<!--
-tags: [equalizer, sliders, controls, settings, filter, adjustments, alt, control, operation, function]
-category: System
-version: "1.11"
-unicode: "ec37"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ec37"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments-alt"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 8h4v4h-4l0 -4" />
   <path d="M6 4l0 4" />
   <path d="M6 12l0 8" />

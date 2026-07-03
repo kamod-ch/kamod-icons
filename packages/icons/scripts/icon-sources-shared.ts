@@ -1,4 +1,5 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { existsSync, readFileSync as readFileSyncNode } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -43,18 +44,33 @@ export async function writeIconSources(data: IconSourcesFile): Promise<void> {
   await writeFile(iconSourcesPath, `${JSON.stringify(data, null, 2)}\n`);
 }
 
+function resolvePackageJson(packageName: string): string {
+  try {
+    return require.resolve(`${packageName}/package.json`);
+  } catch (error) {
+    const code = (error as NodeJS.ErrnoException).code;
+    if (code !== "ERR_PACKAGE_PATH_NOT_EXPORTED" && code !== "MODULE_NOT_FOUND") {
+      throw error;
+    }
+  }
+
+  for (const basePath of require.resolve.paths(packageName) ?? []) {
+    const packageJsonPath = path.join(basePath, packageName, "package.json");
+    if (existsSync(packageJsonPath)) {
+      return packageJsonPath;
+    }
+  }
+
+  throw new Error(`Could not resolve package.json for ${packageName}`);
+}
+
 export function resolvePackageRoot(packageName: string): string {
-  return path.dirname(require.resolve(`${packageName}/package.json`));
+  return path.dirname(resolvePackageJson(packageName));
 }
 
 export function readPackageVersion(packageName: string): string {
-  const packageJsonPath = require.resolve(`${packageName}/package.json`);
-  const packageJson = JSON.parse(readFileSync(packageJsonPath, "utf8")) as { version: string };
+  const packageJson = JSON.parse(readFileSyncNode(resolvePackageJson(packageName), "utf8")) as { version: string };
   return packageJson.version;
-}
-
-function readFileSync(filePath: string): string {
-  return require("node:fs").readFileSync(filePath, "utf8");
 }
 
 export async function countSvgFiles(dir: string): Promise<number> {

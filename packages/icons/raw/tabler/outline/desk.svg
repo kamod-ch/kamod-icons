@@ -1,9 +1,3 @@
-<!--
-category: System
-tags: [workspace, workstation, table, office-desk, workplace, furniture, desk-setup, desktop, office-furniture, working]
-version: "2.41"
-unicode: "fd35"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fd35"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-desk"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 6h18" />
   <path d="M4 6v13" />
   <path d="M20 19v-13" />

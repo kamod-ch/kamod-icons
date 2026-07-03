@@ -1,9 +1,3 @@
-<!--
-tags: [toggle, arrows, switch, navigation, flow, movement, route, path]
-category: Arrows
-version: "1.0"
-unicode: "eb33"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "eb33"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-switch"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M15 4l4 0l0 4" />
   <path d="M14.75 9.25l4.25 -5.25" />
   <path d="M5 19l4 -4" />

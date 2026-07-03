@@ -1,9 +1,3 @@
-<!--
-tags: [zoom-filled, link, off, disabled, inactive, url, connection, hyperlink, reference, attach]
-category: Text
-version: "1.94"
-unicode: "f402"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f402"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-link-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M9 15l3 -3m2 -2l1 -1" />
   <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
   <path d="M3 3l18 18" />

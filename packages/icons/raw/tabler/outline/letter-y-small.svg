@@ -1,9 +1,3 @@
-<!--
-tags: [y, yankee, twenty-fifth, letter, alphabet, character, typeface, glyph, script, small]
-category: Letters
-version: "2.38"
-unicode: "fcdf"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fcdf"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-letter-y-small"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M10 8l2 5l2 -5" />
   <path d="M12 16v-3" />
 </svg>

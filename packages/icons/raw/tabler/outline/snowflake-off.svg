@@ -1,9 +1,3 @@
-<!--
-tags: [winter, weather, cold, frost, snowflake, off, climate, forecast, disabled, inactive]
-category: Weather
-version: "1.67"
-unicode: "f1a8"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f1a8"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-snowflake-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M10 4l2 1l2 -1" />
   <path d="M12 2v6m1.196 1.186l1.804 1.034" />
   <path d="M17.928 6.268l.134 2.232l1.866 1.232" />

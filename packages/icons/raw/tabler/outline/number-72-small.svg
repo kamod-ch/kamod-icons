@@ -1,9 +1,3 @@
-<!--
-tags: [seventy-two, digit, count, numeral, value, sequence, numeric, figure, calculate, number]
-category: Numbers
-version: "3.14"
-unicode: "ffda"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ffda"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-number-72-small"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M14 8h3a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 0 -1 1v2a1 1 0 0 0 1 1h3" />
   <path d="M6 8h4l-2 8" />
 </svg>

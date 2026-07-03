@@ -1,9 +1,3 @@
-<!--
-tags: [to-do, checklist, form, template, task, reminder, schedule, agenda, list, numbers]
-category: Text
-version: "1.40"
-unicode: "ef11"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ef11"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-list-numbers"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M11 6h9" />
   <path d="M11 12h9" />
   <path d="M12 18h8" />

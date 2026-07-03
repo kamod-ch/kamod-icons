@@ -1,9 +1,3 @@
-<!--
-tags: [pointer, cursor, device, mouse, hardware, technology, electronic, gadget, equipment]
-category: Devices
-version: "1.0"
-unicode: "eaf9"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "eaf9"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-mouse"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M6 7a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4l0 -10" />
   <path d="M12 7l0 4" />
 </svg>

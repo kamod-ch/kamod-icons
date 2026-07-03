@@ -1,9 +1,3 @@
-<!--
-tags: [bird, animal, nature, feather, off, environment, natural, disabled, inactive, outdoor]
-category: Nature
-version: "1.65"
-unicode: "f128"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f128"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-feather-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 20l8 -8" />
   <path d="M14 5v5h5" />
   <path d="M9 11v4h4" />

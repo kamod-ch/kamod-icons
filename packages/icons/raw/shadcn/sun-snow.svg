@@ -1,13 +1,25 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 9C9.20435 9 8.44129 9.31607 7.87868 9.87868C7.31607 10.4413 7 11.2044 7 12C7 12.7956 7.31607 13.5587 7.87868 14.1213C8.44129 14.6839 9.20435 15 10 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2 12H3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14 21V3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10 4V3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10 21V20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.63989 18.3599L4.33989 17.6599" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.33989 6.33989L3.63989 5.63989" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14 12H22" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17 4L14 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14 17L17 20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M21 15L18 12L21 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- @license lucide-static v1.23.0 - ISC -->
+<svg
+  class="lucide lucide-sun-snow"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 21v-1" />
+  <path d="M10 4V3" />
+  <path d="M10 9a3 3 0 0 0 0 6" />
+  <path d="m14 20 1.25-2.5L18 18" />
+  <path d="m14 4 1.25 2.5L18 6" />
+  <path d="m17 21-3-6 1.5-3H22" />
+  <path d="m17 3-3 6 1.5 3" />
+  <path d="M2 12h1" />
+  <path d="m20 10-1.5 2 1.5 2" />
+  <path d="m3.64 18.36.7-.7" />
+  <path d="m4.34 6.34-.7-.7" />
 </svg>

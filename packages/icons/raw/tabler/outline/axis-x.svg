@@ -1,9 +1,3 @@
-<!--
-tags: [math, geometry, axis, navigation, flow, movement, route, path, x]
-category: Arrows
-version: "1.43"
-unicode: "ef45"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ef45"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-axis-x"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 13v.01" />
   <path d="M4 9v.01" />
   <path d="M4 5v.01" />

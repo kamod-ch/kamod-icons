@@ -1,9 +1,3 @@
-<!--
-tags: [alphabet, monogram, typography, emblem, character, initial, design, decoration, circle, dotted]
-category: Letters
-version: "3.11"
-unicode: "ff6c"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ff6c"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-dotted-letter-t"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M10 8h4" />
   <path d="M12 8v8" />
   <path d="M7.5 4.21v.01" />

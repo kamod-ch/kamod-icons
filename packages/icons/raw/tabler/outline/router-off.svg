@@ -1,9 +1,3 @@
-<!--
-tags: [wifi, device, wireless, signal, station, cast, router, off, hardware, technology]
-category: Devices
-version: "1.94"
-unicode: "f424"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f424"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-router-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M17 13h2a2 2 0 0 1 2 2v2m-.588 3.417c-.362 .36 -.861 .583 -1.412 .583h-14a2 2 0 0 1 -2 -2v-4a2 2 0 0 1 2 -2h8" />
   <path d="M17 17v.01" />
   <path d="M13 17v.01" />

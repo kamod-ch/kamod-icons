@@ -1,9 +1,3 @@
-<!--
-tags: [weather, visibility, mist, off, climate, forecast, disabled, inactive, meteorology, atmospheric]
-category: Weather
-version: "1.94"
-unicode: "f410"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f410"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-mist-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M12 5h9" />
   <path d="M3 10h7" />
   <path d="M18 10h1" />

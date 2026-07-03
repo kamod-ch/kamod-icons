@@ -1,9 +1,3 @@
-<!--
-tags: [oven, kitchen, cooking, food, cook, microwave, meal, cuisine, eating, nutrition]
-category: Food
-version: "1.74"
-unicode: "f248"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f248"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-microwave"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 7a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1l0 -10" />
   <path d="M15 6v12" />
   <path d="M18 12h.01" />

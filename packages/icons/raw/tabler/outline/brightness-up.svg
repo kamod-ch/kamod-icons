@@ -1,9 +1,3 @@
-<!--
-tags: [light, screen, brightness, top, increase, rise, upward, up, camera, picture]
-category: Photography
-version: "1.3"
-unicode: "eb7e"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "eb7e"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brightness-up"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
   <path d="M12 5l0 -2" />
   <path d="M17 7l1.4 -1.4" />

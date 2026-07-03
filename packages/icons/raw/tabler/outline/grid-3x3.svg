@@ -1,9 +1,3 @@
-<!--
-tags: [layout, pattern, matrix, arrangement, gridlines, cell, structure, block, squares, grid-pattern]
-category: Design
-version: "2.36"
-unicode: "fca4"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fca4"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-grid-3x3"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 8h18" />
   <path d="M3 16h18" />
   <path d="M8 3v18" />

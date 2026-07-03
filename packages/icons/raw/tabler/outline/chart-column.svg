@@ -1,9 +1,3 @@
-<!--
-tags: [analytics, data, visualization, bar, statistics, vertical, graph, comparison, display, presentation]
-category: Charts
-unicode: "ffa5"
-version: "3.12"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.12"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-chart-column"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 20h3" />
   <path d="M17 20h3" />
   <path d="M10.5 20h3" />

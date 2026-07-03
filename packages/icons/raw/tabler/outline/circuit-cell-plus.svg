@@ -1,9 +1,3 @@
-<!--
-tags: [electric, diagram, electricity, battery, power, circuit, cell, plus, energy, add]
-category: Electrical
-version: "1.77"
-unicode: "f276"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f276"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-circuit-cell-plus"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M2 12h9" />
   <path d="M15 12h7" />
   <path d="M11 5v14" />

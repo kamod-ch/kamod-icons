@@ -1,9 +1,3 @@
-<!--
-tags: [scan, cube, 3d, object, model, capture, spatial, augmented, mesh, reality]
-category: System
-unicode: "1025d"
-version: "3.44"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.44"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-scan-cube"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8.504 9.426l3 -1.714a1 1 0 0 1 .992 0l3 1.714a1 1 0 0 1 .504 .868v3.411a1 1 0 0 1 -.504 .868l-3 1.715a1 1 0 0 1 -.992 0l-3 -1.715a1 1 0 0 1 -.504 -.868v-3.41a1 1 0 0 1 .504 -.869" />
   <path d="M15.75 9.964l-3.75 2.036" />
   <path d="M12 12l-3.75 -2.036" />

@@ -1,9 +1,3 @@
-<!--
-category: Map
-tags: [playground, park, monkey, bar, jungle, gym, exercise, fitness, outdoor, fun, children, kids, play, swing, jungle gym]
-unicode: "feb4"
-version: "3.2"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.2"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-monkeybar"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 21v-15l5 -3l5 3v15" />
   <path d="M8 21v-7" />
   <path d="M3 14h10" />

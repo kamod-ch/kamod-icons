@@ -1,9 +1,3 @@
-<!--
-category: System
-tags: [break, halt, stop, pause, interval, interruption, suspend, rest, freeze, delay]
-version: "2.10"
-unicode: "f82b"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f82b"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-pause"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M13 21h-7a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v6" />
   <path d="M16 3v4" />
   <path d="M8 3v4" />

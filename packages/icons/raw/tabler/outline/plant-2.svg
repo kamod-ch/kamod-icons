@@ -1,9 +1,3 @@
-<!--
-category: Nature
-tags: [nature, green, flower, pot, tree, leaf, greenery, root, stem, seed]
-version: "1.33"
-unicode: "ed7e"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ed7e"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-plant-2"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M2 9a10 10 0 1 0 20 0" />
   <path d="M12 19a10 10 0 0 1 10 -10" />
   <path d="M2 9a10 10 0 0 1 10 10" />

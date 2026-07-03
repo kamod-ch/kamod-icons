@@ -1,9 +1,3 @@
-<!--
-category: System
-tags: [printing, vector, shape, cube, sphere, 3d]
-version: "1.20"
-unicode: "ecd7"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ecd7"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-cube-3d-sphere"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M6 17.6l-2 -1.1v-2.5" />
   <path d="M4 10v-2.5l2 -1.1" />
   <path d="M10 4.1l2 -1.1l2 1.1" />

@@ -1,9 +1,3 @@
-<!--
-tags: [plastic, chemistry, resin, material, molecule, industrial, science, engineering, synthetic, compound]
-category: Brand
-unicode: "f498"
-version: "1.96"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,6 +8,8 @@ version: "1.96"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-polymer"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M6.706 6l-3.706 6l3.706 6h1.059l8.47 -12h1.06l3.705 6l-3.706 6" />
 </svg>

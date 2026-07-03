@@ -1,9 +1,3 @@
-<!--
-tags: [electric, electricity, diagram, circuit, ground, energy, voltage, power, current, interface]
-category: Electrical
-version: "1.74"
-unicode: "f27c"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f27c"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-circuit-ground"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M12 13v-8" />
   <path d="M4 13h16" />
   <path d="M7 16h10" />

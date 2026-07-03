@@ -1,9 +1,3 @@
-<!--
-tags: [direction, east, arrow, right, tail, pointer, navigation, flow, navigate, move]
-category: Arrows
-version: "1.35"
-unicode: "eda3"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "eda3"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right-tail"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M18 15l3 -3l-3 -3" />
   <path d="M3 15l3 -3l-3 -3" />
   <path d="M6 12l15 0" />

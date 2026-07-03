@@ -1,9 +1,3 @@
-<!--
-category: System
-tags: [arrows, directional, navigate, wayfinding, pointing, route, orientation, arrow-sign, guidance, direction]
-version: "2.41"
-unicode: "fd36"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fd36"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-direction-arrows"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
   <path d="M8 11l-1 1l1 1" />
   <path d="M11 8l1 -1l1 1" />

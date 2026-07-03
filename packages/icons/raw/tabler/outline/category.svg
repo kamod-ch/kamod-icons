@@ -1,9 +1,3 @@
-<!--
-tags: [folder, menu, tag, game, category, geometry, form, figure, pattern, outline]
-category: Shapes
-version: "1.70"
-unicode: "f1f6"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f1f6"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-category"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 4h6v6h-6l0 -6" />
   <path d="M14 4h6v6h-6l0 -6" />
   <path d="M4 14h6v6h-6l0 -6" />

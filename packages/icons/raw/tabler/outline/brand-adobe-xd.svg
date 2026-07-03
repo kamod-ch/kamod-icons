@@ -1,9 +1,3 @@
-<!--
-tags: [ui, ux, interface, design, prototype, experience, digital, interactive, creative, wireframe]
-category: Brand
-unicode: "ff25"
-version: "3.8"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.8"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-adobe-xd"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 12c0 -4.243 0 -6.364 1.318 -7.682s3.44 -1.318 7.682 -1.318s6.364 0 7.682 1.318s1.318 3.44 1.318 7.682s0 6.364 -1.318 7.682s-3.44 1.318 -7.682 1.318s-6.364 0 -7.682 -1.318s-1.318 -3.44 -1.318 -7.682" />
   <path d="M6 8l5 8" />
   <path d="M6 16l5 -8" />

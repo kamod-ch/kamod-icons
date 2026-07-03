@@ -1,9 +1,3 @@
-<!--
-tags: [notetaking, journal, draft, idea, to-do list, notes, file, paper, text, record]
-category: Document
-version: "1.2"
-unicode: "eb6e"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "eb6e"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-notes"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M5 5a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2l0 -14" />
   <path d="M9 7l6 0" />
   <path d="M9 11l6 0" />

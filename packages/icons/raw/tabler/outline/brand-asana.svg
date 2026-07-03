@@ -1,9 +1,3 @@
-<!--
-tags: [task, management, project management, manage, collaborate, collaboration, team, teamwork, technology, brand]
-category: Brand
-version: "1.36"
-unicode: "edc5"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "edc5"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-asana"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M9 7a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
   <path d="M14 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
   <path d="M4 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />

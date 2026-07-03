@@ -1,9 +1,3 @@
-<!--
-tags: [aquatic, sport, pool, game, ball, team, watergame, swimming, athletic, match]
-category: Sport
-version: "2.17"
-unicode: "fa6f"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fa6f"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-waterpolo"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M5 8l3 4l5 1l7 -1" />
   <path d="M3 18.75a2.4 2.4 0 0 0 1 .25a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 1 -.25" />
   <path d="M12 16l1 -3" />

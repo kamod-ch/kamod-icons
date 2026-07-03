@@ -1,9 +1,3 @@
-<!--
-tags: [app, dating, social, media, communication, brand, bumble, logo, company, trademark]
-category: Brand
-version: "1.114"
-unicode: "f5fb"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f5fb"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bumble"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M7 12h10" />
   <path d="M9 8h6" />
   <path d="M10 16h4" />

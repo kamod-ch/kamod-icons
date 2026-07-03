@@ -1,9 +1,3 @@
-<!--
-tags: [learning, platform, webstie, child, brand, sugarizer, logo, company, trademark, identity]
-category: Brand
-version: "2.6"
-unicode: "f7a5"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f7a5"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-sugarizer"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M14.277 16l3.252 -3.252a1.61 1.61 0 0 0 -2.277 -2.276l-3.252 3.251l-3.252 -3.251a1.61 1.61 0 0 0 -2.276 2.276l3.251 3.252l-3.251 3.252a1.61 1.61 0 1 0 2.276 2.277l3.252 -3.252l3.252 3.252a1.61 1.61 0 1 0 2.277 -2.277l-3.252 -3.252" />
   <path d="M9 5a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
 </svg>

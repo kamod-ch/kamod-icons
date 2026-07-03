@@ -1,9 +1,3 @@
-<!--
-tags: [trade, aed, uae, dirham, money, banknote, pay, currency, finance, payment]
-category: Currencies
-version: "1.39"
-unicode: "ee55"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ee55"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-currency-dirham"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8.5 19h-3.5" />
   <path d="M8.599 16.479a1.5 1.5 0 1 0 -1.099 2.521" />
   <path d="M7 4v9" />

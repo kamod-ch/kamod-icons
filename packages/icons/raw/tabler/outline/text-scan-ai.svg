@@ -1,9 +1,3 @@
-<!--
-tags: [text, scan, ai, ocr, recognition, document, intelligence, capture, reading, extract]
-category: System
-unicode: "10257"
-version: "3.44"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.44"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-text-scan-ai"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8 12h4.5" />
   <path d="M8 8h6" />
   <path d="M8 16h2" />

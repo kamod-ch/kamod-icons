@@ -1,9 +1,3 @@
-<!--
-tags: [china, platform, shopping, online, brand, taobao, logo, company, trademark, identity]
-category: Brand
-version: "1.113"
-unicode: "f5ef"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f5ef"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-taobao"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M2 5c.968 .555 1.335 1.104 2 2" />
   <path d="M2 10c5.007 3.674 2.85 6.544 0 10" />
   <path d="M10 4c-.137 4.137 -2.258 5.286 -3.709 6.684" />

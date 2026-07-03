@@ -1,9 +1,3 @@
-<!--
-tags: [alphabet, text, code, letter, character, typography, writing, i, glyph]
-category: Letters
-version: "1.12"
-unicode: "ec58"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,6 +8,8 @@ unicode: "ec58"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-letter-i"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M12 4l0 16" />
 </svg>

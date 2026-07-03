@@ -1,9 +1,3 @@
-<!--
-category: Games
-tags: [strategy, board, mind, game, go]
-version: "1.102"
-unicode: "f512"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f512"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-go-game"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
   <path d="M10 12a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
   <path d="M4 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />

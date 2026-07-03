@@ -1,9 +1,3 @@
-<!--
-tags: [sailor, journey, sea, lake, ocean, river, sailboat, transport, travel, vehicle]
-category: Vehicles
-version: "1.14"
-unicode: "ec83"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ec83"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-sailboat"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M2 20a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1" />
   <path d="M4 18l-1 -3h18l-1 3" />
   <path d="M11 12h7l-7 -9v9" />

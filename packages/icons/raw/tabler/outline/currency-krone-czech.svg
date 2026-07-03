@@ -1,9 +1,3 @@
-<!--
-tags: [czech, czk, koruna, money, banknote, pay, currency, krone, finance, payment]
-category: Currencies
-version: "1.39"
-unicode: "ee5c"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ee5c"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-currency-krone-czech"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M5 6v12" />
   <path d="M5 12c3.5 0 6 -3 6 -6" />
   <path d="M5 12c3.5 0 6 3 6 6" />

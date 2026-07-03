@@ -1,9 +1,3 @@
-<!--
-category: Design
-tags: [birds, explorer, field glasses, magnifying eye glasses, observe, view, watch, binoculars]
-version: "3.6"
-unicode: "fefe"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fefe"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-binoculars"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
   <path d="M14 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
   <path d="M16.346 9.17l-.729 -1.261c-.16 -.248 -1.056 -.203 -1.117 .091l-.177 1.38" />

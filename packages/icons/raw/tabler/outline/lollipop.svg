@@ -1,9 +1,3 @@
-<!--
-tags: [candy, food, sweet, halloween, dessert, sugar, lollipop, meal, cuisine, eating]
-category: Food
-version: "1.50"
-unicode: "efcc"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "efcc"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-lollipop"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M7 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
   <path d="M21 10a3.5 3.5 0 0 0 -7 0" />
   <path d="M14 10a3.5 3.5 0 0 1 -7 0" />

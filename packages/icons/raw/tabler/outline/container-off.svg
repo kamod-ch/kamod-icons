@@ -1,9 +1,3 @@
-<!--
-tags: [html, block, store, inside, container, off, creative, artistic, disabled, visual]
-category: Design
-version: "1.65"
-unicode: "f107"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f107"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-container-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M20 4v.01" />
   <path d="M20 20v.01" />
   <path d="M20 16v.01" />

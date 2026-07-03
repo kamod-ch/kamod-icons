@@ -1,9 +1,3 @@
-<!--
-tags: [winter, weather, cold, frost, snowflake, climate, forecast, meteorology, atmospheric, conditions]
-category: Weather
-version: "1.8"
-unicode: "ec0b"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ec0b"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-snowflake"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M10 4l2 1l2 -1" />
   <path d="M12 2v6.5l3 1.72" />
   <path d="M17.928 6.268l.134 2.232l1.866 1.232" />

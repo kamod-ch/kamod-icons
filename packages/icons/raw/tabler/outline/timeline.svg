@@ -1,9 +1,3 @@
-<!--
-category: System
-tags: [process, plan, planning, diagram, chart, roadmap, timeline]
-version: "1.55"
-unicode: "f031"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f031"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-timeline"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 16l6 -7l5 5l5 -6" />
   <path d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
   <path d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />

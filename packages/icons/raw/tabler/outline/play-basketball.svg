@@ -1,9 +1,3 @@
-<!--
-tags: [sport, game, hoops, dribble, shoot, ball, competitive, athlete, team, exercise]
-category: Sport
-version: "2.17"
-unicode: "fa66"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fa66"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-play-basketball"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M9.007 5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
   <path d="M5 21l3 -3l.75 -1.5" />
   <path d="M14 21v-4l-4 -3l.5 -6" />

@@ -1,9 +1,3 @@
-<!--
-category: Health
-tags: [pulse, lifeline, impuls, hospital, heartrate, activity, heartbeat, love, like, motion]
-version: "1.64"
-unicode: "f0db"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,6 +8,8 @@ unicode: "f0db"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-activity-heartbeat"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5" />
 </svg>

@@ -1,14 +1,12 @@
-<!--
-unicode: "10104"
-version: "3.28"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
   viewBox="0 0 24 24"
   fill="currentColor"
+  class="icon icon-tabler icons-tabler-filled icon-tabler-sunset"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 16a1 1 0 0 1 0 2h-1a1 1 0 0 1 0 -2z" />
   <path d="M21 16a1 1 0 0 1 0 2h-1a1 1 0 0 1 0 -2z" />
   <path d="M6.307 9.893l.7 .7a1 1 0 0 1 -1.414 1.414l-.7 -.7a1 1 0 0 1 1.414 -1.414" />

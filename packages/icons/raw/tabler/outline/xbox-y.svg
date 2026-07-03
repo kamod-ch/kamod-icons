@@ -1,9 +1,3 @@
-<!--
-tags: [controller, joystick, button, xbox, hardware, technology, electronic, gadget, equipment, y]
-category: Devices
-version: "1.80"
-unicode: "f2b9"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f2b9"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-xbox-y"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M12 21a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9a9 9 0 0 0 -9 9a9 9 0 0 0 9 9" />
   <path d="M9 8l3 4" />
   <path d="M15 8l-2.988 3.984l-.012 4.016" />

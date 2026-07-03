@@ -1,9 +1,3 @@
-<!--
-tags: [regular, expression, code, replace, programming, coding, variables, regex, off, disabled]
-category: Text
-version: "1.94"
-unicode: "f421"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f421"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-regex-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M6.5 15a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0 -5" />
   <path d="M17 7.875l3 -1.687" />
   <path d="M17 7.875v3.375" />

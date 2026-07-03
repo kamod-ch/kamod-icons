@@ -1,9 +1,3 @@
-<!--
-tags: [music, headset, audio, sound, customer, headphones, off, content, entertainment, disabled]
-category: Media
-version: "1.25"
-unicode: "ed1d"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ed1d"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-headphones-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 3l18 18" />
   <path d="M4 15a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2l0 -3" />
   <path d="M17 13h1a2 2 0 0 1 2 2v1m-.589 3.417c-.361 .36 -.86 .583 -1.411 .583h-1a2 2 0 0 1 -2 -2v-3" />

@@ -1,9 +1,3 @@
-<!--
-tags: [travel, navigation, discover, directions, off, location, disabled, inactive, geography, place]
-category: Map
-version: "1.65"
-unicode: "f116"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f116"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-directions-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M12 21v-4" />
   <path d="M12 13v-1" />
   <path d="M12 5v-2" />

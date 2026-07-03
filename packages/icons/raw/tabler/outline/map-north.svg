@@ -1,9 +1,3 @@
-<!--
-tags: [northward, upward, compass, boreal, cardinal, arctic, poleward, direction, trip, geographic]
-category: Map
-version: "2.32"
-unicode: "fc5e"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fc5e"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-map-north"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
   <path d="M10 15v-6l4 6v-6" />
 </svg>

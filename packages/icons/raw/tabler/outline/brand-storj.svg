@@ -1,9 +1,3 @@
-<!--
-tags: [cloud, storage, decentralized, data, network, security, blockchain, sharing, space, file]
-category: Brand
-version: "2.16"
-unicode: "fa54"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fa54"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-storj"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 17a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
   <path d="M3 7a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
   <path d="M19 17a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />

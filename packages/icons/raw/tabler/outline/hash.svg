@@ -1,9 +1,3 @@
-<!--
-category: Design
-tags: [hashtag, "#", instagram, hash]
-version: "1.0"
-unicode: "eabc"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "eabc"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-hash"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M5 9l14 0" />
   <path d="M5 15l14 0" />
   <path d="M11 4l-4 16" />

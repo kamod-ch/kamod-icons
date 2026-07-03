@@ -3,10 +3,6 @@ title: Usage
 description: Import, alias, style, and compose @kamod/icons components in Preact.
 ---
 
-import "../components/icons-docs.css";
-
-# Usage
-
 Icons are typed Preact components. They accept `class`, `style`, `size`, `title`, and standard SVG props.
 
 ## Recommended import

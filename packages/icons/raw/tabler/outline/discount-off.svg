@@ -1,9 +1,3 @@
-<!--
-tags: [sale, reduction, price, cost, money, shopping, bargain, discount, off, store]
-category: E-commerce
-version: "1.94"
-unicode: "f3e7"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f3e7"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-discount-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M9 15l3 -3m2 -2l1 -1" />
   <path d="M9.148 9.145a.498 .498 0 0 0 .352 .855a.5 .5 0 0 0 .35 -.142" />
   <path d="M14.148 14.145a.498 .498 0 0 0 .352 .855a.5 .5 0 0 0 .35 -.142" />

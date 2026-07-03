@@ -1,9 +1,3 @@
-<!--
-category: System
-tags: [voice, voicemail, message, record, mail, off, email, disabled, inactive, letter]
-version: "1.66"
-unicode: "f18b"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f18b"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-record-mail-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
   <path d="M18.569 14.557a3 3 0 1 0 -4.113 -4.149" />
   <path d="M7 15h8" />

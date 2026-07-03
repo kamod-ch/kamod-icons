@@ -1,9 +1,3 @@
-<!--
-tags: [forum, make, question, answers, website, brand, zhihu, logo, company, trademark]
-category: Brand
-version: "1.114"
-unicode: "f60a"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f60a"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-zhihu"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M14 6h6v12h-2l-2 2l-1 -2h-1l0 -12" />
   <path d="M4 12h6.5" />
   <path d="M10.5 6h-5" />

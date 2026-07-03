@@ -1,9 +1,3 @@
-<!--
-tags: [frisbee, throw, sport, activity, disc, golf, athletic, fitness, exercise, game]
-category: Sport
-version: "1.91"
-unicode: "f385"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f385"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-disc-golf"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M5 5h14" />
   <path d="M6 5c.32 6.744 2.74 9.246 6 10" />
   <path d="M18 5c-.32 6.744 -2.74 9.246 -6 10" />

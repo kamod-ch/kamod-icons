@@ -1,9 +1,3 @@
-<!--
-category: Health
-tags: [blind, alphabet, disability, letters, read, braille, accessibility, a11y, vision, impaired, inclusive, tactile]
-version: "1.105"
-unicode: "f545"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f545"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-braille"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M15 5a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
   <path d="M7 5a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
   <path d="M7 19a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />

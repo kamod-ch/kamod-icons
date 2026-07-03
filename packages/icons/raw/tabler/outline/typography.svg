@@ -1,9 +1,3 @@
-<!--
-tags: [type, display, typeface, point size, line length, line-spacing, letter-spacing, font, typography, writing]
-category: Text
-version: "1.5"
-unicode: "ebc5"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ebc5"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-typography"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 20l3 0" />
   <path d="M14 20l7 0" />
   <path d="M6.9 15l6.9 0" />

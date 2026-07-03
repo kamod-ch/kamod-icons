@@ -1,9 +1,3 @@
-<!--
-tags: [tent, show, carnival, clown, building, circus, architecture, structure, construction, property]
-category: Buildings
-version: "1.98"
-unicode: "f4bf"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f4bf"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-building-circus"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 11h16" />
   <path d="M12 6.5c0 1 -5 4.5 -8 4.5" />
   <path d="M12 6.5c0 1 5 4.5 8 4.5" />

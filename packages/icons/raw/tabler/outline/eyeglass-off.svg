@@ -1,9 +1,3 @@
-<!--
-category: Health
-tags: [sight, defect, see, vision, frames, lenses, visually, impaired, myopia, far-sighted]
-version: "1.65"
-unicode: "f126"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f126"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-eyeglass-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M5.536 5.546l-2.536 8.454" />
   <path d="M16 4h2l3 10" />
   <path d="M10 16h4" />

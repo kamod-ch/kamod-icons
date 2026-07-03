@@ -1,9 +1,3 @@
-<!--
-tags: [direction, bar, navigation, indicator, bi-directional, interface, ui, path, flow, arrow]
-category: Arrows
-version: "2.23"
-unicode: "fadd"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fadd"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-bar-both"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8 12h-6" />
   <path d="M5 15l-3 -3l3 -3" />
   <path d="M22 12h-6" />

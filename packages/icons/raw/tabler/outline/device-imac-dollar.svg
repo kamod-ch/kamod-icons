@@ -1,9 +1,3 @@
-<!--
-category: Devices
-tags: [money, currency, finance, wealth, cash, funds, capital, income, profit, earnings]
-version: "2.10"
-unicode: "f876"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f876"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-device-imac-dollar"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M13 17h-9a1 1 0 0 1 -1 -1v-12a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v6.5" />
   <path d="M3 13h11" />
   <path d="M8 21h5" />

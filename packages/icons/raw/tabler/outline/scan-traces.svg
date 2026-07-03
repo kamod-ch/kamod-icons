@@ -1,9 +1,3 @@
-<!--
-category: Development
-tags: [scan, trace, debug, inspect, track, follow, investigate, analyze, monitor, detect, examine, audit]
-unicode: "101ec"
-version: "3.39"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.39"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-scan-traces"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M11 12h6" />
   <path d="M8 8h5" />
   <path d="M9 16h5" />

@@ -3,11 +3,6 @@ title: Icon Sets
 description: Choose the right @kamod/icons subpath export for each project.
 ---
 
-import "../components/icons-docs.css";
-import IconSourcesTable from "../components/IconSourcesTable.tsx";
-
-# Icon Sets
-
 `@kamod/icons` groups every upstream family behind explicit subpath exports. This keeps imports readable, avoids name collisions, and makes upgrades easier to review.
 
 ## Available imports
@@ -75,7 +70,13 @@ import { SearchIcon } from "@kamod/icons/shadcn";
 
 Each set vendors SVGs from an upstream npm package. Versions, icon counts, and sync dates are tracked in `icon-sources.json` and exposed through `@kamod/icons/meta`.
 
-<IconSourcesTable />
+| Set | Upstream | Version | Icons | Last sync |
+| --- | --- | --- | ---: | --- |
+| `@kamod/icons/shadcn` | [shadcn/ui](https://github.com/lucide-icons/lucide) | `lucide-static` (`lucide@1.23.0`) | 877 | 2026-07-03 |
+| `@kamod/icons/lucide` | [Lucide](https://github.com/lucide-icons/lucide) | `lucide-static` (`lucide@1.23.0`) | 1,994 | 2026-07-03 |
+| `@kamod/icons/heroicons/…` | [Heroicons](https://github.com/tailwindlabs/heroicons) | `heroicons` (`@heroicons/react@2.2.0`) | 648 | 2026-07-03 |
+| `@kamod/icons/tabler/…` | [Tabler Icons](https://github.com/tabler/tabler-icons) | `@tabler/icons@3.44.0` | 6,146 | 2026-07-03 |
+| `@kamod/icons/iconoir/…` | [Iconoir](https://github.com/iconoir-icons/iconoir) | `iconoir@7.11.1` | 1,671 | 2026-07-03 |
 
 ## Sync from upstream
 
@@ -91,4 +92,4 @@ Sync one set only:
 npm run icons:sync -- --set lucide
 ```
 
-The `shadcn` set is a Lucide subset with legacy icon names used by shadcn/ui. It refreshes only the SVG files that already exist in `raw/shadcn/`.
+The `shadcn` set is a Lucide subset with legacy icon names used by shadcn/ui. During the latest sync, 860 of 877 existing SVGs were refreshed from `lucide-static`; 17 legacy brand icons were not present upstream and were left unchanged.

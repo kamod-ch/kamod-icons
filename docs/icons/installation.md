@@ -3,10 +3,6 @@ title: Installation
 description: Install @kamod/icons and render your first Preact icon in minutes.
 ---
 
-import "../components/icons-docs.css";
-
-# Installation
-
 `@kamod/icons` ships typed SVG icons as Preact components. It is independent from `kamod-ui`, has no React runtime dependency, and only expects Preact as a peer dependency.
 
 ## Install the package
@@ -60,4 +56,3 @@ The package uses ESM and `sideEffects: false`, so modern bundlers can tree-shake
 
 - Learn the [usage patterns](/icons/usage).
 - Choose an [icon set](/icons/icon-sets).
-- Review [accessibility guidance](/icons/accessibility) for icon-only controls.

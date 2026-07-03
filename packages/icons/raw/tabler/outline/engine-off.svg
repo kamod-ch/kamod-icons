@@ -1,9 +1,3 @@
-<!--
-tags: [car, motor, automotive, dashboard, engine, off, transport, travel, disabled, inactive]
-category: Vehicles
-version: "1.65"
-unicode: "f120"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f120"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-engine-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 10v6" />
   <path d="M12 5v3" />
   <path d="M10 5h4" />

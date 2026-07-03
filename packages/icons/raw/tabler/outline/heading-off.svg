@@ -1,9 +1,3 @@
-<!--
-tags: [main, text, headline, style, styling, html, heading, off, disabled, inactive]
-category: Text
-version: "1.66"
-unicode: "f13f"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f13f"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-heading-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M7 12h5m4 0h1" />
   <path d="M7 7v12" />
   <path d="M17 5v8m0 4v2" />

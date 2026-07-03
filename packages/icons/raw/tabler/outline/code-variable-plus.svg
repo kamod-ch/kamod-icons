@@ -1,9 +1,3 @@
-<!--
-category: System
-tags: [add, increase, extend, expand, augment, boost, enhance, amplify, raise, enlarge]
-unicode: "100ac"
-version: "3.23"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.23"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-code-variable-plus"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M13 16h-7a2 2 0 0 1 -2 -2v-4a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v1" />
   <path d="M16 18h6" />
   <path d="M19 15v6" />

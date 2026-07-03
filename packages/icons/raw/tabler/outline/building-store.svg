@@ -1,9 +1,3 @@
-<!--
-tags: [shopping, shop, supermarket, market, products, retail, buy, sell, building, store]
-category: Buildings
-version: "1.1"
-unicode: "ea4e"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ea4e"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-building-store"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 21l18 0" />
   <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" />
   <path d="M5 21l0 -10.15" />

@@ -1,12 +1,24 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4L6.5 6.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M13.5001 6.50009C12.5686 5.58727 11.3146 5.07893 10.0104 5.08551C8.70631 5.0921 7.45745 5.61309 6.53527 6.53527C5.61309 7.45745 5.0921 8.70631 5.08551 10.0104C5.07893 11.3146 5.58727 12.5686 6.50009 13.5001" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15 5L5 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14 17V17.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10 16V16.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M13 13V13.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16 10V10.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11 20V20.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17 14V14.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20 11V11.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- @license lucide-static v1.23.0 - ISC -->
+<svg
+  class="lucide lucide-shower-head"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m4 4 2.5 2.5" />
+  <path d="M13.5 6.5a4.95 4.95 0 0 0-7 7" />
+  <path d="M15 5 5 15" />
+  <path d="M14 17v.01" />
+  <path d="M10 16v.01" />
+  <path d="M13 13v.01" />
+  <path d="M16 10v.01" />
+  <path d="M11 20v.01" />
+  <path d="M17 14v.01" />
+  <path d="M20 11v.01" />
 </svg>

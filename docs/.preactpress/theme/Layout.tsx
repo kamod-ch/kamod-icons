@@ -198,7 +198,10 @@ const Layout: FunctionalComponent<LayoutProps> = ({
               </details>
             ) : null}
             <button class="kiw-theme-toggle" type="button" onClick={toggleStoredTheme} aria-label="Toggle color theme">
-              ◐
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill="currentColor" d="M12 3a9 9 0 0 1 0 18V3z" />
+                <path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 3a9 9 0 1 0 0 18" />
+              </svg>
             </button>
             <a class="kiw-menu-button" href="#kiw-docs-menu">
               Menu

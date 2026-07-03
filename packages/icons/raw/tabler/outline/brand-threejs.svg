@@ -1,9 +1,3 @@
-<!--
-tags: [javascript, 3d, library, interface, software, make, animation, brand, threejs, logo]
-category: Brand
-version: "1.113"
-unicode: "f5f0"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f5f0"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-threejs"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8 22l-5 -19l19 5.5l-14 13.5" />
   <path d="M12.573 17.58l-6.152 -1.576l8.796 -9.466l1.914 6.64" />
   <path d="M12.573 17.58l-1.573 -6.58l6.13 2.179" />

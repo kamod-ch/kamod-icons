@@ -1,6 +1,18 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.0001 2L13.7001 4.3C13.1504 4.86079 12.8425 5.61474 12.8425 6.4C12.8425 7.18526 13.1504 7.93921 13.7001 8.5L15.5001 10.3C16.0609 10.8497 16.8148 11.1576 17.6001 11.1576C18.3854 11.1576 19.1393 10.8497 19.7001 10.3L22.0001 8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.9999 15L3.29992 3.30005C2.9008 3.6911 2.58373 4.15787 2.36726 4.673C2.1508 5.18813 2.03931 5.74128 2.03931 6.30005C2.03931 6.85881 2.1508 7.41196 2.36726 7.9271C2.58373 8.44223 2.9008 8.90899 3.29992 9.30005L10.5999 16.6C11.2999 17.3 12.5999 17.3 13.3999 16.6L14.9999 15ZM14.9999 15L21.9999 22" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2.1001 21.8L8.5001 15.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M19 5L12 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- @license lucide-static v1.23.0 - ISC -->
+<svg
+  class="lucide lucide-utensils-crossed"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8" />
+  <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7" />
+  <path d="m2.1 21.8 6.4-6.3" />
+  <path d="m19 5-7 7" />
 </svg>

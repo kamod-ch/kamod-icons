@@ -1,9 +1,3 @@
-<!--
-tags: [gesture, touch, press, phone, finger, index, forefinger, hand, mouse, click]
-category: Gestures
-version: "3.27"
-unicode: "100f1"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "100f1"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-hand-click-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8 13v-5" />
   <path d="M8.06 4.077a1.5 1.5 0 0 1 2.94 .423v2.5m0 4v1" />
   <path d="M12.063 8.065a1.5 1.5 0 0 1 1.937 1.435v.5" />

@@ -1,9 +1,3 @@
-<!--
-tags: [six, maths, value, quantity, calculate, calculation, total, amount, sum, order, digit]
-category: Numbers
-version: "1.38"
-unicode: "edf6"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "edf6"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-number-6"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8 16a4 4 0 1 0 8 0v-1a4 4 0 1 0 -8 0" />
   <path d="M16 8a4 4 0 1 0 -8 0v8" />
 </svg>

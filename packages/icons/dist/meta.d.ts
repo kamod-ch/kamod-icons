@@ -23,12 +23,12 @@ declare const iconSources: {
             readonly type: "npm";
             readonly package: "lucide-static";
             readonly versionPackage: "lucide";
-            readonly version: "1.22.0";
+            readonly version: "1.23.0";
             readonly repository: "https://github.com/lucide-icons/lucide";
             readonly license: "ISC";
             readonly note: "Lucide subset with legacy icon names used by shadcn/ui. There is no separate shadcn icons npm package.";
         };
-        readonly syncedAt: null;
+        readonly syncedAt: "2026-07-03";
         readonly iconCount: 877;
     };
     readonly lucide: {
@@ -38,12 +38,12 @@ declare const iconSources: {
             readonly type: "npm";
             readonly package: "lucide-static";
             readonly versionPackage: "lucide";
-            readonly version: "1.22.0";
+            readonly version: "1.23.0";
             readonly repository: "https://github.com/lucide-icons/lucide";
             readonly license: "ISC";
         };
-        readonly syncedAt: null;
-        readonly iconCount: 1744;
+        readonly syncedAt: "2026-07-03";
+        readonly iconCount: 1994;
     };
     readonly heroicons: {
         readonly label: "Heroicons";
@@ -57,7 +57,7 @@ declare const iconSources: {
             readonly repository: "https://github.com/tailwindlabs/heroicons";
             readonly license: "MIT";
         };
-        readonly syncedAt: "2026-07-01";
+        readonly syncedAt: "2026-07-03";
         readonly iconCount: 648;
     };
     readonly tabler: {
@@ -71,7 +71,7 @@ declare const iconSources: {
             readonly repository: "https://github.com/tabler/tabler-icons";
             readonly license: "MIT";
         };
-        readonly syncedAt: null;
+        readonly syncedAt: "2026-07-03";
         readonly iconCount: 6146;
     };
     readonly iconoir: {
@@ -85,7 +85,7 @@ declare const iconSources: {
             readonly repository: "https://github.com/iconoir-icons/iconoir";
             readonly license: "MIT";
         };
-        readonly syncedAt: null;
+        readonly syncedAt: "2026-07-03";
         readonly iconCount: 1671;
     };
 };

@@ -1,9 +1,3 @@
-<!--
-category: Development
-tags: [frontend, micro, modular, architecture, split, components, application, separate, independent, federation, modules, structure]
-unicode: "101ee"
-version: "3.39"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.39"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-microfrontends"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M7.5 7.5l4.5 4.5l4.5 -4.5" />
   <path d="M6 16v-4" />
   <path d="M18 16v-4" />

@@ -1,9 +1,3 @@
-<!--
-tags: [find, agenda, shopping, list, search, look, seek, query, browse, typography]
-category: Text
-version: "1.39"
-unicode: "eea9"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "eea9"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-list-search"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M11 15a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
   <path d="M18.5 18.5l2.5 2.5" />
   <path d="M4 6h16" />

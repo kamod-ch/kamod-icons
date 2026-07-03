@@ -1,9 +1,3 @@
-<!--
-tags: [alphabet, text, code, letter, character, typography, writing, z, glyph]
-category: Letters
-version: "1.12"
-unicode: "ec69"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,6 +8,8 @@ unicode: "ec69"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-letter-z"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M7 4h10l-10 16h10" />
 </svg>

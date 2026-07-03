@@ -1,9 +1,3 @@
-<!--
-category: System
-tags: [up, equipment, garden, climb, climbing, ladder, off, disabled, inactive]
-version: "1.66"
-unicode: "f14c"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f14c"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-ladder-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M8 3v1m0 4v13" />
   <path d="M16 3v9m0 4v5" />
   <path d="M8 14h6" />

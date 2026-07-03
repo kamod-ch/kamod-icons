@@ -1,9 +1,3 @@
-<!--
-tags: [throw, sport, goal, court, ball, team, athlete, competition, game, win]
-category: Sport
-version: "2.17"
-unicode: "fa68"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "fa68"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-play-handball"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M13 21l3.5 -2l-4.5 -4l2 -4.5" />
   <path d="M5 7l4 3l5 .5l4 2.5l2.5 3" />
   <path d="M4 20l5 -1l1.5 -2" />

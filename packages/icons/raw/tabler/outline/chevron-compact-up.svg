@@ -1,9 +1,3 @@
-<!--
-tags: [arrow, direction, upward, ascend, elevate, uplift, point, navigate, move, chevron]
-category: Arrows
-version: "2.24"
-unicode: "faf3"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,6 +8,8 @@ unicode: "faf3"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-compact-up"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 13l8 -3l8 3" />
 </svg>

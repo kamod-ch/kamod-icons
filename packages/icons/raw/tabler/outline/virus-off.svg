@@ -1,9 +1,3 @@
-<!--
-tags: [infection, illness, cell, infectious, health, virus, off, medical, wellness, disabled]
-category: Health
-version: "1.31"
-unicode: "ed66"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ed66"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-virus-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 3l18 18" />
   <path d="M8.469 8.46a5 5 0 0 0 7.058 7.084" />
   <path d="M16.913 12.936a5 5 0 0 0 -5.826 -5.853" />

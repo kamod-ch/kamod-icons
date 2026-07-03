@@ -1,9 +1,3 @@
-<!--
-tags: [construction, building, machine, lifting, crane, off, transport, travel, disabled, inactive]
-category: Vehicles
-version: "1.65"
-unicode: "f109"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f109"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-crane-off"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M6 21h6" />
   <path d="M9 21v-12" />
   <path d="M9 5v-2l-1 1" />

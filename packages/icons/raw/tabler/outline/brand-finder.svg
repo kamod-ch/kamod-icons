@@ -1,9 +1,3 @@
-<!--
-tags: [software, files, manager, macos, osx, programming, brand, finder, logo, company]
-category: Brand
-version: "1.72"
-unicode: "f218"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "f218"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-finder"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1l0 -14" />
   <path d="M7 8v1" />
   <path d="M17 8v1" />

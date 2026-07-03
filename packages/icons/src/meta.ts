@@ -28,12 +28,12 @@ export const iconSources = {
       "type": "npm",
       "package": "lucide-static",
       "versionPackage": "lucide",
-      "version": "1.22.0",
+      "version": "1.23.0",
       "repository": "https://github.com/lucide-icons/lucide",
       "license": "ISC",
       "note": "Lucide subset with legacy icon names used by shadcn/ui. There is no separate shadcn icons npm package."
     },
-    "syncedAt": null,
+    "syncedAt": "2026-07-03",
     "iconCount": 877
   },
   "lucide": {
@@ -43,12 +43,12 @@ export const iconSources = {
       "type": "npm",
       "package": "lucide-static",
       "versionPackage": "lucide",
-      "version": "1.22.0",
+      "version": "1.23.0",
       "repository": "https://github.com/lucide-icons/lucide",
       "license": "ISC"
     },
-    "syncedAt": null,
-    "iconCount": 1744
+    "syncedAt": "2026-07-03",
+    "iconCount": 1994
   },
   "heroicons": {
     "label": "Heroicons",
@@ -65,7 +65,7 @@ export const iconSources = {
       "repository": "https://github.com/tailwindlabs/heroicons",
       "license": "MIT"
     },
-    "syncedAt": "2026-07-01",
+    "syncedAt": "2026-07-03",
     "iconCount": 648
   },
   "tabler": {
@@ -82,7 +82,7 @@ export const iconSources = {
       "repository": "https://github.com/tabler/tabler-icons",
       "license": "MIT"
     },
-    "syncedAt": null,
+    "syncedAt": "2026-07-03",
     "iconCount": 6146
   },
   "iconoir": {
@@ -99,7 +99,7 @@ export const iconSources = {
       "repository": "https://github.com/iconoir-icons/iconoir",
       "license": "MIT"
     },
-    "syncedAt": null,
+    "syncedAt": "2026-07-03",
     "iconCount": 1671
   }
 } as const satisfies Record<string, IconSourceSet>;

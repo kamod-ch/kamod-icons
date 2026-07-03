@@ -1,9 +1,3 @@
-<!--
-tags: [text, alignment, position, align, right, typography, writing, font, character, word]
-category: Text
-version: "1.0"
-unicode: "ea0a"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "ea0a"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-align-right"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 6l16 0" />
   <path d="M10 12l10 0" />
   <path d="M6 18l14 0" />

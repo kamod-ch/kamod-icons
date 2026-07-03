@@ -1,9 +1,3 @@
-<!--
-tags: [internet, web, display, new, add, browser, plus, hardware, technology, more]
-category: Devices
-version: "1.51"
-unicode: "efd7"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ unicode: "efd7"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-browser-plus"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M4 8h16" />
   <path d="M12 20h-6a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v6" />
   <path d="M8 4v4" />

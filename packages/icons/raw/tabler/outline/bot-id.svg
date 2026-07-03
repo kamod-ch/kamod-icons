@@ -1,9 +1,3 @@
-<!--
-category: Development
-tags: [robot, identifier, automation, machine, authentication, identity, digital, user, account, recognition, verify, credentials]
-unicode: "101f6"
-version: "3.39"
--->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -14,7 +8,9 @@ version: "3.39"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-bot-id"
 >
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M7 10.5c0 -.828 .746 -1.5 1.667 -1.5h6.666c.92 0 1.667 .672 1.667 1.5v3c0 .828 -.746 1.5 -1.667 1.5h-6.666c-.92 0 -1.667 -.672 -1.667 -1.5v-3" />
   <path d="M12 7v2" />
   <path d="M10 12v.01" />
