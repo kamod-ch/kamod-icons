@@ -1,7 +1,23 @@
 <p align="center">
-  <img src=".github/assets/logo-kamod-icons-dark.svg#gh-light-mode-only" alt="kamod Icons" width="280" />
-  <img src=".github/assets/logo-kamod-icons-light.svg#gh-dark-mode-only" alt="kamod Icons" width="280" />
+  <img src=".github/assets/logo-kamod-icons-dark.svg#gh-light-mode-only" alt="Kamod Icons" width="280" />
+  <img src=".github/assets/logo-kamod-icons-light.svg#gh-dark-mode-only" alt="Kamod Icons" width="280" />
 </p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@kamod/icons"><img src="https://img.shields.io/npm/v/@kamod/icons" alt="npm version" /></a>
+  <a href="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml"><img src="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml/badge.svg" alt="Docs deploy" /></a>
+  <a href="https://github.com/kamod-ch/kamod-icons/stargazers"><img src="https://img.shields.io/github/stars/kamod-ch/kamod-icons?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/kamod-ch/kamod-icons/blob/main/LICENSE"><img src="https://img.shields.io/github/license/kamod-ch/kamod-icons" alt="license" /></a>
+</p>
+
+<p align="center">
+  <strong><a href="https://kamod-ch.github.io/kamod-icons/">Live docs</a></strong> ·
+  <strong><a href="https://www.npmjs.com/package/@kamod/icons">npm</a></strong> ·
+  <strong><a href="https://github.com/kamod-ch/kamod-icons">GitHub</a></strong> ·
+  <strong><a href="https://github.com/kamod-ch/kamod-icons/issues">Issues</a></strong>
+</p>
+
+> If Kamod Icons saves you time, **[star the repo](https://github.com/kamod-ch/kamod-icons)** — it helps others discover the project.
 
 # Kamod Icons
 
@@ -21,31 +37,31 @@ docs/             # PreactPress documentation site
 Install dependencies from the repository root:
 
 ```bash
-npm install
+pnpm install
 ```
 
-The root package uses npm workspaces for `packages/*` and `docs`.
+The root package uses pnpm workspaces for `packages/*` and `docs`.
 
 ## Commands
 
 ```bash
-npm run build          # build icons, then build the PreactPress docs
-npm run build:icons    # build only @kamod/icons
-npm run build:docs     # build only the docs site
-npm run dev:docs       # start PreactPress locally
-npm run dev:icons      # watch-build the icon package
-npm run icons:sync       # copy upstream SVGs and update icon-sources.json
-npm run icons:generate   # generate Preact components from raw SVGs
-npm run check:docs     # run PreactPress checks
-npm run preview:docs   # preview the built docs
-npm run clean          # remove icon dist and docs dist
+pnpm run build          # build icons, then build the PreactPress docs
+pnpm run build:icons    # build only @kamod/icons
+pnpm run build:docs     # build only the docs site
+pnpm run dev:docs       # start PreactPress locally
+pnpm run dev:icons      # watch-build the icon package
+pnpm run icons:sync     # copy upstream SVGs and update icon-sources.json
+pnpm run icons:generate # generate Preact components from raw SVGs
+pnpm run check:docs     # run PreactPress checks
+pnpm run preview:docs   # preview the built docs
+pnpm run clean          # remove icon dist and docs dist
 ```
 
 ## Local docs
 
 ```bash
-npm install
-npm run dev:docs
+pnpm install
+pnpm run dev:docs
 ```
 
 The docs live in `docs/icons/` and are configured in `docs/.preactpress/config.ts`.
@@ -53,13 +69,13 @@ The docs live in `docs/icons/` and are configured in `docs/.preactpress/config.t
 ## Build everything
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 This runs:
 
-1. `npm run build --workspace @kamod/icons`
-2. `npm run build --workspace @kamod/icons-docs`
+1. `pnpm run build:icons`
+2. `pnpm run build:docs`
 
 The docs build depends on the icon package build because the package exports point to `packages/icons/dist/*`.
 
@@ -67,8 +83,8 @@ The docs build depends on the icon package build because the package exports poi
 
 ```bash
 cp ~/Downloads/figma-icons/*.svg packages/icons/raw/shadcn/
-npm run icons:generate
-npm run build:icons
+pnpm run icons:generate
+pnpm run build:icons
 ```
 
 File names are converted to PascalCase with an `Icon` suffix, e.g. `arrow-left.svg` becomes `ArrowLeftIcon`.
@@ -76,16 +92,16 @@ File names are converted to PascalCase with an `Icon` suffix, e.g. `arrow-left.s
 ## Edit the documentation
 
 - Navigation: `docs/.preactpress/config.ts`
-- Icons overview page: `docs/icons/index.md`
+- Icons overview page: `docs/icons/index.mdx`
 - Home page component: `docs/components/IconsHome.tsx`
-- Preview grid: `docs/components/IconGrid.tsx`
+- Interactive catalog: `docs/components/IconCatalogBrowser.tsx`
 - Visual styling: `docs/components/icons-docs.css`
 
 ---
 
 <div align="center">
 
-Built by Klaus Zahiragic <watzak> | Kamod GmbH
+Built by Klaus Zahiragic &lt;watzak&gt; | Kamod GmbH
 
 <a href="https://www.kamod.ch">Website</a> ·
 <a href="https://www.linkedin.com/in/klauszahiragic/">LinkedIn</a>
