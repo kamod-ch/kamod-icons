@@ -5,6 +5,8 @@ export default defineConfig({
   site: {
     title: "Kamod Icons",
     description: "Icons that make Preact interfaces easier to understand.",
+    url: "https://kamod-ch.github.io",
+    base: "/kamod-icons/",
   },
   markdown: {
     html: false,

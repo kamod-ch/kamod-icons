@@ -14,7 +14,7 @@ export default function LandingHero() {
           what you need, and keep visual language consistent across apps, docs, and design systems.
         </p>
         <div class="ki-hero-actions">
-          <a class="ki-btn ki-btn-primary" href="/icons/installation">
+          <a class="ki-btn ki-btn-primary" href="./icons/installation">
             Start in 2 minutes
           </a>
           <a class="ki-btn ki-btn-secondary" href="#icon-browser">

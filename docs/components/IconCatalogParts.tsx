@@ -3,6 +3,12 @@ import type { CatalogIcon } from "./iconCatalog.ts";
 
 const svgCache = new Map<string, string>();
 
+function withBase(path: string): string {
+  if (/^https?:\/\//.test(path)) return path;
+  const base = import.meta.env.BASE_URL || "/";
+  return `${base.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
+}
+
 type IconSvgProps = {
   icon: CatalogIcon;
   size: number;
@@ -49,12 +55,13 @@ export default function IconSvg({ icon, size, stroke, color, strokeEnabled }: Ic
 
     async function loadSvg() {
       try {
-        let svgText = svgCache.get(icon.assetPath);
+        const assetUrl = withBase(icon.assetPath);
+        let svgText = svgCache.get(assetUrl);
         if (!svgText) {
-          const response = await fetch(icon.assetPath);
+          const response = await fetch(assetUrl);
           if (!response.ok) throw new Error("SVG fetch failed");
           svgText = await response.text();
-          svgCache.set(icon.assetPath, svgText);
+          svgCache.set(assetUrl, svgText);
         }
 
         if (!cancelled) {

@@ -27,9 +27,14 @@ export type IconCatalog = {
 
 let catalogPromise: Promise<IconCatalog> | null = null;
 
+function withBase(path: string): string {
+  const base = import.meta.env.BASE_URL || "/";
+  return `${base.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
+}
+
 export function loadIconCatalog(): Promise<IconCatalog> {
   if (!catalogPromise) {
-    catalogPromise = fetch("/data/icon-catalog.json").then((response) => {
+    catalogPromise = fetch(withBase("data/icon-catalog.json")).then((response) => {
       if (!response.ok) {
         throw new Error(`Failed to load icon catalog (${response.status})`);
       }
