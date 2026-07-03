@@ -145,6 +145,11 @@ const Layout: FunctionalComponent<LayoutProps> = ({
       })
     : undefined;
 
+  function closeMobileMenu(event: Event) {
+    const link = event.currentTarget as HTMLAnchorElement;
+    link.closest("details")?.removeAttribute("open");
+  }
+
   const content = MdxComponent ? (
     <MdxComponent components={mdxComponents} />
   ) : (
@@ -203,9 +208,35 @@ const Layout: FunctionalComponent<LayoutProps> = ({
                 <path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 3a9 9 0 1 0 0 18" />
               </svg>
             </button>
-            <a class="kiw-menu-button" href="#kiw-docs-menu">
-              Menu
-            </a>
+            <details class="kiw-mobile-menu">
+              <summary class="kiw-menu-button">Menu</summary>
+              <div class="kiw-mobile-menu-panel">
+                <nav aria-label="Mobile navigation">
+                  {(themeConfig.nav ?? []).map((item: NavItem) =>
+                    item.link ? (
+                      <a
+                        key={item.link}
+                        class={isActive(routePath, item.link) ? "active" : ""}
+                        href={withBase(site.base, item.link)}
+                        aria-current={isActive(routePath, item.link) ? "page" : undefined}
+                        onClick={closeMobileMenu}
+                      >
+                        {item.text}
+                      </a>
+                    ) : item.items?.length ? (
+                      item.items.map((child) =>
+                        child.link ? (
+                          <a href={withBase(site.base, child.link)} key={child.link} onClick={closeMobileMenu}>
+                            {child.text}
+                          </a>
+                        ) : null,
+                      )
+                    ) : null,
+                  )}
+                </nav>
+
+              </div>
+            </details>
           </div>
         </div>
       </header>
@@ -214,6 +245,9 @@ const Layout: FunctionalComponent<LayoutProps> = ({
         {!isHome ? (
           <aside class="kiw-sidebar" id="kiw-docs-menu" aria-label="Documentation navigation">
             <div class="kiw-panel">
+              <a class="kiw-menu-close" href="#content" aria-label="Close documentation menu">
+                ×
+              </a>
               {sidebar.map((group, index) => (
                 <section class="kiw-sidebar-group" key={`${group.text ?? "group"}:${index}`}>
                   {group.text ? <h2>{group.text}</h2> : null}
