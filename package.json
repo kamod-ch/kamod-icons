@@ -1,6 +1,5 @@
 {
   "name": "kamod-icons",
-  "private": true,
   "version": "1.0.0",
   "description": "ightweight, tree-shakeable SVG icon library for Preact, Kamod UI and modern frontend apps.",
   "keywords": [
