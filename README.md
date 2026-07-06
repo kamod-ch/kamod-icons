@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@kamod/icons"><img src="https://img.shields.io/npm/v/%40kamod%2Ficons" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/@kamod-ch/icons"><img src="https://img.shields.io/npm/v/%40kamod-ch%2Ficons" alt="npm version" /></a>
   <a href="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml"><img src="https://github.com/kamod-ch/kamod-icons/actions/workflows/gh-pages.yml/badge.svg" alt="Docs deploy" /></a>
   <a href="https://github.com/kamod-ch/kamod-icons/stargazers"><img src="https://img.shields.io/github/stars/kamod-ch/kamod-icons?style=social" alt="GitHub stars" /></a>
   <a href="https://github.com/kamod-ch/kamod-icons/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" /></a>
@@ -12,7 +12,7 @@
 
 <p align="center">
   <strong><a href="https://kamod-ch.github.io/kamod-icons/">Live docs</a></strong> ·
-  <strong><a href="https://www.npmjs.com/package/@kamod/icons">npm</a></strong> ·
+  <strong><a href="https://www.npmjs.com/package/@kamod-ch/icons">npm</a></strong> ·
   <strong><a href="https://github.com/kamod-ch/kamod-icons">GitHub</a></strong> ·
   <strong><a href="https://github.com/kamod-ch/kamod-icons/issues">Issues</a></strong>
 </p>
