@@ -41,6 +41,7 @@
     "packages/*"
   ],
   "scripts": {
+    "prepublishOnly": "node -e \"console.error('Do not publish the workspace root. Use: pnpm publish:core'); process.exit(1)\"",
     "icons:sync": "pnpm --filter @kamod-ch/icons icons:sync",
     "icons:generate": "pnpm --filter @kamod-ch/icons icons:generate",
     "build:icons": "pnpm --filter @kamod-ch/icons build",
@@ -51,6 +52,8 @@
     "check:docs": "pnpm --filter @kamod-ch/icons-docs check",
     "preview:docs": "pnpm --filter @kamod-ch/icons-docs preview",
     "clean": "pnpm --filter @kamod-ch/icons clean && rm -rf packages/docs/dist",
+    "pack:core": "pnpm --filter @kamod-ch/icons exec npm pack --dry-run",
+    "publish:core": "pnpm --filter @kamod-ch/icons publish --access public",
     "release": "node ./scripts/release.mjs patch",
     "release:minor": "node ./scripts/release.mjs minor",
     "release:major": "node ./scripts/release.mjs major",
