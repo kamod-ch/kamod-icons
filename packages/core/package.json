@@ -1,6 +1,6 @@
 {
   "name": "@kamod/icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight, tree-shakeable SVG icon library for Preact apps.",
   "license": "MIT",
   "homepage": "https://kamod-ch.github.io/kamod-icons/",
