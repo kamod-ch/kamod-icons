@@ -38,8 +38,7 @@
   "type": "module",
   "packageManager": "pnpm@11.8.0",
   "workspaces": [
-    "packages/*",
-    "docs"
+    "packages/*"
   ],
   "scripts": {
     "icons:sync": "pnpm --filter @kamod/icons icons:sync",
@@ -51,6 +50,6 @@
     "dev:docs": "pnpm --filter @kamod/icons-docs dev",
     "check:docs": "pnpm --filter @kamod/icons-docs check",
     "preview:docs": "pnpm --filter @kamod/icons-docs preview",
-    "clean": "pnpm --filter @kamod/icons clean && rm -rf docs/dist"
+    "clean": "pnpm --filter @kamod/icons clean && rm -rf packages/docs/dist"
   }
 }

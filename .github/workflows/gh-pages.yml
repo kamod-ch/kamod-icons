@@ -41,7 +41,7 @@ jobs:
         run: pnpm run build:docs
 
       - name: Add .nojekyll
-        run: touch docs/dist/.nojekyll
+        run: touch packages/docs/dist/.nojekyll
 
       - name: Add Matomo image tracker
         run: |
@@ -54,7 +54,7 @@ jobs:
 
           <!-- End Matomo -->'''
 
-          for html_file in Path('docs/dist').rglob('*.html'):
+          for html_file in Path('packages/docs/dist').rglob('*.html'):
               html = html_file.read_text(encoding='utf-8')
               if 'matomo.kamod.ch/matomo.php?idsite=8' in html:
                   continue
@@ -68,7 +68,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: docs/dist
+          path: packages/docs/dist
 
   deploy:
     needs: build

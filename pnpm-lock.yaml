@@ -8,26 +8,7 @@ importers:
 
   .: {}
 
-  docs:
-    dependencies:
-      '@kamod/icons':
-        specifier: file:../packages/icons
-        version: link:../packages/icons
-      preact:
-        specifier: '>=10'
-        version: 10.29.3
-    devDependencies:
-      '@kamod-ch/preactpress':
-        specifier: ^2.0.0
-        version: 2.0.0(@babel/core@7.29.7)(@types/node@26.1.0)(esbuild@0.28.1)(rollup@4.62.2)(tsx@4.22.4)
-      tsx:
-        specifier: ^4.22.4
-        version: 4.22.4
-      typescript:
-        specifier: ~5.9.3
-        version: 5.9.3
-
-  packages/icons:
+  packages/core:
     devDependencies:
       '@heroicons/react':
         specifier: 2.2.0
@@ -59,6 +40,25 @@ importers:
       tsup:
         specifier: ^8.5.1
         version: 8.5.1(postcss@8.5.16)(tsx@4.22.4)(typescript@5.9.3)
+      tsx:
+        specifier: ^4.22.4
+        version: 4.22.4
+      typescript:
+        specifier: ~5.9.3
+        version: 5.9.3
+
+  packages/docs:
+    dependencies:
+      '@kamod/icons':
+        specifier: file:../core
+        version: link:../core
+      preact:
+        specifier: '>=10'
+        version: 10.29.3
+    devDependencies:
+      '@kamod-ch/preactpress':
+        specifier: ^2.0.0
+        version: 2.0.0(@babel/core@7.29.7)(@types/node@26.1.0)(esbuild@0.28.1)(rollup@4.62.2)(tsx@4.22.4)
       tsx:
         specifier: ^4.22.4
         version: 4.22.4

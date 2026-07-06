@@ -28,8 +28,8 @@ Monorepo for `@kamod/icons` and the PreactPress documentation site.
 ## Structure
 
 ```txt
-packages/icons/   # @kamod/icons package, generator, raw SVGs and source icons
-docs/             # PreactPress documentation site
+packages/core/   # @kamod/icons package, generator, raw SVGs and source icons
+packages/docs/     # PreactPress documentation site
 ```
 
 ## Install
@@ -64,7 +64,7 @@ pnpm install
 pnpm run dev:docs
 ```
 
-The docs live in `docs/icons/` and are configured in `docs/.preactpress/config.ts`.
+The docs live in `packages/docs/icons/` and are configured in `packages/docs/.preactpress/config.ts`.
 
 ## Build everything
 
@@ -77,7 +77,7 @@ This runs:
 1. `pnpm run build:icons`
 2. `pnpm run build:docs`
 
-The docs build depends on the icon package build because the package exports point to `packages/icons/dist/*`.
+The docs build depends on the icon package build because the package exports point to `packages/core/dist/*`.
 
 ---
 

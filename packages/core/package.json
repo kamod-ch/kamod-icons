@@ -1,0 +1,125 @@
+{
+  "name": "@kamod/icons",
+  "version": "1.0.0",
+  "description": "Lightweight, tree-shakeable SVG icon library for Preact apps.",
+  "license": "MIT",
+  "homepage": "https://kamod-ch.github.io/kamod-icons/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamod-ch/kamod-icons.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/kamod-ch/kamod-icons/issues"
+  },
+  "keywords": [
+    "icons",
+    "preact",
+    "svg",
+    "lucide",
+    "heroicons",
+    "tabler",
+    "iconoir",
+    "shadcn",
+    "svg-icons",
+    "icon-library",
+    "typescript",
+    "tree-shaking",
+    "tree-shakeable",
+    "preact-components",
+    "ui-components",
+    "design-system",
+    "kamod-ui",
+    "kamod-icons",
+    "preactpress",
+    "figma-icons",
+    "npm-package",
+    "monorepo",
+    "frontend",
+    "webdev",
+    "developer-tools",
+    "shadcn"
+  ],
+  "packageManager": "pnpm@11.8.0",
+  "type": "module",
+  "sideEffects": false,
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "ATTRIBUTION.md",
+    "LICENSE",
+    "icon-sources.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./meta": {
+      "types": "./dist/meta.d.ts",
+      "import": "./dist/meta.js"
+    },
+    "./shadcn": {
+      "types": "./dist/sets/shadcn/index.d.ts",
+      "import": "./dist/sets/shadcn/index.js"
+    },
+    "./lucide": {
+      "types": "./dist/sets/lucide/index.d.ts",
+      "import": "./dist/sets/lucide/index.js"
+    },
+    "./heroicons/outline": {
+      "types": "./dist/sets/heroicons/outline/index.d.ts",
+      "import": "./dist/sets/heroicons/outline/index.js"
+    },
+    "./heroicons/solid": {
+      "types": "./dist/sets/heroicons/solid/index.d.ts",
+      "import": "./dist/sets/heroicons/solid/index.js"
+    },
+    "./tabler/outline": {
+      "types": "./dist/sets/tabler/outline/index.d.ts",
+      "import": "./dist/sets/tabler/outline/index.js"
+    },
+    "./tabler/filled": {
+      "types": "./dist/sets/tabler/filled/index.d.ts",
+      "import": "./dist/sets/tabler/filled/index.js"
+    },
+    "./iconoir/regular": {
+      "types": "./dist/sets/iconoir/regular/index.d.ts",
+      "import": "./dist/sets/iconoir/regular/index.js"
+    },
+    "./iconoir/solid": {
+      "types": "./dist/sets/iconoir/solid/index.d.ts",
+      "import": "./dist/sets/iconoir/solid/index.js"
+    }
+  },
+  "scripts": {
+    "icons:sync": "tsx scripts/sync-icons.ts",
+    "icons:generate": "tsx scripts/generate-icons.ts",
+    "icons:meta": "tsx scripts/generate-meta.ts",
+    "build": "pnpm run icons:meta && tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "preact": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@heroicons/react": "2.2.0",
+    "@tabler/icons": "3.44.0",
+    "@types/node": "^26.1.0",
+    "heroicons": "2.2.0",
+    "iconoir": "7.11.1",
+    "lucide": "1.23.0",
+    "lucide-static": "1.23.0",
+    "preact": "^10.29.3",
+    "svgo": "^4.0.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.4",
+    "typescript": "~5.9.3"
+  }
+}
