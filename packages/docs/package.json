@@ -1,5 +1,5 @@
 {
-  "name": "@kamod/icons-docs",
+  "name": "@kamod-ch/icons-docs",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,7 +12,7 @@
     "preview": "preactpress preview"
   },
   "dependencies": {
-    "@kamod/icons": "file:../core",
+    "@kamod-ch/icons": "file:../core",
     "preact": ">=10"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 ---
 title: Usage
-description: Import, alias, style, and compose @kamod/icons components in Preact.
+description: Import, alias, style, and compose @kamod-ch/icons components in Preact.
 ---
 
 Icons are typed Preact components. They accept `class`, `style`, `size`, `title`, and standard SVG props.
@@ -10,7 +10,7 @@ Icons are typed Preact components. They accept `class`, `style`, `size`, `title`
 Use explicit set imports in applications, component libraries, and documentation examples:
 
 ```tsx
-import { SearchIcon } from "@kamod/icons/shadcn";
+import { SearchIcon } from "@kamod-ch/icons/shadcn";
 ```
 
 This makes the source clear and avoids surprises when more sets are added.
@@ -20,7 +20,7 @@ This makes the source clear and avoids surprises when more sets are added.
 The root import points to the preferred default set. Today that is `shadcn`:
 
 ```tsx
-import { SearchIcon } from "@kamod/icons";
+import { SearchIcon } from "@kamod-ch/icons";
 ```
 
 Use it for quick prototypes or examples where the default set is acceptable.
@@ -30,8 +30,8 @@ Use it for quick prototypes or examples where the default set is acceptable.
 Different sets can export the same component name. Alias at import time when you compare or combine sets:
 
 ```tsx
-import { SearchIcon as ShadcnSearchIcon } from "@kamod/icons/shadcn";
-import { SearchIcon as LucideSearchIcon } from "@kamod/icons/lucide";
+import { SearchIcon as ShadcnSearchIcon } from "@kamod-ch/icons/shadcn";
+import { SearchIcon as LucideSearchIcon } from "@kamod-ch/icons/lucide";
 ```
 
 ## Style with classes or props

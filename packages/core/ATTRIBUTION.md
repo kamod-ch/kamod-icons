@@ -1,6 +1,6 @@
 # Attribution
 
-`@kamod/icons` vendors SVG sources from upstream icon libraries and converts them into Preact components. The table below lists the upstream packages, versions, and licenses tracked in `icon-sources.json`.
+`@kamod-ch/icons` vendors SVG sources from upstream icon libraries and converts them into Preact components. The table below lists the upstream packages, versions, and licenses tracked in `icon-sources.json`.
 
 | Set | Upstream package | Version | License | Repository |
 | --- | --- | --- | --- | --- |
@@ -12,7 +12,7 @@
 
 ## shadcn/ui note
 
-There is no separate npm package called "shadcn icons". The `@kamod/icons/shadcn` set is a Lucide-based subset with legacy icon names commonly used in shadcn/ui projects.
+There is no separate npm package called "shadcn icons". The `@kamod-ch/icons/shadcn` set is a Lucide-based subset with legacy icon names commonly used in shadcn/ui projects.
 
 ## Sync workflow
 
@@ -27,9 +27,9 @@ npm run build
 Programmatic access to the tracked metadata:
 
 ```ts
-import { iconSources } from "@kamod/icons/meta";
+import { iconSources } from "@kamod-ch/icons/meta";
 ```
 
 ## License
 
-The `@kamod/icons` package code is part of the Kamod project. Upstream icon libraries remain under their respective licenses listed above.
+The `@kamod-ch/icons` package code is part of the Kamod project. Upstream icon libraries remain under their respective licenses listed above.

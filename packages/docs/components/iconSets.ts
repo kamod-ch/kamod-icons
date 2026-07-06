@@ -12,7 +12,7 @@ import {
   UserIcon as ShadcnUserIcon,
   XIcon as ShadcnXIcon,
   ZapIcon as ShadcnZapIcon,
-} from "@kamod/icons/shadcn";
+} from "@kamod-ch/icons/shadcn";
 import {
   BadgeAlertIcon as LucideBadgeAlertIcon,
   BellIcon as LucideBellIcon,
@@ -26,7 +26,7 @@ import {
   UserIcon as LucideUserIcon,
   XIcon as LucideXIcon,
   ZapIcon as LucideZapIcon,
-} from "@kamod/icons/lucide";
+} from "@kamod-ch/icons/lucide";
 import {
   BellIcon as HeroBellIcon,
   CalendarIcon as HeroCalendarIcon,
@@ -40,7 +40,7 @@ import {
   Cog6ToothIcon as HeroCog6ToothIcon,
   Bars3Icon as HeroBars3Icon,
   BoltIcon as HeroBoltIcon,
-} from "@kamod/icons/heroicons/outline";
+} from "@kamod-ch/icons/heroicons/outline";
 import {
   AlertCircleIcon as TablerAlertCircleIcon,
   BellIcon as TablerBellIcon,
@@ -54,7 +54,7 @@ import {
   UserIcon as TablerUserIcon,
   XIcon as TablerXIcon,
   BoltIcon as TablerBoltIcon,
-} from "@kamod/icons/tabler/outline";
+} from "@kamod-ch/icons/tabler/outline";
 import {
   BellIcon as IconoirBellIcon,
   CalendarIcon as IconoirCalendarIcon,
@@ -68,8 +68,8 @@ import {
   WarningCircleIcon as IconoirWarningCircleIcon,
   XIcon as IconoirXIcon,
   FlashIcon as IconoirFlashIcon,
-} from "@kamod/icons/iconoir/regular";
-import { iconSources, type IconSourceName } from "@kamod/icons/meta";
+} from "@kamod-ch/icons/iconoir/regular";
+import { iconSources, type IconSourceName } from "@kamod-ch/icons/meta";
 
 export type IconComponent = ComponentType<{ size?: number; class?: string; "aria-hidden"?: string | boolean }>;
 export type IconItem = [name: string, Icon: IconComponent];
@@ -86,7 +86,7 @@ export const iconSets: IconSet[] = [
   {
     id: "shadcn",
     label: "shadcn",
-    importPath: "@kamod/icons/shadcn",
+    importPath: "@kamod-ch/icons/shadcn",
     description: "Balanced UI icons with a crisp app-ready style.",
     iconCount: iconSources.shadcn.iconCount,
     icons: [
@@ -107,7 +107,7 @@ export const iconSets: IconSet[] = [
   {
     id: "lucide",
     label: "Lucide",
-    importPath: "@kamod/icons/lucide",
+    importPath: "@kamod-ch/icons/lucide",
     description: "Clean, lightweight line icons for modern product interfaces.",
     iconCount: iconSources.lucide.iconCount,
     icons: [
@@ -128,7 +128,7 @@ export const iconSets: IconSet[] = [
   {
     id: "heroicons",
     label: "Heroicons",
-    importPath: "@kamod/icons/heroicons/outline",
+    importPath: "@kamod-ch/icons/heroicons/outline",
     description: "Friendly outline icons that work well in dashboards and docs.",
     iconCount: iconSources.heroicons.iconCount,
     icons: [
@@ -149,7 +149,7 @@ export const iconSets: IconSet[] = [
   {
     id: "tabler",
     label: "Tabler",
-    importPath: "@kamod/icons/tabler/outline",
+    importPath: "@kamod-ch/icons/tabler/outline",
     description: "A broad, practical set for product screens, tools, and admin UIs.",
     iconCount: iconSources.tabler.iconCount,
     icons: [
@@ -170,7 +170,7 @@ export const iconSets: IconSet[] = [
   {
     id: "iconoir",
     label: "Iconoir",
-    importPath: "@kamod/icons/iconoir/regular",
+    importPath: "@kamod-ch/icons/iconoir/regular",
     description: "Distinctive geometric icons for expressive product moments.",
     iconCount: iconSources.iconoir.iconCount,
     icons: [

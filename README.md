@@ -21,14 +21,14 @@
 
 # Kamod Icons
 
-Monorepo for `@kamod/icons` and the PreactPress documentation site.
+Monorepo for `@kamod-ch/icons` and the PreactPress documentation site.
 
-`@kamod/icons` is a lightweight, tree-shakeable icon package for Preact, Kamod UI, PreactPress and other modern Preact apps. Icons are exported as typed Preact components and are grouped by stable subpath exports such as `@kamod/icons/shadcn`.
+`@kamod-ch/icons` is a lightweight, tree-shakeable icon package for Preact, Kamod UI, PreactPress and other modern Preact apps. Icons are exported as typed Preact components and are grouped by stable subpath exports such as `@kamod-ch/icons/shadcn`.
 
 ## Structure
 
 ```txt
-packages/core/   # @kamod/icons package, generator, raw SVGs and source icons
+packages/core/   # @kamod-ch/icons package, generator, raw SVGs and source icons
 packages/docs/     # PreactPress documentation site
 ```
 
@@ -46,7 +46,7 @@ The root package uses pnpm workspaces for `packages/*` and `docs`.
 
 ```bash
 pnpm run build          # build icons, then build the PreactPress docs
-pnpm run build:icons    # build only @kamod/icons
+pnpm run build:icons    # build only @kamod-ch/icons
 pnpm run build:docs     # build only the docs site
 pnpm run dev:docs       # start PreactPress locally
 pnpm run dev:icons      # watch-build the icon package

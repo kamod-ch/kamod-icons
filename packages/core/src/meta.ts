@@ -23,7 +23,7 @@ export type IconSourceSet = {
 export const iconSources = {
   "shadcn": {
     "label": "shadcn/ui",
-    "exportPath": "@kamod/icons/shadcn",
+    "exportPath": "@kamod-ch/icons/shadcn",
     "upstream": {
       "type": "npm",
       "package": "lucide-static",
@@ -38,7 +38,7 @@ export const iconSources = {
   },
   "lucide": {
     "label": "Lucide",
-    "exportPath": "@kamod/icons/lucide",
+    "exportPath": "@kamod-ch/icons/lucide",
     "upstream": {
       "type": "npm",
       "package": "lucide-static",
@@ -52,7 +52,7 @@ export const iconSources = {
   },
   "heroicons": {
     "label": "Heroicons",
-    "exportPath": "@kamod/icons/heroicons/{variant}",
+    "exportPath": "@kamod-ch/icons/heroicons/{variant}",
     "variants": [
       "outline",
       "solid"
@@ -70,7 +70,7 @@ export const iconSources = {
   },
   "tabler": {
     "label": "Tabler Icons",
-    "exportPath": "@kamod/icons/tabler/{variant}",
+    "exportPath": "@kamod-ch/icons/tabler/{variant}",
     "variants": [
       "outline",
       "filled"
@@ -87,7 +87,7 @@ export const iconSources = {
   },
   "iconoir": {
     "label": "Iconoir",
-    "exportPath": "@kamod/icons/iconoir/{variant}",
+    "exportPath": "@kamod-ch/icons/iconoir/{variant}",
     "variants": [
       "regular",
       "solid"

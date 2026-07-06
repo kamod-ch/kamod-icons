@@ -16,14 +16,14 @@
   <strong><a href="https://github.com/kamod-ch/kamod-icons/issues">Issues</a></strong>
 </p>
 
-# @kamod/icons
+# @kamod-ch/icons
 
 Tree-shakeable Preact icon components for Kamod. The package contains multiple independent icon sets (`shadcn`, `lucide`, `heroicons`, `tabler`, `iconoir`) via stable subpath exports.
 
 ## Installation
 
 ```bash
-npm install @kamod/icons preact
+npm install @kamod-ch/icons preact
 ```
 
 `preact` is a peer dependency. There is no React runtime dependency.
@@ -35,7 +35,7 @@ npm install @kamod/icons preact
 The root export currently points to the `shadcn` set:
 
 ```tsx
-import { SearchIcon } from "@kamod/icons";
+import { SearchIcon } from "@kamod-ch/icons";
 
 export function Example() {
   return <SearchIcon size={20} />;
@@ -45,8 +45,8 @@ export function Example() {
 ### Explicit icon set
 
 ```tsx
-import { SearchIcon } from "@kamod/icons/shadcn";
-import { SearchIcon as LucideSearchIcon } from "@kamod/icons/lucide";
+import { SearchIcon } from "@kamod-ch/icons/shadcn";
+import { SearchIcon as LucideSearchIcon } from "@kamod-ch/icons/lucide";
 ```
 
 ### Heroicons (outline and solid)
@@ -54,8 +54,8 @@ import { SearchIcon as LucideSearchIcon } from "@kamod/icons/lucide";
 Heroicons are split into separate subpath exports, matching the upstream `outline` / `solid` layout:
 
 ```tsx
-import { MagnifyingGlassIcon } from "@kamod/icons/heroicons/outline";
-import { MagnifyingGlassIcon as MagnifyingGlassSolidIcon } from "@kamod/icons/heroicons/solid";
+import { MagnifyingGlassIcon } from "@kamod-ch/icons/heroicons/outline";
+import { MagnifyingGlassIcon as MagnifyingGlassSolidIcon } from "@kamod-ch/icons/heroicons/solid";
 ```
 
 Raw SVGs live in variant subfolders:
@@ -68,8 +68,8 @@ raw/heroicons/solid/magnifying-glass.svg
 ### Tabler (outline and filled)
 
 ```tsx
-import { SearchIcon } from "@kamod/icons/tabler/outline";
-import { SearchIcon as SearchFilledIcon } from "@kamod/icons/tabler/filled";
+import { SearchIcon } from "@kamod-ch/icons/tabler/outline";
+import { SearchIcon as SearchFilledIcon } from "@kamod-ch/icons/tabler/filled";
 ```
 
 Raw SVGs:
@@ -82,8 +82,8 @@ raw/tabler/filled/search.svg
 ### Iconoir (regular and solid)
 
 ```tsx
-import { SearchIcon } from "@kamod/icons/iconoir/regular";
-import { AlarmIcon as AlarmSolidIcon } from "@kamod/icons/iconoir/solid";
+import { SearchIcon } from "@kamod-ch/icons/iconoir/regular";
+import { AlarmIcon as AlarmSolidIcon } from "@kamod-ch/icons/iconoir/solid";
 ```
 
 Raw SVGs:
@@ -96,7 +96,7 @@ raw/iconoir/solid/alarm.svg
 ### Tailwind classes
 
 ```tsx
-import { SearchIcon } from "@kamod/icons/shadcn";
+import { SearchIcon } from "@kamod-ch/icons/shadcn";
 
 export function Example() {
   return (
@@ -158,7 +158,7 @@ The package already contains raw and source folders plus subpath exports for:
 - `tabler`
 - `iconoir`
 
-To add icons to one of these sets, place SVG files in `raw/<set-name>/` and run the generator. Heroicons use variant subfolders (`raw/heroicons/outline/`, `raw/heroicons/solid/`) and export via `@kamod/icons/heroicons/outline` and `@kamod/icons/heroicons/solid`. Tabler uses `outline` / `filled`; Iconoir uses `regular` / `solid`. To add a brand-new set later, add:
+To add icons to one of these sets, place SVG files in `raw/<set-name>/` and run the generator. Heroicons use variant subfolders (`raw/heroicons/outline/`, `raw/heroicons/solid/`) and export via `@kamod-ch/icons/heroicons/outline` and `@kamod-ch/icons/heroicons/solid`. Tabler uses `outline` / `filled`; Iconoir uses `regular` / `solid`. To add a brand-new set later, add:
 
 1. `raw/<set-name>/`
 2. `src/sets/<set-name>/index.ts`
@@ -186,7 +186,7 @@ npm run icons:sync -- --set heroicons
 Read tracked metadata at runtime:
 
 ```tsx
-import { iconSources } from "@kamod/icons/meta";
+import { iconSources } from "@kamod-ch/icons/meta";
 
 console.log(iconSources.heroicons.upstream.version);
 ```

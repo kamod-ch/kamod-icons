@@ -2,7 +2,7 @@
 var iconSources = {
   "shadcn": {
     "label": "shadcn/ui",
-    "exportPath": "@kamod/icons/shadcn",
+    "exportPath": "@kamod-ch/icons/shadcn",
     "upstream": {
       "type": "npm",
       "package": "lucide-static",
@@ -17,7 +17,7 @@ var iconSources = {
   },
   "lucide": {
     "label": "Lucide",
-    "exportPath": "@kamod/icons/lucide",
+    "exportPath": "@kamod-ch/icons/lucide",
     "upstream": {
       "type": "npm",
       "package": "lucide-static",
@@ -31,7 +31,7 @@ var iconSources = {
   },
   "heroicons": {
     "label": "Heroicons",
-    "exportPath": "@kamod/icons/heroicons/{variant}",
+    "exportPath": "@kamod-ch/icons/heroicons/{variant}",
     "variants": [
       "outline",
       "solid"
@@ -49,7 +49,7 @@ var iconSources = {
   },
   "tabler": {
     "label": "Tabler Icons",
-    "exportPath": "@kamod/icons/tabler/{variant}",
+    "exportPath": "@kamod-ch/icons/tabler/{variant}",
     "variants": [
       "outline",
       "filled"
@@ -66,7 +66,7 @@ var iconSources = {
   },
   "iconoir": {
     "label": "Iconoir",
-    "exportPath": "@kamod/icons/iconoir/{variant}",
+    "exportPath": "@kamod-ch/icons/iconoir/{variant}",
     "variants": [
       "regular",
       "solid"

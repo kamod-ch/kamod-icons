@@ -1,4 +1,4 @@
-import { iconSources } from "@kamod/icons/meta";
+import { iconSources } from "@kamod-ch/icons/meta";
 
 function formatUpstreamPackage(set: (typeof iconSources)[keyof typeof iconSources]): string {
   const versionPackage = set.upstream.versionPackage;
@@ -28,7 +28,7 @@ export default function IconSourcesTable() {
           {rows.map(([setName, set]) => (
             <tr key={setName}>
               <td>
-                <code>@kamod/icons/{setName === "heroicons" || setName === "tabler" || setName === "iconoir" ? `${setName}/…` : setName}</code>
+                <code>@kamod-ch/icons/{setName === "heroicons" || setName === "tabler" || setName === "iconoir" ? `${setName}/…` : setName}</code>
               </td>
               <td>
                 <a href={set.upstream.repository} target="_blank" rel="noreferrer">

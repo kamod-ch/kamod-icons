@@ -49,7 +49,7 @@ importers:
 
   packages/docs:
     dependencies:
-      '@kamod/icons':
+      '@kamod-ch/icons':
         specifier: file:../core
         version: link:../core
       preact:

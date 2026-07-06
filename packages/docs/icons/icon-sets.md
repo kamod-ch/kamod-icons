@@ -1,22 +1,22 @@
 ---
 title: Icon Sets
-description: Choose the right @kamod/icons subpath export for each project.
+description: Choose the right @kamod-ch/icons subpath export for each project.
 ---
 
-`@kamod/icons` groups every upstream family behind explicit subpath exports. This keeps imports readable, avoids name collisions, and makes upgrades easier to review.
+`@kamod-ch/icons` groups every upstream family behind explicit subpath exports. This keeps imports readable, avoids name collisions, and makes upgrades easier to review.
 
 ## Available imports
 
 ```txt
-@kamod/icons
-@kamod/icons/shadcn
-@kamod/icons/lucide
-@kamod/icons/heroicons/outline
-@kamod/icons/heroicons/solid
-@kamod/icons/tabler/outline
-@kamod/icons/tabler/filled
-@kamod/icons/iconoir/regular
-@kamod/icons/iconoir/solid
+@kamod-ch/icons
+@kamod-ch/icons/shadcn
+@kamod-ch/icons/lucide
+@kamod-ch/icons/heroicons/outline
+@kamod-ch/icons/heroicons/solid
+@kamod-ch/icons/tabler/outline
+@kamod-ch/icons/tabler/filled
+@kamod-ch/icons/iconoir/regular
+@kamod-ch/icons/iconoir/solid
 ```
 
 The root import currently maps to the preferred `shadcn` set. For long-lived app code, prefer explicit subpaths.
@@ -42,7 +42,7 @@ The root import currently maps to the preferred `shadcn` set. For long-lived app
 ## Example
 
 ```tsx
-import { CheckIcon } from "@kamod/icons/shadcn";
+import { CheckIcon } from "@kamod-ch/icons/shadcn";
 
 export function SavedLabel() {
   return (
@@ -57,26 +57,26 @@ export function SavedLabel() {
 ## Root import vs set import
 
 ```tsx
-import { SearchIcon } from "@kamod/icons";
+import { SearchIcon } from "@kamod-ch/icons";
 ```
 
 Use the root import when you intentionally accept the package default. Use explicit subpaths when API stability matters:
 
 ```tsx
-import { SearchIcon } from "@kamod/icons/shadcn";
+import { SearchIcon } from "@kamod-ch/icons/shadcn";
 ```
 
 ## Upstream versions
 
-Each set vendors SVGs from an upstream npm package. Versions, icon counts, and sync dates are tracked in `icon-sources.json` and exposed through `@kamod/icons/meta`.
+Each set vendors SVGs from an upstream npm package. Versions, icon counts, and sync dates are tracked in `icon-sources.json` and exposed through `@kamod-ch/icons/meta`.
 
 | Set | Upstream | Version | Icons | Last sync |
 | --- | --- | --- | ---: | --- |
-| `@kamod/icons/shadcn` | [shadcn/ui](https://github.com/lucide-icons/lucide) | `lucide-static` (`lucide@1.23.0`) | 877 | 2026-07-03 |
-| `@kamod/icons/lucide` | [Lucide](https://github.com/lucide-icons/lucide) | `lucide-static` (`lucide@1.23.0`) | 1,994 | 2026-07-03 |
-| `@kamod/icons/heroicons/…` | [Heroicons](https://github.com/tailwindlabs/heroicons) | `heroicons` (`@heroicons/react@2.2.0`) | 648 | 2026-07-03 |
-| `@kamod/icons/tabler/…` | [Tabler Icons](https://github.com/tabler/tabler-icons) | `@tabler/icons@3.44.0` | 6,146 | 2026-07-03 |
-| `@kamod/icons/iconoir/…` | [Iconoir](https://github.com/iconoir-icons/iconoir) | `iconoir@7.11.1` | 1,671 | 2026-07-03 |
+| `@kamod-ch/icons/shadcn` | [shadcn/ui](https://github.com/lucide-icons/lucide) | `lucide-static` (`lucide@1.23.0`) | 877 | 2026-07-03 |
+| `@kamod-ch/icons/lucide` | [Lucide](https://github.com/lucide-icons/lucide) | `lucide-static` (`lucide@1.23.0`) | 1,994 | 2026-07-03 |
+| `@kamod-ch/icons/heroicons/…` | [Heroicons](https://github.com/tailwindlabs/heroicons) | `heroicons` (`@heroicons/react@2.2.0`) | 648 | 2026-07-03 |
+| `@kamod-ch/icons/tabler/…` | [Tabler Icons](https://github.com/tabler/tabler-icons) | `@tabler/icons@3.44.0` | 6,146 | 2026-07-03 |
+| `@kamod-ch/icons/iconoir/…` | [Iconoir](https://github.com/iconoir-icons/iconoir) | `iconoir@7.11.1` | 1,671 | 2026-07-03 |
 
 ## Sync from upstream
 

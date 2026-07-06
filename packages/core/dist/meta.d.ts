@@ -18,7 +18,7 @@ type IconSourceSet = {
 declare const iconSources: {
     readonly shadcn: {
         readonly label: "shadcn/ui";
-        readonly exportPath: "@kamod/icons/shadcn";
+        readonly exportPath: "@kamod-ch/icons/shadcn";
         readonly upstream: {
             readonly type: "npm";
             readonly package: "lucide-static";
@@ -33,7 +33,7 @@ declare const iconSources: {
     };
     readonly lucide: {
         readonly label: "Lucide";
-        readonly exportPath: "@kamod/icons/lucide";
+        readonly exportPath: "@kamod-ch/icons/lucide";
         readonly upstream: {
             readonly type: "npm";
             readonly package: "lucide-static";
@@ -47,7 +47,7 @@ declare const iconSources: {
     };
     readonly heroicons: {
         readonly label: "Heroicons";
-        readonly exportPath: "@kamod/icons/heroicons/{variant}";
+        readonly exportPath: "@kamod-ch/icons/heroicons/{variant}";
         readonly variants: ["outline", "solid"];
         readonly upstream: {
             readonly type: "npm";
@@ -62,7 +62,7 @@ declare const iconSources: {
     };
     readonly tabler: {
         readonly label: "Tabler Icons";
-        readonly exportPath: "@kamod/icons/tabler/{variant}";
+        readonly exportPath: "@kamod-ch/icons/tabler/{variant}";
         readonly variants: ["outline", "filled"];
         readonly upstream: {
             readonly type: "npm";
@@ -76,7 +76,7 @@ declare const iconSources: {
     };
     readonly iconoir: {
         readonly label: "Iconoir";
-        readonly exportPath: "@kamod/icons/iconoir/{variant}";
+        readonly exportPath: "@kamod-ch/icons/iconoir/{variant}";
         readonly variants: ["regular", "solid"];
         readonly upstream: {
             readonly type: "npm";
