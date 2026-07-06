@@ -50,6 +50,10 @@
     "dev:docs": "pnpm --filter @kamod/icons-docs dev",
     "check:docs": "pnpm --filter @kamod/icons-docs check",
     "preview:docs": "pnpm --filter @kamod/icons-docs preview",
-    "clean": "pnpm --filter @kamod/icons clean && rm -rf packages/docs/dist"
+    "clean": "pnpm --filter @kamod/icons clean && rm -rf packages/docs/dist",
+    "release": "node ./scripts/release.mjs patch",
+    "release:minor": "node ./scripts/release.mjs minor",
+    "release:major": "node ./scripts/release.mjs major",
+    "release:dry": "node ./scripts/release.mjs patch --dry"
   }
 }
