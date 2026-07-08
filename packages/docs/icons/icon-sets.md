@@ -17,6 +17,8 @@ description: Choose the right @kamod-ch/icons subpath export for each project.
 @kamod-ch/icons/tabler/filled
 @kamod-ch/icons/iconoir/regular
 @kamod-ch/icons/iconoir/solid
+@kamod-ch/icons/reicon/outline
+@kamod-ch/icons/reicon/filled
 ```
 
 The root import currently maps to the preferred `shadcn` set. For long-lived app code, prefer explicit subpaths.
@@ -30,6 +32,7 @@ The root import currently maps to the preferred `shadcn` set. For long-lived app
 | `heroicons` | Friendly dashboard, marketing, and app icons |
 | `tabler` | Large product surfaces, admin tools, and dense UIs |
 | `iconoir` | Distinctive geometric product moments |
+| `reicon` | Broad outline/filled coverage from the Reicon open-source library |
 
 ## Why subpath exports?
 
@@ -68,7 +71,7 @@ import { SearchIcon } from "@kamod-ch/icons/shadcn";
 
 ## Upstream versions
 
-Each set vendors SVGs from an upstream npm package. Versions, icon counts, and sync dates are tracked in `icon-sources.json` and exposed through `@kamod-ch/icons/meta`.
+Each set vendors SVGs from an upstream npm package or repository. Versions, icon counts, and sync dates are tracked in `icon-sources.json` and exposed through `@kamod-ch/icons/meta`.
 
 | Set | Upstream | Version | Icons | Last sync |
 | --- | --- | --- | ---: | --- |
@@ -77,6 +80,7 @@ Each set vendors SVGs from an upstream npm package. Versions, icon counts, and s
 | `@kamod-ch/icons/heroicons/…` | [Heroicons](https://github.com/tailwindlabs/heroicons) | `heroicons` (`@heroicons/react@2.2.0`) | 648 | 2026-07-03 |
 | `@kamod-ch/icons/tabler/…` | [Tabler Icons](https://github.com/tabler/tabler-icons) | `@tabler/icons@3.44.0` | 6,146 | 2026-07-03 |
 | `@kamod-ch/icons/iconoir/…` | [Iconoir](https://github.com/iconoir-icons/iconoir) | `iconoir@7.11.1` | 1,671 | 2026-07-03 |
+| `@kamod-ch/icons/reicon/…` | [Reicon](https://github.com/dqev/reicon) | `dqev/reicon@1.1.1` | 5,360 | 2026-07-08 |
 
 ## Sync from upstream
 

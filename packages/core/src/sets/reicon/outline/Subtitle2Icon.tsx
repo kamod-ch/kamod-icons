@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function Subtitle2Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7m8.5-4.92h-1.85m-2.68 0H6.5m11-3.76h-5.53m-2.7 0H6.5"/>
+    </svg>
+  );
+}

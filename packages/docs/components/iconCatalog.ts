@@ -53,11 +53,12 @@ export function variantLabel(variant: string): string {
   return variant.charAt(0).toUpperCase() + variant.slice(1);
 }
 
-export const STROKE_SETS = new Set(["lucide", "shadcn", "tabler", "heroicons", "iconoir"]);
+export const STROKE_SETS = new Set(["lucide", "shadcn", "tabler", "heroicons", "iconoir", "reicon"]);
 
 export function setSupportsStroke(setId: string, variant: string): boolean {
   if (setId === "heroicons" && variant === "solid") return false;
   if (setId === "iconoir" && variant === "solid") return false;
   if (setId === "tabler" && variant === "filled") return false;
+  if (setId === "reicon" && variant === "filled") return false;
   return STROKE_SETS.has(setId);
 }

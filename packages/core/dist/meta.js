@@ -80,6 +80,24 @@ var iconSources = {
     },
     "syncedAt": "2026-07-03",
     "iconCount": 1671
+  },
+  "reicon": {
+    "label": "Reicon",
+    "exportPath": "@kamod-ch/icons/reicon/{variant}",
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "upstream": {
+      "type": "github",
+      "package": "dqev/reicon",
+      "version": "1.1.1",
+      "repository": "https://github.com/dqev/reicon",
+      "license": "MIT",
+      "note": "SVG path data generated from data/icon-data.json in the Reicon repository."
+    },
+    "syncedAt": "2026-07-08",
+    "iconCount": 5360
   }
 };
 export {

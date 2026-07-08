@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function LanguageSquare2Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16.99 8.96H7.01M12 7.28v1.68m2.5-.02c0 4.3-3.36 7.78-7.5 7.78"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 16.72c-1.8 0-3.4-.96-4.55-2.47"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"/>
+    </svg>
+  );
+}

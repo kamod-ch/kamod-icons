@@ -1,0 +1,22 @@
+import type { IconProps } from "../../../shared/types";
+
+export function TargetIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path fill="currentColor" fillRule="evenodd" d="M11.248 2A10.03 10.03 0 0 0 2 11.248h2.98a.752.752 0 1 1 0 1.504H2A10.03 10.03 0 0 0 11.248 22v-2.98a.752.752 0 0 1 1.504 0V22A10.03 10.03 0 0 0 22 12.752h-2.98a.752.752 0 0 1 0-1.504H22A10.03 10.03 0 0 0 12.752 2v2.98a.752.752 0 1 1-1.504 0zM9.242 12c0-.415.337-.752.752-.752h1.254V9.994a.752.752 0 1 1 1.504 0v1.254h1.254a.752.752 0 0 1 0 1.504h-1.254v1.254a.752.752 0 0 1-1.504 0v-1.254H9.994A.75.75 0 0 1 9.242 12Z" clipRule="evenodd"/>
+    </svg>
+  );
+}

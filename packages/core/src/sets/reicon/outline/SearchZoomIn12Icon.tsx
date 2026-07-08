@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function SearchZoomIn12Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M11 20a9 9 0 1 0 0-18 9 9 0 0 0 0 18m-2.5-9h5M11 13.5v-5m7.93 12.19c.53 1.6 1.74 1.76 2.67.36.85-1.28.29-2.33-1.25-2.33-1.14-.01-1.78.88-1.42 1.97"/>
+    </svg>
+  );
+}

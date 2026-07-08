@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function Airpods2Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.5" d="M6.72 9.56h-.94A3.79 3.79 0 0 1 2 5.78C2 3.7 3.7 2 5.78 2h1.89a2.84 2.84 0 0 1 2.83 2.83V17.1c0 1.04-.85 1.89-1.89 1.89s-1.89-.85-1.89-1.89z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.5" d="M5.78 6.72a.939.939 0 1 1 0-1.88m11.5 4.72h.94c2.08 0 3.78-1.7 3.78-3.78S20.3 2 18.22 2h-1.89a2.84 2.84 0 0 0-2.83 2.83V17.1c0 1.04.85 1.89 1.89 1.89s1.89-.85 1.89-1.89z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.5" d="M18.22 6.72a.939.939 0 1 0 0-1.88M8.5 22v-3m7 3v-3"/>
+    </svg>
+  );
+}

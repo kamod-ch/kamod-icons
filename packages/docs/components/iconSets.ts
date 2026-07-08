@@ -69,6 +69,20 @@ import {
   XIcon as IconoirXIcon,
   FlashIcon as IconoirFlashIcon,
 } from "@kamod-ch/icons/iconoir/regular";
+import {
+  AlertCircleIcon as ReiconAlertCircleIcon,
+  BellIcon as ReiconBellIcon,
+  BoltIcon as ReiconBoltIcon,
+  CalendarIcon as ReiconCalendarIcon,
+  CheckIcon as ReiconCheckIcon,
+  CloseCircle2Icon as ReiconCloseCircle2Icon,
+  HomeIcon as ReiconHomeIcon,
+  MenuIcon as ReiconMenuIcon,
+  SearchIcon as ReiconSearchIcon,
+  SettingsIcon as ReiconSettingsIcon,
+  Star2Icon as ReiconStar2Icon,
+  UserIcon as ReiconUserIcon,
+} from "@kamod-ch/icons/reicon/outline";
 import { iconSources, type IconSourceName } from "@kamod-ch/icons/meta";
 
 export type IconComponent = ComponentType<{ size?: number; class?: string; "aria-hidden"?: string | boolean }>;
@@ -186,6 +200,27 @@ export const iconSets: IconSet[] = [
       ["Home", IconoirHomeIcon],
       ["Star", IconoirStarIcon],
       ["Flash", IconoirFlashIcon],
+    ],
+  },
+  {
+    id: "reicon",
+    label: "Reicon",
+    importPath: "@kamod-ch/icons/reicon/outline",
+    description: "Large open-source icon library with outline and filled weights.",
+    iconCount: iconSources.reicon.iconCount,
+    icons: [
+      ["Search", ReiconSearchIcon],
+      ["Check", ReiconCheckIcon],
+      ["AlertCircle", ReiconAlertCircleIcon],
+      ["Settings", ReiconSettingsIcon],
+      ["User", ReiconUserIcon],
+      ["Menu", ReiconMenuIcon],
+      ["CloseCircle2", ReiconCloseCircle2Icon],
+      ["Calendar", ReiconCalendarIcon],
+      ["Bell", ReiconBellIcon],
+      ["Home", ReiconHomeIcon],
+      ["Star2", ReiconStar2Icon],
+      ["Bolt", ReiconBoltIcon],
     ],
   },
 ];

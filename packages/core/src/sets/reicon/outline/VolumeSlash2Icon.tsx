@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function VolumeSlash2Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 8.37v-.96c0-2.98-2.07-4.12-4.59-2.54L7.49 6.7c-.32.19-.69.3-1.06.3H5q-3 0-3 3v4q0 3 3 3h2m3.41 2.13c2.52 1.58 4.59.43 4.59-2.54v-3.64m3.81-3.53c.9 2.15.63 4.66-.81 6.58m3.15-8.2a10.82 10.82 0 0 1-1.32 10.7M22 2 2 22"/>
+    </svg>
+  );
+}

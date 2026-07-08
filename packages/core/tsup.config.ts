@@ -12,6 +12,8 @@ export default defineConfig({
     "src/sets/tabler/filled/index.ts",
     "src/sets/iconoir/regular/index.ts",
     "src/sets/iconoir/solid/index.ts",
+    "src/sets/reicon/outline/index.ts",
+    "src/sets/reicon/filled/index.ts",
   ],
   format: ["esm"],
   dts: true,

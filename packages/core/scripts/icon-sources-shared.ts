@@ -13,7 +13,7 @@ export const metaOutputPath = path.join(packageRoot, "src", "meta.ts");
 const require = createRequire(import.meta.url);
 
 export type IconSourceUpstream = {
-  type: "npm";
+  type: "npm" | "github";
   package: string;
   version: string;
   versionPackage?: string;

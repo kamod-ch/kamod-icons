@@ -20,6 +20,7 @@
     "heroicons",
     "tabler",
     "iconoir",
+    "reicon",
     "shadcn",
     "svg-icons",
     "icon-library",
@@ -92,6 +93,14 @@
     "./iconoir/solid": {
       "types": "./dist/sets/iconoir/solid/index.d.ts",
       "import": "./dist/sets/iconoir/solid/index.js"
+    },
+    "./reicon/outline": {
+      "types": "./dist/sets/reicon/outline/index.d.ts",
+      "import": "./dist/sets/reicon/outline/index.js"
+    },
+    "./reicon/filled": {
+      "types": "./dist/sets/reicon/filled/index.d.ts",
+      "import": "./dist/sets/reicon/filled/index.js"
     }
   },
   "scripts": {

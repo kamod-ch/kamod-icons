@@ -1,0 +1,22 @@
+import type { IconProps } from "../../../shared/types";
+
+export function Grid72Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path fill="currentColor" d="M11.25 10.5V22H7.81C4.17 22 2 19.83 2 16.19V10.5zm10.75 0v5.69c0 3.64-2.17 5.81-5.81 5.81h-3.44V10.5zm0-2.69V9H2V7.81C2 4.17 4.17 2 7.81 2h8.38C19.83 2 22 4.17 22 7.81Z"/>
+    </svg>
+  );
+}

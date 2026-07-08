@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function VideoVertical2Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7M6.89 2.52v18.96m10-18.96v18.96m-10-14.51H2.54M6.89 12H2.03m4.86 4.97H2.48m19.41-10h-4.35M21.89 12h-4.86m-.06 0h-11m15.92 4.97h-4.41"/>
+    </svg>
+  );
+}

@@ -1,9 +1,10 @@
-import { cp, mkdir, readdir, readFile, rm } from "node:fs/promises";
+import { cp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { generateMeta } from "./generate-meta.ts";
 import {
   copyFileEnsuringDir,
+  countSvgFiles,
   rawRoot,
   readIconSources,
   readPackageVersion,
@@ -135,12 +136,73 @@ async function syncIconoir(): Promise<void> {
   console.log(`Synced iconoir: ${regularCopied} regular, ${solidCopied} solid`);
 }
 
+type ReiconData = {
+  categories: Record<
+    string,
+    {
+      icons: Record<
+        string,
+        {
+          description?: string[];
+          weights: Record<string, { code: string }>;
+        }
+      >;
+    }
+  >;
+};
+
+async function syncReicon(): Promise<void> {
+  const dataPath = process.env.REICON_DATA_PATH;
+  if (!dataPath) {
+    const outlineCount = await countSvgFiles(path.join(rawRoot, "reicon", "outline"));
+    const filledCount = await countSvgFiles(path.join(rawRoot, "reicon", "filled"));
+    console.log(
+      `Reicon raw SVGs are vendored (${outlineCount} outline, ${filledCount} filled). Set REICON_DATA_PATH to a reicon data/icon-data.json file to refresh them.`,
+    );
+    return;
+  }
+
+  const reiconData = JSON.parse(await readFile(dataPath, "utf8")) as ReiconData;
+  const variants = {
+    Outline: "outline",
+    Filled: "filled",
+  } as const;
+  const counts: Record<string, number> = { outline: 0, filled: 0 };
+
+  for (const variant of Object.values(variants)) {
+    const targetDir = path.join(rawRoot, "reicon", variant);
+    await mkdir(targetDir, { recursive: true });
+    await cleanSvgFiles(targetDir);
+  }
+
+  for (const [category, categoryData] of Object.entries(reiconData.categories)) {
+    for (const [name, icon] of Object.entries(categoryData.icons)) {
+      const tags = icon.description?.join(", ") ?? "";
+      const metadata = `<!-- category: ${category}\ntags: [${tags}]\n-->`;
+
+      for (const [weight, weightData] of Object.entries(icon.weights)) {
+        const variant = variants[weight as keyof typeof variants];
+        if (!variant || !weightData.code.trim()) {
+          continue;
+        }
+
+        const svg = `${metadata}\n<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">\n  ${weightData.code.trim()}\n</svg>\n`;
+        await writeFile(path.join(rawRoot, "reicon", variant, `${name}.svg`), svg);
+        counts[variant] += 1;
+      }
+    }
+  }
+
+  console.log(`Synced reicon: ${counts.outline} outline, ${counts.filled} filled`);
+}
+
 const syncHandlers: Record<string, () => Promise<void>> = {
   heroicons: syncHeroicons,
   lucide: syncLucide,
   shadcn: syncShadcn,
   tabler: syncTabler,
   iconoir: syncIconoir,
+  reicon: syncReicon,
 };
 
 async function updateSetMetadata(setName: string): Promise<void> {
@@ -151,8 +213,10 @@ async function updateSetMetadata(setName: string): Promise<void> {
     throw new Error(`Unknown icon set "${setName}" in icon-sources.json`);
   }
 
-  const versionPackage = setConfig.upstream.versionPackage ?? setConfig.upstream.package;
-  setConfig.upstream.version = readPackageVersion(versionPackage);
+  if (setConfig.upstream.type === "npm") {
+    const versionPackage = setConfig.upstream.versionPackage ?? setConfig.upstream.package;
+    setConfig.upstream.version = readPackageVersion(versionPackage);
+  }
   setConfig.syncedAt = new Date().toISOString().slice(0, 10);
 
   await writeIconSources(data);
