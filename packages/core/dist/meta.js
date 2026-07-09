@@ -94,7 +94,7 @@ var iconSources = {
       "version": "1.1.1",
       "repository": "https://github.com/dqev/reicon",
       "license": "MIT",
-      "note": "SVG path data generated from data/icon-data.json in the Reicon repository."
+      "note": "Raw SVGs from public/reicon-icons.zip (outline + filled). Docs: docs/svg/usage.md. Override with REICON_ZIP_PATH or REICON_ZIP_URL."
     },
     "syncedAt": "2026-07-08",
     "iconCount": 5360

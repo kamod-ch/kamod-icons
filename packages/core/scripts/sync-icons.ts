@@ -1,16 +1,23 @@
-import { cp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
+import { execFile } from "node:child_process";
+import { cp, mkdir, mkdtemp, readdir, readFile, rm, writeFile } from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { promisify } from "node:util";
 import { generateMeta } from "./generate-meta.ts";
 import {
   copyFileEnsuringDir,
-  countSvgFiles,
   rawRoot,
   readIconSources,
   readPackageVersion,
   resolvePackageRoot,
   writeIconSources,
 } from "./icon-sources-shared.ts";
+
+const execFileAsync = promisify(execFile);
+
+const REICON_ZIP_URL =
+  "https://raw.githubusercontent.com/dqev/reicon/main/public/reicon-icons.zip";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -136,64 +143,67 @@ async function syncIconoir(): Promise<void> {
   console.log(`Synced iconoir: ${regularCopied} regular, ${solidCopied} solid`);
 }
 
-type ReiconData = {
-  categories: Record<
-    string,
-    {
-      icons: Record<
-        string,
-        {
-          description?: string[];
-          weights: Record<string, { code: string }>;
-        }
-      >;
+async function findNamedDir(rootDir: string, dirName: string): Promise<string | null> {
+  const direct = path.join(rootDir, dirName);
+  const directEntries = await readdir(direct, { withFileTypes: true }).catch(() => null);
+  if (directEntries?.some((entry) => entry.isFile() && entry.name.endsWith(".svg"))) {
+    return direct;
+  }
+
+  const entries = await readdir(rootDir, { withFileTypes: true }).catch(() => []);
+  for (const entry of entries) {
+    if (!entry.isDirectory()) {
+      continue;
     }
-  >;
-};
+
+    const nested = await findNamedDir(path.join(rootDir, entry.name), dirName);
+    if (nested) {
+      return nested;
+    }
+  }
+
+  return null;
+}
 
 async function syncReicon(): Promise<void> {
-  const dataPath = process.env.REICON_DATA_PATH;
-  if (!dataPath) {
-    const outlineCount = await countSvgFiles(path.join(rawRoot, "reicon", "outline"));
-    const filledCount = await countSvgFiles(path.join(rawRoot, "reicon", "filled"));
-    console.log(
-      `Reicon raw SVGs are vendored (${outlineCount} outline, ${filledCount} filled). Set REICON_DATA_PATH to a reicon data/icon-data.json file to refresh them.`,
-    );
-    return;
-  }
+  const localZipPath = process.env.REICON_ZIP_PATH;
+  const zipUrl = process.env.REICON_ZIP_URL ?? REICON_ZIP_URL;
+  const tmpDir = await mkdtemp(path.join(os.tmpdir(), "reicon-sync-"));
 
-  const reiconData = JSON.parse(await readFile(dataPath, "utf8")) as ReiconData;
-  const variants = {
-    Outline: "outline",
-    Filled: "filled",
-  } as const;
-  const counts: Record<string, number> = { outline: 0, filled: 0 };
+  try {
+    let archivePath = localZipPath;
 
-  for (const variant of Object.values(variants)) {
-    const targetDir = path.join(rawRoot, "reicon", variant);
-    await mkdir(targetDir, { recursive: true });
-    await cleanSvgFiles(targetDir);
-  }
-
-  for (const [category, categoryData] of Object.entries(reiconData.categories)) {
-    for (const [name, icon] of Object.entries(categoryData.icons)) {
-      const tags = icon.description?.join(", ") ?? "";
-      const metadata = `<!-- category: ${category}\ntags: [${tags}]\n-->`;
-
-      for (const [weight, weightData] of Object.entries(icon.weights)) {
-        const variant = variants[weight as keyof typeof variants];
-        if (!variant || !weightData.code.trim()) {
-          continue;
-        }
-
-        const svg = `${metadata}\n<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">\n  ${weightData.code.trim()}\n</svg>\n`;
-        await writeFile(path.join(rawRoot, "reicon", variant, `${name}.svg`), svg);
-        counts[variant] += 1;
+    if (!archivePath) {
+      console.log(`Downloading Reicon SVG archive from ${zipUrl}`);
+      const response = await fetch(zipUrl);
+      if (!response.ok) {
+        throw new Error(`Failed to download Reicon zip (${response.status} ${response.statusText}): ${zipUrl}`);
       }
-    }
-  }
 
-  console.log(`Synced reicon: ${counts.outline} outline, ${counts.filled} filled`);
+      archivePath = path.join(tmpDir, "reicon-icons.zip");
+      await writeFile(archivePath, Buffer.from(await response.arrayBuffer()));
+    }
+
+    const extractDir = path.join(tmpDir, "extracted");
+    await mkdir(extractDir, { recursive: true });
+    await execFileAsync("unzip", ["-q", "-o", archivePath, "-d", extractDir]);
+
+    const outlineSource = await findNamedDir(extractDir, "outline");
+    const filledSource = await findNamedDir(extractDir, "filled");
+
+    if (!outlineSource || !filledSource) {
+      throw new Error(
+        `Reicon zip is missing outline/ or filled/ SVG folders (looked under ${extractDir}). Set REICON_ZIP_PATH to a local public/reicon-icons.zip.`,
+      );
+    }
+
+    const outlineCopied = await copyAllSvgs(outlineSource, path.join(rawRoot, "reicon", "outline"));
+    const filledCopied = await copyAllSvgs(filledSource, path.join(rawRoot, "reicon", "filled"));
+
+    console.log(`Synced reicon: ${outlineCopied} outline, ${filledCopied} filled`);
+  } finally {
+    await rm(tmpDir, { recursive: true, force: true });
+  }
 }
 
 const syncHandlers: Record<string, () => Promise<void>> = {

@@ -34,6 +34,9 @@ importers:
       preact:
         specifier: ^10.29.3
         version: 10.29.3
+      reicon:
+        specifier: 1.0.0
+        version: 1.0.0
       svgo:
         specifier: ^4.0.1
         version: 4.0.1
@@ -57,8 +60,8 @@ importers:
         version: 10.29.3
     devDependencies:
       '@kamod-ch/preactpress':
-        specifier: ^2.0.0
-        version: 2.0.0(@babel/core@7.29.7)(@types/node@26.1.0)(esbuild@0.28.1)(rollup@4.62.2)(tsx@4.22.4)
+        specifier: ^2.1.0
+        version: 2.1.0(@babel/core@7.29.7)(@types/node@26.1.0)(esbuild@0.28.1)(rollup@4.62.2)(tsx@4.22.4)
       tsx:
         specifier: ^4.22.4
         version: 4.22.4
@@ -524,8 +527,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@kamod-ch/preactpress@2.0.0':
-    resolution: {integrity: sha512-otKh262PuE0Y4mkOCvWR7PBLsA2V/yII+ODQLkoHXH2nfyRfHubKZLhiJaqRJEG5bFr639AZzmsfhQZIYD9QSg==}
+  '@kamod-ch/preactpress@2.1.0':
+    resolution: {integrity: sha512-k2MA1AFTCZ2KSF9SYvadn2ucCjE20yHHTKmWTnXPsAqzqTBAth2Enl1stof7WuD6oPaoWN5qLdWzZzxESf2f7g==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -2006,6 +2009,9 @@ packages:
   rehype-recma@1.0.0:
     resolution: {integrity: sha512-lqA4rGUf1JmacCNWWZx0Wv1dHqMwxzsDWYMTowuplHF3xH0N/MmrZ/G3BDZnzAkRmxDadujCjaKM2hqYdCBOGw==}
 
+  reicon@1.0.0:
+    resolution: {integrity: sha512-ldGnVVU4HxNVG3W/r9YeiADMfatAt1kM9C4D5CTbS4EgPzXN/mmO7aYPWj2Z4oxAn6foaFnzgAMSy0rNrqCJ9Q==}
+
   remark-frontmatter@5.0.0:
     resolution: {integrity: sha512-XTFYvNASMe5iPN0719nPrdItC9aU0ssC4v14mH1BCi1u0n1gAocqcujWUrByftZTbLhRtiKRyjYTSIOcr69UVQ==}
 
@@ -2636,7 +2642,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@kamod-ch/preactpress@2.0.0(@babel/core@7.29.7)(@types/node@26.1.0)(esbuild@0.28.1)(rollup@4.62.2)(tsx@4.22.4)':
+  '@kamod-ch/preactpress@2.1.0(@babel/core@7.29.7)(@types/node@26.1.0)(esbuild@0.28.1)(rollup@4.62.2)(tsx@4.22.4)':
     dependencies:
       '@docsearch/css': 4.6.3
       '@docsearch/js': 4.6.3
@@ -4374,6 +4380,8 @@ snapshots:
       hast-util-to-estree: 3.1.3
     transitivePeerDependencies:
       - supports-color
+
+  reicon@1.0.0: {}
 
   remark-frontmatter@5.0.0:
     dependencies:

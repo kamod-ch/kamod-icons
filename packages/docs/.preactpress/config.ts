@@ -1,20 +1,89 @@
+import fs from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "@kamod-ch/preactpress/config";
+
+const productionBase = "/kamod-icons/";
+const isDev = process.argv.includes("dev");
+const siteBase = isDev ? "/" : productionBase;
+const docsRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const faviconFiles = new Map([
+  ["/favicon.svg", { file: "favicon.svg", type: "image/svg+xml" }],
+  ["/favicon-32.png", { file: "favicon-32.png", type: "image/png" }],
+  ["/favicon.png", { file: "favicon.png", type: "image/png" }],
+]);
+
+function publicUrl(path: string): string {
+  return `${siteBase.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
+}
 
 export default defineConfig({
   theme: "./theme/Layout.tsx",
+  rewrites: isDev
+    ? {
+        "/kamod-icons": "/",
+        "/kamod-icons/": "/",
+        "/kamod-icons/icons": "/icons",
+        "/kamod-icons/icons/installation": "/icons/installation",
+        "/kamod-icons/icons/usage": "/icons/usage",
+        "/kamod-icons/icons/icon-sets": "/icons/icon-sets",
+      }
+    : undefined,
   site: {
     title: "Kamod Icons",
     description: "Icons that make Preact interfaces easier to understand.",
     url: "https://kamod-ch.github.io",
-    base: "/kamod-icons/",
+    base: siteBase,
   },
   markdown: {
     html: false,
     emoji: true,
   },
+  vite: {
+    plugins: [
+      {
+        name: "kamod-icons-favicon-dev",
+        enforce: "pre",
+        configureServer(server) {
+          const serveKamodFavicon = (req, res, next) => {
+            const pathname = req.url?.split("?")[0] ?? "";
+            const favicon = faviconFiles.get(pathname);
+
+            if (!favicon) {
+              next();
+              return;
+            }
+
+            void fs
+              .readFile(path.join(docsRoot, "public", favicon.file))
+              .then((body) => {
+                res.statusCode = 200;
+                res.setHeader("Content-Type", favicon.type);
+                res.setHeader("Cache-Control", "no-store, max-age=0");
+                res.end(body);
+              })
+              .catch(() => next());
+          };
+
+          // PreactPress registers its own /favicon.* middleware. Put ours at the
+          // very front so dev serves the project favicon, not PreactPress' default.
+          const stack = server.middlewares.stack;
+          if (Array.isArray(stack)) {
+            stack.unshift({ route: "", handle: serveKamodFavicon });
+          } else {
+            server.middlewares.use(serveKamodFavicon);
+          }
+        },
+      },
+    ],
+  },
   head: [
-    ["link", { rel: "icon", href: "/kamod-icons/favicon.svg", type: "image/svg+xml" }],
-    ["link", { rel: "apple-touch-icon", href: "/kamod-icons/favicon.svg" }],
+    ["link", { rel: "icon", href: publicUrl("favicon.svg"), type: "image/svg+xml" }],
+    ["link", { rel: "icon", href: publicUrl("favicon-32.png"), type: "image/png", sizes: "32x32" }],
+    ["link", { rel: "apple-touch-icon", href: publicUrl("favicon.png") }],
+    ["link", { rel: "stylesheet", href: publicUrl("styles/logo.css") }],
+    ["link", { rel: "stylesheet", href: publicUrl("styles/studio.css") }],
+    ["link", { rel: "stylesheet", href: publicUrl("styles/icons-docs.css") }],
   ],
   themeConfig: {
     outline: true,

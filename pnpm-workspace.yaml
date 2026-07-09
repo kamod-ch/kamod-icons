@@ -3,7 +3,9 @@ packages:
 allowBuilds:
   esbuild: true
 minimumReleaseAgeExclude:
+  - '@kamod-ch/preactpress'
   - '@kamod-ch/preactpress@2.0.0'
   - '@types/node@26.1.0'
   - lucide-static@1.23.0
   - lucide@1.23.0
+  - '@kamod-ch/preactpress@2.1.0'

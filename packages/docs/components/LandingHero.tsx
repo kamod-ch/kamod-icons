@@ -3,6 +3,11 @@ import { iconSources } from "@kamod-ch/icons/meta";
 const totalIcons = Object.values(iconSources).reduce((sum, set) => sum + set.iconCount, 0);
 const packageVersion = "1.0.0";
 
+function withBase(path: string): string {
+  const base = import.meta.env.BASE_URL || "/";
+  return `${base.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
+}
+
 export default function LandingHero() {
   return (
     <section class="ki-hero" aria-labelledby="landing-hero-title">
@@ -14,7 +19,7 @@ export default function LandingHero() {
           what you need, and keep visual language consistent across apps, docs, and design systems.
         </p>
         <div class="ki-hero-actions">
-          <a class="ki-btn ki-btn-primary" href=".-ch-ch/icons/installation">
+          <a class="ki-btn ki-btn-primary" href={withBase("icons/installation")}>
             Start in 2 minutes
           </a>
           <a class="ki-btn ki-btn-secondary" href="#icon-browser">

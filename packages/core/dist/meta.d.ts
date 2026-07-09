@@ -98,7 +98,7 @@ declare const iconSources: {
             readonly version: "1.1.1";
             readonly repository: "https://github.com/dqev/reicon";
             readonly license: "MIT";
-            readonly note: "SVG path data generated from data/icon-data.json in the Reicon repository.";
+            readonly note: "Raw SVGs from public/reicon-icons.zip (outline + filled). Docs: docs/svg/usage.md. Override with REICON_ZIP_PATH or REICON_ZIP_URL.";
         };
         readonly syncedAt: "2026-07-08";
         readonly iconCount: 5360;
