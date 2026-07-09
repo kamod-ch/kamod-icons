@@ -1,0 +1,22 @@
+import type { IconProps } from "../../../shared/types";
+
+export function CartLarge5Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path fill="currentColor" d="M2.084 2.751a.75.75 0 0 1 .956-.459l.302.106c.616.217 1.14.401 1.552.603.44.217.819.483 1.103.899.282.412.398.865.452 1.362q.035.333.043.738h10.639c1.685 0 3.201 0 3.645.577s.27 1.447-.076 3.186l-.5 2.425c-.315 1.528-.473 2.293-1.025 2.742-.551.45-1.332.45-2.893.45H10.98c-2.789 0-4.183 0-5.05-.914S5 12.582 5 9.64V7.038c0-.74 0-1.235-.041-1.615-.04-.363-.11-.545-.2-.677-.088-.129-.221-.25-.525-.398-.322-.158-.761-.314-1.429-.549l-.261-.091a.75.75 0 0 1-.459-.957ZM7.5 18a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+    </svg>
+  );
+}

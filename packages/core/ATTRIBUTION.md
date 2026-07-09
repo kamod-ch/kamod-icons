@@ -9,6 +9,7 @@
 | heroicons | `heroicons` / `@heroicons/react` | see `icon-sources.json` | MIT | https://github.com/tailwindlabs/heroicons |
 | tabler | `@tabler/icons` | see `icon-sources.json` | MIT | https://github.com/tabler/tabler-icons |
 | iconoir | `iconoir` | see `icon-sources.json` | MIT | https://github.com/iconoir-icons/iconoir |
+| reicon | `dqev/reicon` | see `icon-sources.json` | MIT | https://github.com/dqev/reicon |
 
 ## shadcn/ui note
 

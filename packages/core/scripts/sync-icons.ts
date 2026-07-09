@@ -1,6 +1,9 @@
-import { cp, mkdir, readdir, readFile, rm } from "node:fs/promises";
+import { execFile } from "node:child_process";
+import { cp, mkdir, mkdtemp, readdir, readFile, rm, writeFile } from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { promisify } from "node:util";
 import { generateMeta } from "./generate-meta.ts";
 import {
   copyFileEnsuringDir,
@@ -10,6 +13,11 @@ import {
   resolvePackageRoot,
   writeIconSources,
 } from "./icon-sources-shared.ts";
+
+const execFileAsync = promisify(execFile);
+
+const REICON_ZIP_URL =
+  "https://raw.githubusercontent.com/dqev/reicon/main/public/reicon-icons.zip";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -135,12 +143,76 @@ async function syncIconoir(): Promise<void> {
   console.log(`Synced iconoir: ${regularCopied} regular, ${solidCopied} solid`);
 }
 
+async function findNamedDir(rootDir: string, dirName: string): Promise<string | null> {
+  const direct = path.join(rootDir, dirName);
+  const directEntries = await readdir(direct, { withFileTypes: true }).catch(() => null);
+  if (directEntries?.some((entry) => entry.isFile() && entry.name.endsWith(".svg"))) {
+    return direct;
+  }
+
+  const entries = await readdir(rootDir, { withFileTypes: true }).catch(() => []);
+  for (const entry of entries) {
+    if (!entry.isDirectory()) {
+      continue;
+    }
+
+    const nested = await findNamedDir(path.join(rootDir, entry.name), dirName);
+    if (nested) {
+      return nested;
+    }
+  }
+
+  return null;
+}
+
+async function syncReicon(): Promise<void> {
+  const localZipPath = process.env.REICON_ZIP_PATH;
+  const zipUrl = process.env.REICON_ZIP_URL ?? REICON_ZIP_URL;
+  const tmpDir = await mkdtemp(path.join(os.tmpdir(), "reicon-sync-"));
+
+  try {
+    let archivePath = localZipPath;
+
+    if (!archivePath) {
+      console.log(`Downloading Reicon SVG archive from ${zipUrl}`);
+      const response = await fetch(zipUrl);
+      if (!response.ok) {
+        throw new Error(`Failed to download Reicon zip (${response.status} ${response.statusText}): ${zipUrl}`);
+      }
+
+      archivePath = path.join(tmpDir, "reicon-icons.zip");
+      await writeFile(archivePath, Buffer.from(await response.arrayBuffer()));
+    }
+
+    const extractDir = path.join(tmpDir, "extracted");
+    await mkdir(extractDir, { recursive: true });
+    await execFileAsync("unzip", ["-q", "-o", archivePath, "-d", extractDir]);
+
+    const outlineSource = await findNamedDir(extractDir, "outline");
+    const filledSource = await findNamedDir(extractDir, "filled");
+
+    if (!outlineSource || !filledSource) {
+      throw new Error(
+        `Reicon zip is missing outline/ or filled/ SVG folders (looked under ${extractDir}). Set REICON_ZIP_PATH to a local public/reicon-icons.zip.`,
+      );
+    }
+
+    const outlineCopied = await copyAllSvgs(outlineSource, path.join(rawRoot, "reicon", "outline"));
+    const filledCopied = await copyAllSvgs(filledSource, path.join(rawRoot, "reicon", "filled"));
+
+    console.log(`Synced reicon: ${outlineCopied} outline, ${filledCopied} filled`);
+  } finally {
+    await rm(tmpDir, { recursive: true, force: true });
+  }
+}
+
 const syncHandlers: Record<string, () => Promise<void>> = {
   heroicons: syncHeroicons,
   lucide: syncLucide,
   shadcn: syncShadcn,
   tabler: syncTabler,
   iconoir: syncIconoir,
+  reicon: syncReicon,
 };
 
 async function updateSetMetadata(setName: string): Promise<void> {
@@ -151,8 +223,10 @@ async function updateSetMetadata(setName: string): Promise<void> {
     throw new Error(`Unknown icon set "${setName}" in icon-sources.json`);
   }
 
-  const versionPackage = setConfig.upstream.versionPackage ?? setConfig.upstream.package;
-  setConfig.upstream.version = readPackageVersion(versionPackage);
+  if (setConfig.upstream.type === "npm") {
+    const versionPackage = setConfig.upstream.versionPackage ?? setConfig.upstream.package;
+    setConfig.upstream.version = readPackageVersion(versionPackage);
+  }
   setConfig.syncedAt = new Date().toISOString().slice(0, 10);
 
   await writeIconSources(data);

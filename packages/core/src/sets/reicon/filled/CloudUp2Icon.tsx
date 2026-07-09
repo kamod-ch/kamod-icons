@@ -1,0 +1,22 @@
+import type { IconProps } from "../../../shared/types";
+
+export function CloudUp2Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path fill="currentColor" fillRule="evenodd" d="M4.25 11A7.75 7.75 0 0 1 19.6 9.476 5.752 5.752 0 0 1 18 20.75H5a4.75 4.75 0 0 1-.744-9.442A8 8 0 0 1 4.25 11ZM12 17.75a.75.75 0 0 1-.75-.75v-6.19l-1.72 1.72a.75.75 0 1 1-1.06-1.06l3-3a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1-1.06 1.06l-1.72-1.72V17a.75.75 0 0 1-.75.75Z" clipRule="evenodd"/>
+    </svg>
+  );
+}

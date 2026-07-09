@@ -1,5 +1,5 @@
 type IconSourceUpstream = {
-    type: "npm";
+    type: "npm" | "github";
     package: string;
     version: string;
     versionPackage?: string;
@@ -87,6 +87,21 @@ declare const iconSources: {
         };
         readonly syncedAt: "2026-07-03";
         readonly iconCount: 1671;
+    };
+    readonly reicon: {
+        readonly label: "Reicon";
+        readonly exportPath: "@kamod-ch/icons/reicon/{variant}";
+        readonly variants: ["outline", "filled"];
+        readonly upstream: {
+            readonly type: "github";
+            readonly package: "dqev/reicon";
+            readonly version: "1.1.1";
+            readonly repository: "https://github.com/dqev/reicon";
+            readonly license: "MIT";
+            readonly note: "Raw SVGs from public/reicon-icons.zip (outline + filled). Docs: docs/svg/usage.md. Override with REICON_ZIP_PATH or REICON_ZIP_URL.";
+        };
+        readonly syncedAt: "2026-07-08";
+        readonly iconCount: 5360;
     };
 };
 type IconSourceName = keyof typeof iconSources;

@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function AspectRatioSquare2Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" transform="scale(1.33333)"><rect x="2.75" y="2.75" rx="2" ry="2"/><path d="M12.25 8.75v-3h-3m-.5 6.5h-3v-3"/></g>
+    </svg>
+  );
+}

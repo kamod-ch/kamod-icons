@@ -1,0 +1,23 @@
+import type { IconProps } from "../../../shared/types";
+
+export function Sun4Icon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8.5V3m0 18v-5.5M10 3h4m-4 18h4M8.97 10.25 4.21 7.5m15.58 9-4.76-2.75M3.21 9.23l2-3.46m13.58 12.46 2-3.46M15.5 12a3.5 3.5 0 0 1-3.5 3.5 3.5 3.5 0 0 1 0-7 3.5 3.5 0 0 1 3.5 3.5m4.29-4.5-4.76 2.75m-6.06 3.5L4.21 16.5m16.58-7.27-2-3.46M5.21 18.23l-2-3.46"/>
+    </svg>
+  );
+}

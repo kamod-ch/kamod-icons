@@ -10,8 +10,6 @@ import {
 } from "@kamod-ch/preactpress/client";
 import Logo from "./Logo.js";
 import Footer from "./Footer.js";
-import "./logo.css";
-import "./studio.css";
 
 type SidebarItem = {
   text: string;
