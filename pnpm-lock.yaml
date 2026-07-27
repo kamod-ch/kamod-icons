@@ -6,7 +6,11 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      '@kamod-ch/brand':
+        specifier: ^0.1.0
+        version: 0.1.0(preact@10.29.3)
 
   packages/core:
     devDependencies:
@@ -52,6 +56,9 @@ importers:
 
   packages/docs:
     dependencies:
+      '@kamod-ch/brand':
+        specifier: ^0.1.0
+        version: 0.1.0(preact@10.29.3)
       '@kamod-ch/icons':
         specifier: file:../core
         version: link:../core
@@ -526,6 +533,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@kamod-ch/brand@0.1.0':
+    resolution: {integrity: sha512-OlvFptU4FYa4sM4F10LQEWvOuA0in5aLQQVT1runf8ZbvVzLxRcYx7LZBHoBysjxHgIN3uue+b06kYnZ61UvGg==}
+    hasBin: true
+    peerDependencies:
+      preact: '>=10'
 
   '@kamod-ch/preactpress@2.1.0':
     resolution: {integrity: sha512-k2MA1AFTCZ2KSF9SYvadn2ucCjE20yHHTKmWTnXPsAqzqTBAth2Enl1stof7WuD6oPaoWN5qLdWzZzxESf2f7g==}
@@ -2641,6 +2654,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@kamod-ch/brand@0.1.0(preact@10.29.3)':
+    dependencies:
+      preact: 10.29.3
 
   '@kamod-ch/preactpress@2.1.0(@babel/core@7.29.7)(@types/node@26.1.0)(esbuild@0.28.1)(rollup@4.62.2)(tsx@4.22.4)':
     dependencies:

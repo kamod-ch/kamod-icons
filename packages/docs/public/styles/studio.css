@@ -404,12 +404,12 @@ a { color: inherit; }
   text-decoration: none;
 }
 
-.kiw-footer-logo .ki-logo__kamod-wrap {
+.kiw-footer-logo .kamod-mark {
   height: auto;
   width: min(9.5rem, 52vw);
 }
 
-.kiw-footer-logo .ki-logo__kamod {
+.kiw-footer-logo .kamod-mark__img {
   display: block;
   height: auto;
   width: 100%;
@@ -1259,16 +1259,16 @@ body {
   flex-shrink: 0;
 }
 
-.kiw-brand .ki-logo,
-.ki-logo__kamod-wrap,
-.ki-logo__kamod,
-.ki-logo__icons {
+.kiw-brand .kamod-logo,
+.kamod-logo__mark,
+.kamod-logo__mark-img,
+.kamod-logo__suffix {
   max-height: 2rem;
 }
 
-.ki-logo__kamod-wrap,
-.ki-logo__kamod,
-.ki-logo__icons {
+.kamod-logo__mark,
+.kamod-logo__mark-img,
+.kamod-logo__suffix {
   height: 2rem !important;
 }
 
@@ -1365,10 +1365,10 @@ body {
 }
 
 .kiw-brand,
-.kiw-brand .ki-logo,
-.ki-logo__kamod-wrap,
-.ki-logo__kamod,
-.ki-logo__icons,
+.kiw-brand .kamod-logo,
+.kamod-logo__mark,
+.kamod-logo__mark-img,
+.kamod-logo__suffix,
 .kiw-actions,
 .kiw-nav {
   transform: none !important;
@@ -1396,7 +1396,7 @@ body {
   max-width: 1320px !important;
 }
 
-.kiw-brand .ki-logo {
+.kiw-brand .kamod-logo {
   height: 2rem !important;
   min-height: 2rem !important;
   max-height: 2rem !important;

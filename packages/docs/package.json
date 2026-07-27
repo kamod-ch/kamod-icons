@@ -3,15 +3,17 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "brand:sync": "kamod-brand-sync-docs --target public",
     "icons:catalog": "tsx scripts/generate-icon-catalog.ts",
-    "predev": "pnpm run icons:catalog",
-    "prebuild": "pnpm run icons:catalog",
+    "predev": "pnpm run brand:sync && pnpm run icons:catalog",
+    "prebuild": "pnpm run brand:sync && pnpm run icons:catalog",
     "dev": "preactpress dev",
     "check": "preactpress check",
     "build": "preactpress build",
     "preview": "preactpress preview"
   },
   "dependencies": {
+    "@kamod-ch/brand": "^0.1.0",
     "@kamod-ch/icons": "file:../core",
     "preact": ">=10"
   },
