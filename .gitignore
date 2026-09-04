@@ -3,3 +3,4 @@ docs/dist/
 docs/node_modules/
 .codex/agents/
 TODO.md
+tmp/

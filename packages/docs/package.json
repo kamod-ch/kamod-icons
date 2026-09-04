@@ -9,6 +9,7 @@
     "prebuild": "pnpm run brand:sync && pnpm run icons:catalog",
     "dev": "preactpress dev",
     "check": "preactpress check",
+    "typecheck": "tsc --noEmit -p tsconfig.animated.json",
     "build": "preactpress build",
     "preview": "preactpress preview"
   },

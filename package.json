@@ -41,7 +41,9 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@kamod-ch/brand": "^0.1.0"
+    "@kamod-ch/brand": "^0.1.0",
+    "oxfmt": "^0.66.0",
+    "oxlint": "^1.81.0"
   },
   "scripts": {
     "prepublishOnly": "node -e \"console.error('Do not publish the workspace root. Use: pnpm publish:core'); process.exit(1)\"",
@@ -59,10 +61,17 @@
     "pack:core": "pnpm --filter @kamod-ch/icons exec npm pack --dry-run",
     "publish:core": "pnpm --filter @kamod-ch/icons publish --access public",
     "release:check": "pnpm build && pnpm check:docs",
+    "release:rc-check": "node ./scripts/release-candidate-check.mjs",
     "release:publish": "pnpm --filter @kamod-ch/icons publish --access public --provenance --no-git-checks",
     "release": "node ./scripts/release.mjs patch",
     "release:minor": "node ./scripts/release.mjs minor",
     "release:major": "node ./scripts/release.mjs major",
-    "release:dry": "node ./scripts/release.mjs patch --dry"
+    "release:dry": "node ./scripts/release.mjs patch --dry",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check .",
+    "test": "pnpm --filter @kamod-ch/icons test",
+    "typecheck": "pnpm --filter @kamod-ch/icons typecheck"
   }
 }

@@ -1,0 +1,298 @@
+{
+  "generatedAt": "2026-09-04T12:13:53.198Z",
+  "importPath": "@kamod-ch/icons/lucide/animated",
+  "icons": [
+    {
+      "componentName": "ArrowRightAnimatedIcon",
+      "iconName": "arrow-right",
+      "variants": [
+        "advance"
+      ],
+      "defaultVariant": "advance",
+      "source": "kamod",
+      "intent": "The arrow shifts forward once — a clear “next” or continue cue without overshoot.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "ArrowLeftAnimatedIcon",
+      "iconName": "arrow-left",
+      "variants": [
+        "retreat"
+      ],
+      "defaultVariant": "retreat",
+      "source": "kamod",
+      "intent": "The arrow shifts backward once — a calm “back” or previous cue.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "ChevronDownAnimatedIcon",
+      "iconName": "chevron-down",
+      "variants": [
+        "expand"
+      ],
+      "defaultVariant": "expand",
+      "source": "kamod",
+      "intent": "The chevron nudges downward — expand or reveal content below.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "ChevronUpAnimatedIcon",
+      "iconName": "chevron-up",
+      "variants": [
+        "collapse"
+      ],
+      "defaultVariant": "collapse",
+      "source": "kamod",
+      "intent": "The chevron nudges upward — collapse or hide content above.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "SearchAnimatedIcon",
+      "iconName": "search",
+      "variants": [
+        "scan"
+      ],
+      "defaultVariant": "scan",
+      "source": "kamod",
+      "intent": "A short, precise sweep of the lens and handle — like scanning a field of view once.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "MenuAnimatedIcon",
+      "iconName": "menu",
+      "variants": [
+        "spread"
+      ],
+      "defaultVariant": "spread",
+      "source": "kamod",
+      "intent": "Top and bottom bars separate slightly — a menu opening hint without morphing into an X.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "XAnimatedIcon",
+      "iconName": "x",
+      "variants": [
+        "dismiss"
+      ],
+      "defaultVariant": "dismiss",
+      "source": "kamod",
+      "intent": "Both strokes rotate into alignment — a decisive close or dismiss action.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "CheckAnimatedIcon",
+      "iconName": "check",
+      "variants": [
+        "draw"
+      ],
+      "defaultVariant": "draw",
+      "source": "kamod",
+      "intent": "The check mark draws once along its path — confirmation without bounce or overshoot.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "PlusAnimatedIcon",
+      "iconName": "plus",
+      "variants": [
+        "add"
+      ],
+      "defaultVariant": "add",
+      "source": "kamod",
+      "intent": "The vertical bar grows from the center — an additive action without bounce.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "MinusAnimatedIcon",
+      "iconName": "minus",
+      "variants": [
+        "remove"
+      ],
+      "defaultVariant": "remove",
+      "source": "kamod",
+      "intent": "The bar shortens horizontally — a subtractive or remove action.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "CopyAnimatedIcon",
+      "iconName": "copy",
+      "variants": [
+        "duplicate"
+      ],
+      "defaultVariant": "duplicate",
+      "source": "kamod",
+      "intent": "The front sheet lifts diagonally — duplicated content being picked up.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "DownloadAnimatedIcon",
+      "iconName": "download",
+      "variants": [
+        "fetch"
+      ],
+      "defaultVariant": "fetch",
+      "source": "kamod",
+      "intent": "The arrow travels toward the tray while the shelf stays fixed — a clear download landing motion.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "UploadAnimatedIcon",
+      "iconName": "upload",
+      "variants": [
+        "send"
+      ],
+      "defaultVariant": "send",
+      "source": "kamod",
+      "intent": "The arrow rises toward the tray edge — upload or send upward, mirroring download.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "RefreshCwAnimatedIcon",
+      "iconName": "refresh-cw",
+      "variants": [
+        "spin"
+      ],
+      "defaultVariant": "spin",
+      "source": "kamod",
+      "intent": "Continuous rotation signals an ongoing refresh or sync — stops cleanly when unmounted.",
+      "loopCapable": true,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "SettingsAnimatedIcon",
+      "iconName": "settings",
+      "variants": [
+        "adjust",
+        "spin"
+      ],
+      "defaultVariant": "adjust",
+      "source": "kamod",
+      "intent": "Adjust rotates the gear partially for a tweak; spin loops for ongoing configuration or processing.",
+      "loopCapable": true,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "BellAnimatedIcon",
+      "iconName": "bell",
+      "variants": [
+        "ring"
+      ],
+      "defaultVariant": "ring",
+      "source": "kamod",
+      "intent": "The bell body and clapper swing from plausible pivot points — a single believable ring, not endless shaking.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "Trash2AnimatedIcon",
+      "iconName": "trash-2",
+      "variants": [
+        "delete"
+      ],
+      "defaultVariant": "delete",
+      "source": "kamod",
+      "intent": "The lid lifts briefly — delete or remove with the bin body staying grounded.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "LockAnimatedIcon",
+      "iconName": "lock",
+      "variants": [
+        "secure"
+      ],
+      "defaultVariant": "secure",
+      "source": "kamod",
+      "intent": "The shackle drops into the body — transitioning to a locked, secured state.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "LockOpenAnimatedIcon",
+      "iconName": "lock-open",
+      "variants": [
+        "unlock"
+      ],
+      "defaultVariant": "unlock",
+      "source": "kamod",
+      "intent": "The shackle swings open — an unlocked or accessible state.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "EyeAnimatedIcon",
+      "iconName": "eye",
+      "variants": [
+        "look",
+        "blink"
+      ],
+      "defaultVariant": "look",
+      "source": "kamod",
+      "intent": "Look enlarges the pupil for focus; blink closes it briefly — visibility without cartoon bounce.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "EyeOffAnimatedIcon",
+      "iconName": "eye-off",
+      "variants": [
+        "conceal"
+      ],
+      "defaultVariant": "conceal",
+      "source": "kamod",
+      "intent": "The strike-through fades in — content hidden or visibility toggled off.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "HeartAnimatedIcon",
+      "iconName": "heart",
+      "variants": [
+        "pulse",
+        "selected"
+      ],
+      "defaultVariant": "pulse",
+      "source": "kamod",
+      "intent": "Pulse affirms lightly; selected fills with currentColor and rests in a stable favored state.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "PlayAnimatedIcon",
+      "iconName": "play",
+      "variants": [
+        "play"
+      ],
+      "defaultVariant": "play",
+      "source": "kamod",
+      "intent": "The play triangle nudges forward — start playback without elastic overshoot.",
+      "loopCapable": false,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    },
+    {
+      "componentName": "LoaderCircleAnimatedIcon",
+      "iconName": "loader-circle",
+      "variants": [
+        "spin"
+      ],
+      "defaultVariant": "spin",
+      "source": "kamod",
+      "intent": "An even, continuous rotation that reads as loading and stops cleanly when unmounted or reduced motion applies.",
+      "loopCapable": true,
+      "importPath": "@kamod-ch/icons/lucide/animated"
+    }
+  ],
+  "totalIcons": 24
+}

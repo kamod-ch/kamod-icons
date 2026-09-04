@@ -1,4 +1,5 @@
 import { useState } from "preact/hooks";
+import AnimatedIconGallery from "./AnimatedIconGallery.tsx";
 import {
   formatImportSnippet,
   setSupportsStroke,
@@ -7,7 +8,10 @@ import {
 import { IconCatalogCell, IconCatalogPagination, usePagination } from "./IconCatalogParts.tsx";
 import { useIconCatalog } from "./useIconCatalog.ts";
 
+type BrowserMode = "static" | "animated";
+
 export default function IconCatalogBrowser() {
+  const [browserMode, setBrowserMode] = useState<BrowserMode>("static");
   const {
     catalog,
     error,
@@ -46,6 +50,7 @@ export default function IconCatalogBrowser() {
   if (error) {
     return (
       <section class="ki-catalog" id="icon-browser">
+        <BrowserModeTabs mode={browserMode} onChange={setBrowserMode} />
         <p class="ki-catalog-error">Could not load icon catalog: {error}</p>
       </section>
     );
@@ -54,13 +59,24 @@ export default function IconCatalogBrowser() {
   if (!catalog || !activeSet) {
     return (
       <section class="ki-catalog" id="icon-browser">
+        <BrowserModeTabs mode={browserMode} onChange={setBrowserMode} />
         <p class="ki-catalog-loading">Loading icon catalog…</p>
+      </section>
+    );
+  }
+
+  if (browserMode === "animated") {
+    return (
+      <section class="ki-catalog ki-catalog-animated-mode" id="icon-browser" aria-labelledby="icon-browser-title">
+        <BrowserModeTabs mode={browserMode} onChange={setBrowserMode} />
+        <AnimatedIconGallery id="animated-icon-gallery" />
       </section>
     );
   }
 
   return (
     <section class="ki-catalog" id="icon-browser" aria-labelledby="icon-browser-title">
+      <BrowserModeTabs mode={browserMode} onChange={setBrowserMode} />
       <div class="ki-catalog-toolbar">
         <div class="ki-catalog-toolbar-row">
           <div class="ki-catalog-field">
@@ -216,5 +232,36 @@ export default function IconCatalogBrowser() {
 
       {!filteredIcons.length ? <p class="ki-catalog-empty">No icons match your filters.</p> : null}
     </section>
+  );
+}
+
+function BrowserModeTabs({
+  mode,
+  onChange,
+}: {
+  mode: BrowserMode;
+  onChange: (mode: BrowserMode) => void;
+}) {
+  return (
+    <div class="ki-catalog-mode-tabs" role="tablist" aria-label="Catalog mode">
+      <button
+        type="button"
+        role="tab"
+        class={mode === "static" ? "is-active" : ""}
+        aria-selected={mode === "static"}
+        onClick={() => onChange("static")}
+      >
+        Static sets
+      </button>
+      <button
+        type="button"
+        role="tab"
+        class={mode === "animated" ? "is-active" : ""}
+        aria-selected={mode === "animated"}
+        onClick={() => onChange("animated")}
+      >
+        Animated icons
+      </button>
+    </div>
   );
 }

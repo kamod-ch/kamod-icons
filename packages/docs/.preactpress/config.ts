@@ -18,6 +18,8 @@ export default defineConfig({
         "/kamod-icons/icons/installation": "/icons/installation",
         "/kamod-icons/icons/usage": "/icons/usage",
         "/kamod-icons/icons/icon-sets": "/icons/icon-sets",
+        "/kamod-icons/icons/animated": "/icons/animated",
+        "/kamod-icons/icons/animated-poc": "/icons/animated-poc",
       }
     : undefined,
   site: {

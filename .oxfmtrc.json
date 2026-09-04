@@ -1,0 +1,28 @@
+{
+  "ignorePatterns": [
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/coverage/**",
+    "**/raw/**",
+    "packages/core/src/sets/**",
+    "packages/core/src/meta.ts",
+    "packages/core/scripts/**",
+    "packages/docs/**",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "package.json",
+    "packages/core/package.json",
+    "packages/core/icon-sources.json",
+    "release.config.mjs",
+    "scripts/**",
+    "**/.cursor/**",
+    "**/tmp/**",
+    "**/*.tsbuildinfo",
+    "**/*.md",
+    "**/*.json",
+    "**/*.css",
+    "**/*.yaml",
+    "**/*.yml",
+    "README.md"
+  ]
+}

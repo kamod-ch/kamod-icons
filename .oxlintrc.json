@@ -1,0 +1,14 @@
+{
+  "ignorePatterns": [
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/coverage/**",
+    "**/raw/**",
+    "packages/core/src/sets/**",
+    "pnpm-lock.yaml",
+    "**/.cursor/**",
+    "**/tmp/**",
+    "**/*.tsbuildinfo",
+    "**/*.tgz"
+  ]
+}

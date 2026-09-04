@@ -34,3 +34,12 @@ import { iconSources } from "@kamod-ch/icons/meta";
 ## License
 
 The `@kamod-ch/icons` package code is part of the Kamod project. Upstream icon libraries remain under their respective licenses listed above.
+
+## Animated Lucide geometry
+
+The `@kamod-ch/icons/lucide/animated` entry ships **Kamod-authored animation recipes** applied to **Lucide ISC-licensed SVG path geometry**. Static path data is derived from the same Lucide sources tracked in `icon-sources.json` (`lucide` / `lucide-static`). Keyframes, timing, and trigger wiring are implemented in this repository and are **not** copied from third-party animation libraries.
+
+When redistributing or documenting animated icons, attribute Lucide as the underlying icon set:
+
+> Icon geometry from [Lucide](https://lucide.dev) (ISC License). Animations © Kamod.
+

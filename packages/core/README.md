@@ -193,3 +193,85 @@ console.log(iconSources.heroicons.upstream.version);
 ```
 
 See `ATTRIBUTION.md` for upstream licenses and repositories.
+
+## Animated Lucide icons (preview)
+
+> **API status:** Preview / not stable. **24 curated MVP icons** ship under `@kamod-ch/icons/lucide/animated`. Browser support is validated by Playwright smoke and visual tests — see [Browser support](#browser-support-animated) below.
+
+Animated icons use the Web Animations API via Preact. They are **not** exported from the root barrel or `@kamod-ch/icons/lucide`, so static icon imports do not pull animation runtime.
+
+### Import
+
+```tsx
+import {
+  AnimateIcon,
+  BellAnimatedIcon,
+  SearchAnimatedIcon,
+  type AnimatedIconProps,
+} from "@kamod-ch/icons/lucide/animated";
+```
+
+Available components (24): navigation (`ArrowRight`, `ArrowLeft`, `ChevronDown`, `ChevronUp`, `Menu`, `X`), actions (`Search`, `Check`, `Plus`, `Minus`, `Copy`, `Download`, `Upload`, `RefreshCw`, `Settings`, `Bell`, `Trash2`, `Play`), state (`Lock`, `LockOpen`, `Eye`, `EyeOff`, `Heart`), and `LoaderCircle`.
+
+Metadata (`componentName`, `iconName`, `variants`, `intent`, `loopCapable`) is generated from Kamod animated sources via `pnpm run animated:meta` — not from upstream Lucide sync.
+
+### Per-icon subpaths
+
+Per-icon subpaths (for example `@kamod-ch/icons/lucide/animated/search`) are **not** published in this step. The animated entry is a single ESM barrel with `sideEffects: false`; bundlers tree-shake unused icon components reliably. Adding six hand-maintained export entries would duplicate the barrel without measurable gain at this scale.
+
+### Props
+
+Animated icons extend the usual icon props (`size`, `class`, `title`, …) with:
+
+| Prop | Purpose |
+| --- | --- |
+| `animate` | Play immediately (`true`) or a named variant |
+| `animateOnHover` / `animateOnFocus` / `animateOnPress` | Trigger on interaction |
+| `animateOnView` | Play when visible (Intersection Observer) |
+| `loop` / `loopDelay` / `delay` | Timing control |
+| `persistOnEnd` | Keep final keyframe state |
+| `triggerTarget` | Where to attach listeners: `"self"`, `"parent"`, or `closest:selector` |
+| `reducedMotion` | `"system"` (default), `"always"`, or `"never"` |
+
+### Reduced motion
+
+When `reducedMotion="system"` and the user prefers reduced motion, animations are skipped and icons render in their static end state.
+
+### Group control with `AnimateIcon`
+
+Wrap multiple animated icons to share triggers and programmatic control:
+
+```tsx
+import { AnimateIcon, BellAnimatedIcon, SearchAnimatedIcon } from "@kamod-ch/icons/lucide/animated";
+
+export function Toolbar() {
+  return (
+    <AnimateIcon animateOnHover>
+      <SearchAnimatedIcon size={20} />
+      <BellAnimatedIcon size={20} />
+    </AnimateIcon>
+  );
+}
+```
+
+`AnimateIcon` renders a `span[data-kamod-animate-icon]` wrapper and provides context so child icons inherit group animation settings unless overridden.
+
+### Browser support (animated)
+
+Automated checks run via `pnpm test:browser` in `packages/core` (Playwright):
+
+| Engine | Smoke (hover, focus, reduced motion) | Visual regression |
+| --- | --- | --- |
+| Chromium | ✓ CI / local | ✓ baseline snapshots |
+| Firefox | ✓ when Playwright Firefox is installed | ✓ when installed |
+| WebKit (Safari) | ✓ when Playwright WebKit is installed | ✓ when installed |
+
+Requirements: built `dist/lucide/animated`, Web Animations API, `IntersectionObserver` for `animateOnView`, and `matchMedia('(prefers-reduced-motion: reduce)')` for system reduced motion.
+
+Run the full release-candidate gate from the repo root:
+
+```bash
+pnpm release:rc-check
+```
+
+This does **not** publish to npm.

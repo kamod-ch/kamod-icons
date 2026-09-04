@@ -1,6 +1,6 @@
 {
   "name": "@kamod-ch/icons",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Lightweight, tree-shakeable SVG icon library for Preact apps.",
   "license": "MIT",
   "homepage": "https://kamod-ch.github.io/kamod-icons/",
@@ -50,6 +50,7 @@
     "dist",
     "README.md",
     "ATTRIBUTION.md",
+    "CHANGELOG.md",
     "LICENSE",
     "icon-sources.json"
   ],
@@ -69,6 +70,10 @@
     "./lucide": {
       "types": "./dist/sets/lucide/index.d.ts",
       "import": "./dist/sets/lucide/index.js"
+    },
+    "./lucide/animated": {
+      "types": "./dist/lucide/animated/index.d.ts",
+      "import": "./dist/lucide/animated/index.js"
     },
     "./heroicons/outline": {
       "types": "./dist/sets/heroicons/outline/index.d.ts",
@@ -107,9 +112,23 @@
     "icons:sync": "tsx scripts/sync-icons.ts",
     "icons:generate": "tsx scripts/generate-icons.ts",
     "icons:meta": "tsx scripts/generate-meta.ts",
-    "build": "pnpm run icons:meta && tsup",
+    "animated:meta": "tsx scripts/generate-animated-meta.ts",
+    "animated:meta:check": "tsx scripts/generate-animated-meta.ts && git diff --exit-code -- src/animated/lucide/index.ts src/animated/lucide/animated-icons.meta.ts src/animated/lucide/animated-icons.catalog.ts src/animated/lucide/animated-icons.registry.ts",
+    "build": "pnpm run icons:meta && pnpm run animated:meta && tsup",
     "dev": "tsup --watch",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:browser": "playwright test",
+    "test:browser:update": "playwright test --update-snapshots",
+    "test:consumer": "node scripts/qa-tarball-consumer.mjs",
+    "measure:bundles": "node scripts/measure-bundle-sizes.mjs",
+    "check:bundles": "node scripts/check-bundle-budgets.mjs"
   },
   "peerDependencies": {
     "preact": ">=10"
@@ -118,18 +137,22 @@
     "access": "public"
   },
   "devDependencies": {
-    "@heroicons/react": "2.2.0",
+    "@playwright/test": "^1.55.0",
     "@tabler/icons": "3.44.0",
     "@types/node": "^26.1.0",
     "heroicons": "2.2.0",
     "iconoir": "7.11.1",
+    "esbuild": "^0.25.12",
+    "jsdom": "^26.1.0",
     "lucide": "1.23.0",
     "lucide-static": "1.23.0",
     "preact": "^10.29.3",
+    "preact-render-to-string": "^6.7.0",
     "reicon": "1.0.0",
     "svgo": "^4.0.1",
     "tsup": "^8.5.1",
     "tsx": "^4.22.4",
-    "typescript": "~5.9.3"
+    "typescript": "~5.9.3",
+    "vitest": "^4.1.11"
   }
 }

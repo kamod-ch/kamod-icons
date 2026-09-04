@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "components/AnimatedIconGallery.tsx",
+    "components/AnimatedIconsDoc.tsx",
+    "components/animatedIconCatalog.ts",
+    "components/animatedIconComponents.generated.ts"
+  ]
+}

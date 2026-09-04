@@ -56,3 +56,4 @@ The package uses ESM and `sideEffects: false`, so modern bundlers can tree-shake
 
 - Learn the [usage patterns](./usage).
 - Choose an [icon set](./icon-sets).
+- Explore [animated icons](./animated) for Preact-native motion.
