@@ -1,11 +1,11 @@
 import { execSync } from "node:child_process";
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+// When copied to scripts/release.mjs in a consumer repo, __dirname is scripts/.
 const repoRoot = path.resolve(__dirname, "..");
-const coreDir = path.join(repoRoot, "packages/core");
 
 const [, , bumpArg, ...flags] = process.argv;
 const bump = bumpArg ?? "patch";
@@ -28,7 +28,7 @@ function run(command, options = {}) {
       stdio: "inherit",
       encoding: "utf8",
       cwd: options.cwd ?? repoRoot,
-      ...options
+      ...options,
     });
   } catch (error) {
     fail(`command failed: ${command}`, error);
@@ -41,43 +41,87 @@ function output(command, options = {}) {
       encoding: "utf8",
       stdio: ["ignore", "pipe", "pipe"],
       cwd: options.cwd ?? repoRoot,
-      ...options
+      ...options,
     }).trim();
   } catch (error) {
     fail(`command failed: ${command}`, error);
   }
 }
 
-function readCorePackage() {
-  return JSON.parse(readFileSync(path.join(coreDir, "package.json"), "utf8"));
+function readPackageJson(packageDir) {
+  const packagePath = path.join(repoRoot, packageDir, "package.json");
+  return JSON.parse(readFileSync(packagePath, "utf8"));
 }
 
-function readCoreVersion() {
-  return readCorePackage().version;
+function readVersion(packageDir) {
+  return readPackageJson(packageDir).version;
 }
 
-function bumpVersion(version, releaseType) {
-  const parts = version.split(".").map((part) => Number(part));
-  if (parts.length !== 3 || parts.some((part) => !Number.isInteger(part) || part < 0)) {
-    fail(`unsupported version format: ${version}`);
+function discoverPackages(globPattern) {
+  const parent = path.dirname(globPattern);
+  const base = path.basename(globPattern);
+  const parentDir = path.join(repoRoot, parent);
+
+  if (!existsSync(parentDir)) {
+    fail(`discoverPackages parent directory not found: ${parent}`);
   }
 
-  const [major, minor, patch] = parts;
-  if (releaseType === "major") return `${major + 1}.0.0`;
-  if (releaseType === "minor") return `${major}.${minor + 1}.0`;
-  return `${major}.${minor}.${patch + 1}`;
+  const entries = readdirSync(parentDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .filter((name) => base === "*" || name === base.replace("*", ""));
+
+  const packages = [];
+  for (const name of entries.sort()) {
+    const packageDir = path.posix.join(parent, name);
+    const packagePath = path.join(repoRoot, packageDir, "package.json");
+    if (!existsSync(packagePath)) continue;
+
+    const pkg = JSON.parse(readFileSync(packagePath, "utf8"));
+    if (pkg.private === true) continue;
+    packages.push(packageDir);
+  }
+
+  if (packages.length === 0) {
+    fail(`no publishable packages found for discoverPackages: ${globPattern}`);
+  }
+
+  return packages;
 }
 
-function writeCoreVersion(version) {
-  const packagePath = path.join(coreDir, "package.json");
-  const pkg = readCorePackage();
-  pkg.version = version;
-  writeFileSync(packagePath, `${JSON.stringify(pkg, null, 2)}\n`);
-} 
+function resolvePackageDirs(config) {
+  if (config.packages?.length) {
+    return config.packages.map((entry) => (entry === "." ? "." : entry.replace(/\\/g, "/")));
+  }
 
-function assertNpmLogin() {
-  output("npm whoami --registry=https://registry.npmjs.org");
+  if (config.discoverPackages) {
+    return discoverPackages(config.discoverPackages);
+  }
+
+  fail("release.config.mjs must define packages or discoverPackages");
 }
+
+async function loadConfig() {
+  const configPath = path.join(repoRoot, "release.config.mjs");
+  if (!existsSync(configPath)) {
+    fail(`missing release.config.mjs at ${configPath}`);
+  }
+
+  const module = await import(pathToFileURL(configPath).href);
+  return module.default ?? module;
+}
+
+const config = await loadConfig();
+const packageDirs = resolvePackageDirs(config);
+const tagPackage = config.tagPackage ?? packageDirs[0];
+const qaCommand = config.qaCommand ?? "pnpm release:check";
+const commitMessage =
+  config.commitMessage ?? ((version) => `chore: release v${version}`);
+const syncLockfile = config.syncLockfile === true;
+const syncLockfileCommands = config.syncLockfileCommands ?? [
+  "pnpm syncpack:fix",
+  "pnpm install --lockfile-only",
+];
 
 if (!allowed.has(bump)) {
   fail(`invalid release type: ${bump}. Use one of: patch, minor, major`);
@@ -93,40 +137,56 @@ if (status) {
   fail("working tree is not clean — commit or stash changes before releasing");
 }
 
-const corePackage = readCorePackage();
-const packageName = corePackage.name;
-const currentVersion = corePackage.version;
+const tagPkg = readPackageJson(tagPackage);
+const packageName = tagPkg.name;
+const currentVersion = tagPkg.version;
 console.log(
-  `[release] Preparing ${packageName}@${currentVersion}${dryRun ? " (dry run)" : ""}`
+  `[release] Preparing ${packageName}@${currentVersion}${dryRun ? " (dry run)" : ""}`,
 );
 
-assertNpmLogin();
-
 run("pnpm install --frozen-lockfile");
-run("pnpm run build && pnpm run check:docs");
+run(qaCommand);
 
+const primaryDir = path.join(repoRoot, tagPackage);
 if (dryRun) {
-  const tarball = output("npm pack", { cwd: coreDir });
-  run(`tar -tf ${JSON.stringify(tarball)}`, { cwd: coreDir });
-  run(`rm -f ${JSON.stringify(tarball)}`, { cwd: coreDir });
+  const tarball = output("npm pack", { cwd: primaryDir });
+  run(`tar -tf ${JSON.stringify(tarball)}`, { cwd: primaryDir });
+  run(`rm -f ${JSON.stringify(tarball)}`, { cwd: primaryDir });
   console.log("\n[release] Dry run completed successfully.");
   process.exit(0);
 }
 
-const newVersion = bumpVersion(currentVersion, bump);
+for (const packageDir of packageDirs) {
+  run(`npm version ${bump} --no-git-tag-version`, {
+    cwd: path.join(repoRoot, packageDir),
+  });
+}
+
+const newVersion = readVersion(tagPackage);
 console.log(`\n[release] Bumping ${packageName} from ${currentVersion} to ${newVersion}`);
-writeCoreVersion(newVersion);
 
-run("git add packages/core/package.json pnpm-lock.yaml");
-run(`git commit -m "chore(core): release v${newVersion}"`);
+if (syncLockfile) {
+  for (const command of syncLockfileCommands) {
+    run(command);
+  }
+}
+
+const gitPaths = config.gitPaths ?? [
+  ...packageDirs.map((dir) =>
+    dir === "." ? "package.json" : path.posix.join(dir, "package.json"),
+  ),
+  ...(existsSync(path.join(repoRoot, "pnpm-lock.yaml")) ? ["pnpm-lock.yaml"] : []),
+];
+
+run(`git add ${gitPaths.map((entry) => JSON.stringify(entry)).join(" ")}`);
+run(`git commit -m ${JSON.stringify(commitMessage(newVersion))}`);
 run(`git tag v${newVersion}`);
-
-console.log("\n[release] Publishing to npm from packages/core …");
-run("pnpm publish --access public --no-git-checks", { cwd: coreDir });
 
 run("git push origin main");
 run(`git push origin v${newVersion}`);
 
-console.log("\n[release] Release completed successfully.");
+console.log("\n[release] Release tag pushed successfully.");
+console.log(
+  "[release] GitHub Actions will publish to npm with provenance (see .github/workflows/publish.yml).",
+);
 console.log(`[release] npm: https://www.npmjs.com/package/${packageName}/v/${newVersion}`);
-console.log("[release] Push to main will deploy docs via GitHub Pages workflow.");

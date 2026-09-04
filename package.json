@@ -58,6 +58,8 @@
     "brand:readme": "kamod-brand-readme --product Icons --output .github/assets",
     "pack:core": "pnpm --filter @kamod-ch/icons exec npm pack --dry-run",
     "publish:core": "pnpm --filter @kamod-ch/icons publish --access public",
+    "release:check": "pnpm build && pnpm check:docs",
+    "release:publish": "pnpm --filter @kamod-ch/icons publish --access public --provenance --no-git-checks",
     "release": "node ./scripts/release.mjs patch",
     "release:minor": "node ./scripts/release.mjs minor",
     "release:major": "node ./scripts/release.mjs major",
