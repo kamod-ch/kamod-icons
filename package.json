@@ -41,9 +41,9 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@kamod-ch/brand": "^0.1.0",
-    "oxfmt": "^0.66.0",
-    "oxlint": "^1.81.0"
+    "@kamod-ch/brand": "^0.1.12",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0"
   },
   "scripts": {
     "prepublishOnly": "node -e \"console.error('Do not publish the workspace root. Use: pnpm publish:core'); process.exit(1)\"",

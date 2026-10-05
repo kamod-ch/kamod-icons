@@ -1,6 +1,7 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { format } from "oxfmt";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const packageRoot = path.resolve(__dirname, "..");
@@ -228,12 +229,23 @@ async function main() {
 
   const entries = await Promise.all(ANIMATED_MVP_COMPONENTS.map((name) => loadIconMeta(name)));
 
-  await Promise.all([
-    writeFile(path.join(lucideDir, "index.ts"), buildIndexExports(entries)),
-    writeFile(path.join(lucideDir, "animated-icons.meta.ts"), buildMetaFile(entries)),
-    writeFile(path.join(lucideDir, "animated-icons.catalog.ts"), buildCatalogFile(entries)),
-    writeFile(path.join(lucideDir, "animated-icons.registry.ts"), buildRegistryFile(entries)),
-  ]);
+  const generatedFiles = [
+    ["index.ts", buildIndexExports(entries)],
+    ["animated-icons.meta.ts", buildMetaFile(entries)],
+    ["animated-icons.catalog.ts", buildCatalogFile(entries)],
+    ["animated-icons.registry.ts", buildRegistryFile(entries)],
+  ] as const;
+
+  await Promise.all(
+    generatedFiles.map(async ([fileName, source]) => {
+      const filePath = path.join(lucideDir, fileName);
+      const result = await format(filePath, source);
+      if (result.errors.length > 0) {
+        throw new Error(`Could not format ${fileName}: ${result.errors.map((error) => error.message).join(", ")}`);
+      }
+      await writeFile(filePath, result.code);
+    }),
+  );
 
   console.log(`Generated animated barrel + metadata for ${entries.length} MVP icons.`);
 }

@@ -1,6 +1,6 @@
-import type { JSX } from "preact";
+import type { SVGAttributes } from "preact";
 
-export type IconProps = JSX.SVGAttributes<SVGSVGElement> & {
+export type IconProps = SVGAttributes<SVGSVGElement> & {
   size?: number | string;
   title?: string;
 };

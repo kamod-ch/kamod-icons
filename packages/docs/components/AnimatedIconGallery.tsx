@@ -99,9 +99,9 @@ function AnimatedIconCard({ icon, previewReducedMotion, copiedId, onCopy }: Anim
 
   if (!Icon) {
     return (
-      <article class="ki-animated-card" role="listitem">
+      <div class="ki-animated-card" role="listitem">
         <p class="ki-catalog-error">Missing component: {icon.componentName}</p>
-      </article>
+      </div>
     );
   }
 
@@ -127,7 +127,7 @@ function AnimatedIconCard({ icon, previewReducedMotion, copiedId, onCopy }: Anim
   }
 
   return (
-    <article class="ki-animated-card" role="listitem" aria-labelledby={`${icon.componentName}-title`}>
+    <div class="ki-animated-card" role="listitem" aria-labelledby={`${icon.componentName}-title`}>
       <div class="ki-animated-card-preview" aria-live="polite">
         <AnimatedIconPreview
           Icon={Icon}
@@ -246,7 +246,7 @@ function AnimatedIconCard({ icon, previewReducedMotion, copiedId, onCopy }: Anim
               {copiedId === copyId ? "Copied" : "Copy full example"}
             </button>
           </div>
-          <pre class="ki-animated-snippet-pre" tabindex="0">
+          <pre class="ki-animated-snippet-pre" tabIndex={0}>
             <code>{compactSnippet}</code>
           </pre>
           <p class="ki-animated-snippet-hint">
@@ -254,7 +254,7 @@ function AnimatedIconCard({ icon, previewReducedMotion, copiedId, onCopy }: Anim
           </p>
         </div>
       </div>
-    </article>
+    </div>
   );
 }
 
