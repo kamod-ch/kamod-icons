@@ -1,3 +1,4 @@
+import { FaviconSync } from "@kamod-ch/brand";
 import type { FunctionalComponent } from "preact";
 import {
   createMdxHeadingComponents,
@@ -156,6 +157,7 @@ const Layout: FunctionalComponent<LayoutProps> = ({
 
   return (
     <div class={`kiw-site${isHome ? " is-home" : ""}`}>
+      <FaviconSync base={site.base} />
       <a class="kiw-skip" href="#content">Skip to content</a>
 
       <header class="kiw-header">

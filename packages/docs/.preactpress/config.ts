@@ -1,3 +1,4 @@
+import { docsFaviconHeadLinks } from "@kamod-ch/brand";
 import { defineConfig } from "@kamod-ch/preactpress/config";
 
 const productionBase = "/kamod-icons/";
@@ -33,8 +34,7 @@ export default defineConfig({
     emoji: true,
   },
   head: [
-    ["link", { rel: "icon", href: `${siteBase}favicon.svg`, type: "image/svg+xml" }],
-    ["link", { rel: "apple-touch-icon", href: `${siteBase}favicon.svg` }],
+    ...docsFaviconHeadLinks(siteBase),
     ["link", { rel: "stylesheet", href: publicUrl("styles/logo.css") }],
     ["link", { rel: "stylesheet", href: publicUrl("styles/studio.css") }],
     ["link", { rel: "stylesheet", href: publicUrl("styles/icons-docs.css") }],
