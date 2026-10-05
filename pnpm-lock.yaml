@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@kamod-ch/brand':
-        specifier: ^0.1.12
-        version: 0.1.12(preact@11.0.0)
+        specifier: file:../kamod-brand
+        version: file:../kamod-brand(preact@11.0.0)
       oxfmt:
         specifier: ^0.71.0
         version: 0.71.0
@@ -81,8 +81,8 @@ importers:
   packages/docs:
     dependencies:
       '@kamod-ch/brand':
-        specifier: ^0.1.12
-        version: 0.1.12(preact@11.0.0)
+        specifier: file:../../../kamod-brand
+        version: file:../kamod-brand(preact@11.0.0)
       '@kamod-ch/icons':
         specifier: file:../core
         version: link:../core
@@ -589,11 +589,11 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@kamod-ch/brand@0.1.12':
-    resolution: {integrity: sha512-ubS0lKHkqSdefC3Nid9H8KQT62jITocsuef/qkDrOYvisEN+R4nQ9KW3w7dQrTkWa8zVmxOMslDNtPtUPpRThA==}
+  '@kamod-ch/brand@file:../kamod-brand':
+    resolution: {directory: ../kamod-brand, type: directory}
     hasBin: true
     peerDependencies:
-      preact: '>=10'
+      preact: '>=11'
 
   '@kamod-ch/preactpress@3.0.1':
     resolution: {integrity: sha512-Pj2LrI8ScnwCAg+ZyZ0zVvQQc4QFQaZDjKLMB5LuUIPi6drfbeYkLO+nv99SxSUfDYTlFkdNemXd3mzCFmPAGQ==}
@@ -2844,7 +2844,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@kamod-ch/brand@0.1.12(preact@11.0.0)':
+  '@kamod-ch/brand@file:../kamod-brand(preact@11.0.0)':
     dependencies:
       preact: 11.0.0(preact-render-to-string@6.8.0)
 

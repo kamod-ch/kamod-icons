@@ -6,6 +6,7 @@ import {
   normalizeLink,
   slugifyHeading,
   toggleStoredTheme,
+  useStoredThemeSync,
   withBase,
   type LayoutProps,
 } from "@kamod-ch/preactpress/client";
@@ -118,6 +119,8 @@ const Layout: FunctionalComponent<LayoutProps> = ({
   locales = [],
   localizeRoute,
 }) => {
+  useStoredThemeSync();
+
   const sidebar = resolveSidebar(themeConfig.sidebar, routePath);
   const flat = flattenSidebar(sidebar);
   const activeIndex = flat.findIndex((item) => isActive(routePath, item.link));

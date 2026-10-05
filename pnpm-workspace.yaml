@@ -12,3 +12,4 @@ minimumReleaseAgeExclude:
   - '@kamod-ch/brand@0.1.0'
   - '@kamod-ch/brand@0.1.11'
   - '@kamod-ch/brand@0.1.12'
+  - '@kamod-ch/brand@0.3.1'
