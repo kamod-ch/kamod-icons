@@ -9,7 +9,12 @@
 | heroicons | `heroicons` / `@heroicons/react` | see `icon-sources.json` | MIT | https://github.com/tailwindlabs/heroicons |
 | tabler | `@tabler/icons` | see `icon-sources.json` | MIT | https://github.com/tabler/tabler-icons |
 | iconoir | `iconoir` | see `icon-sources.json` | MIT | https://github.com/iconoir-icons/iconoir |
+| iconmind | `@iconmind/icons` (outline regular) | see `icon-sources.json` | MIT | https://github.com/iconmind/iconmind |
 | reicon | `dqev/reicon` | see `icon-sources.json` | MIT | https://github.com/dqev/reicon |
+
+## IconMind note
+
+Kamod packages IconMind's 5,287 `outline-regular` SVG cells as typed Preact components. IconMind's alternate duotone and thin/bold cells are not duplicated here and remain available from the upstream IconMind packages.
 
 ## shadcn/ui note
 

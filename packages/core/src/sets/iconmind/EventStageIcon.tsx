@@ -1,0 +1,26 @@
+import type { IconProps } from "../../shared/types";
+
+export function EventStageIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="M2 4h20M7 4v3M5 9a2 2 0 1 0 4 0 2 2 0 1 0-4 0m12-5v3m-2 2a2 2 0 1 0 4 0 2 2 0 1 0-4 0M4 18h16"/>
+    </svg>
+  );
+}

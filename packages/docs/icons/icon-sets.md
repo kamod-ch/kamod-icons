@@ -17,6 +17,7 @@ description: Choose the right @kamod-ch/icons subpath export for each project.
 @kamod-ch/icons/tabler/filled
 @kamod-ch/icons/iconoir/regular
 @kamod-ch/icons/iconoir/solid
+@kamod-ch/icons/iconmind
 @kamod-ch/icons/reicon/outline
 @kamod-ch/icons/reicon/filled
 ```
@@ -32,6 +33,7 @@ The root import currently maps to the preferred `shadcn` set. For long-lived app
 | `heroicons` | Friendly dashboard, marketing, and app icons |
 | `tabler` | Large product surfaces, admin tools, and dense UIs |
 | `iconoir` | Distinctive geometric product moments |
+| `iconmind` | AI-native interfaces for agents, LLMs, MCP, and RAG |
 | `reicon` | Broad outline/filled coverage from the Reicon open-source library |
 
 ## Why subpath exports?
@@ -80,6 +82,7 @@ Each set vendors SVGs from an upstream npm package or repository. Versions, icon
 | `@kamod-ch/icons/heroicons/…` | [Heroicons](https://github.com/tailwindlabs/heroicons) | `heroicons` (`@heroicons/react@2.2.0`) | 648 | 2026-07-03 |
 | `@kamod-ch/icons/tabler/…` | [Tabler Icons](https://github.com/tabler/tabler-icons) | `@tabler/icons@3.44.0` | 6,146 | 2026-07-03 |
 | `@kamod-ch/icons/iconoir/…` | [Iconoir](https://github.com/iconoir-icons/iconoir) | `iconoir@7.11.1` | 1,671 | 2026-07-03 |
+| `@kamod-ch/icons/iconmind` | [IconMind](https://github.com/iconmind/iconmind) | `@iconmind/icons@0.8.1` (outline regular) | 5,287 | 2026-10-05 |
 | `@kamod-ch/icons/reicon/…` | [Reicon](https://github.com/dqev/reicon) | `dqev/reicon@1.1.1` | 5,360 | 2026-07-08 |
 
 ## Sync from upstream

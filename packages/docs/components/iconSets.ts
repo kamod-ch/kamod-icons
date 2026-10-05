@@ -70,6 +70,20 @@ import {
   FlashIcon as IconoirFlashIcon,
 } from "@kamod-ch/icons/iconoir/regular";
 import {
+  AgentActiveIcon as IconMindAgentActiveIcon,
+  AgentIcon as IconMindAgentIcon,
+  AgentThinkingIcon as IconMindAgentThinkingIcon,
+  ContextWindowIcon as IconMindContextWindowIcon,
+  InferenceServerIcon as IconMindInferenceServerIcon,
+  LlmChatIcon as IconMindLlmChatIcon,
+  McpServerIcon as IconMindMcpServerIcon,
+  PromptIcon as IconMindPromptIcon,
+  RagPipelineIcon as IconMindRagPipelineIcon,
+  TokenIcon as IconMindTokenIcon,
+  ToolChainIcon as IconMindToolChainIcon,
+  VectorDatabaseIcon as IconMindVectorDatabaseIcon,
+} from "@kamod-ch/icons/iconmind";
+import {
   AlertCircleIcon as ReiconAlertCircleIcon,
   BellIcon as ReiconBellIcon,
   BoltIcon as ReiconBoltIcon,
@@ -200,6 +214,27 @@ export const iconSets: IconSet[] = [
       ["Home", IconoirHomeIcon],
       ["Star", IconoirStarIcon],
       ["Flash", IconoirFlashIcon],
+    ],
+  },
+  {
+    id: "iconmind",
+    label: "IconMind",
+    importPath: "@kamod-ch/icons/iconmind",
+    description: "AI-native icons for agents, LLMs, MCP, RAG, and modern developer tools.",
+    iconCount: iconSources.iconmind.iconCount,
+    icons: [
+      ["Agent", IconMindAgentIcon],
+      ["AgentActive", IconMindAgentActiveIcon],
+      ["AgentThinking", IconMindAgentThinkingIcon],
+      ["ContextWindow", IconMindContextWindowIcon],
+      ["McpServer", IconMindMcpServerIcon],
+      ["VectorDatabase", IconMindVectorDatabaseIcon],
+      ["RagPipeline", IconMindRagPipelineIcon],
+      ["Prompt", IconMindPromptIcon],
+      ["Token", IconMindTokenIcon],
+      ["ToolChain", IconMindToolChainIcon],
+      ["InferenceServer", IconMindInferenceServerIcon],
+      ["LlmChat", IconMindLlmChatIcon],
     ],
   },
   {

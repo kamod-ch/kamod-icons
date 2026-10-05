@@ -102,6 +102,20 @@ export const iconSources = {
     "syncedAt": "2026-07-03",
     "iconCount": 1671
   },
+  "iconmind": {
+    "label": "IconMind",
+    "exportPath": "@kamod-ch/icons/iconmind",
+    "upstream": {
+      "type": "npm",
+      "package": "@iconmind/icons",
+      "version": "0.8.1",
+      "repository": "https://github.com/iconmind/iconmind",
+      "license": "MIT",
+      "note": "The 5,287 outline-regular cells are exposed as Kamod Preact components. IconMind also publishes duotone and alternate stroke-weight cells upstream."
+    },
+    "syncedAt": "2026-10-05",
+    "iconCount": 5287
+  },
   "reicon": {
     "label": "Reicon",
     "exportPath": "@kamod-ch/icons/reicon/{variant}",

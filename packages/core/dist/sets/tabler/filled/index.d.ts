@@ -1,5 +1,5 @@
 import * as preact from 'preact';
-import { I as IconProps } from '../../../types-DQL76FNw.js';
+import { I as IconProps } from '../../../types-Cm-1hxkn.js';
 
 declare function AccessibleIcon({ size, title, ...props }: IconProps): preact.JSX.Element;
 

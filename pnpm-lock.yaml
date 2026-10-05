@@ -20,6 +20,9 @@ importers:
 
   packages/core:
     devDependencies:
+      '@iconmind/icons':
+        specifier: 0.8.1
+        version: 0.8.1
       '@playwright/test':
         specifier: ^1.63.0
         version: 1.63.0
@@ -566,6 +569,9 @@ packages:
     peerDependenciesMeta:
       '@noble/hashes':
         optional: true
+
+  '@iconmind/icons@0.8.1':
+    resolution: {integrity: sha512-lIqK8A54lxkign2o7xzFdmGC779G5uNtNtV232MI0y3n3RM2q9FHQMyjf3WbLtifptqO/LR4pNRjrnxomzcjHw==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -2816,6 +2822,8 @@ snapshots:
     optional: true
 
   '@exodus/bytes@1.16.0': {}
+
+  '@iconmind/icons@0.8.1': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:

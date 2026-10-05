@@ -19,7 +19,7 @@
 
 # @kamod-ch/icons
 
-Tree-shakeable Preact icon components for Kamod. The package contains multiple independent icon sets (`shadcn`, `lucide`, `heroicons`, `tabler`, `iconoir`) via stable subpath exports.
+Tree-shakeable Preact icon components for Kamod. The package contains multiple independent icon sets (`shadcn`, `lucide`, `heroicons`, `tabler`, `iconoir`, `iconmind`, `reicon`) via stable subpath exports.
 
 ## Installation
 
@@ -94,6 +94,16 @@ raw/iconoir/regular/search.svg
 raw/iconoir/solid/alarm.svg
 ```
 
+### IconMind (AI-native icons)
+
+IconMind contributes 5,287 icons for agents, LLMs, MCP, RAG, and related software. Kamod exposes the upstream outline-regular cells through the same Preact API as its other static sets:
+
+```tsx
+import { AgentIcon, ContextWindowIcon, McpServerIcon } from "@kamod-ch/icons/iconmind";
+```
+
+The alternate IconMind duotone and stroke-weight cells remain available from the upstream packages.
+
 ### Tailwind classes
 
 ```tsx
@@ -158,6 +168,8 @@ The package already contains raw and source folders plus subpath exports for:
 - `heroicons`
 - `tabler`
 - `iconoir`
+- `iconmind`
+- `reicon`
 
 To add icons to one of these sets, place SVG files in `raw/<set-name>/` and run the generator. Heroicons use variant subfolders (`raw/heroicons/outline/`, `raw/heroicons/solid/`) and export via `@kamod-ch/icons/heroicons/outline` and `@kamod-ch/icons/heroicons/solid`. Tabler uses `outline` / `filled`; Iconoir uses `regular` / `solid`. To add a brand-new set later, add:
 

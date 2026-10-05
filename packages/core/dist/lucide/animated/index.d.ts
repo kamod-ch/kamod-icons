@@ -1,6 +1,6 @@
 import * as preact from 'preact';
 import { ComponentChildren, CSSProperties } from 'preact';
-import { I as IconProps } from '../../types-DQL76FNw.js';
+import { I as IconProps } from '../../types-Cm-1hxkn.js';
 
 type ReducedMotionMode = "system" | "always" | "never";
 type TriggerTarget = "self" | "parent" | `closest:${string}`;

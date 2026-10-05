@@ -12,6 +12,7 @@ export default defineConfig({
     "sets/tabler/filled/index": "src/sets/tabler/filled/index.ts",
     "sets/iconoir/regular/index": "src/sets/iconoir/regular/index.ts",
     "sets/iconoir/solid/index": "src/sets/iconoir/solid/index.ts",
+    "sets/iconmind/index": "src/sets/iconmind/index.ts",
     "sets/reicon/outline/index": "src/sets/reicon/outline/index.ts",
     "sets/reicon/filled/index": "src/sets/reicon/filled/index.ts",
     "lucide/animated/index": "src/animated/lucide/index.ts",
