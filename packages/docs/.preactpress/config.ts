@@ -33,6 +33,13 @@ export default defineConfig({
     html: false,
     emoji: true,
   },
+  vite: {
+    ssr: {
+      // Brand components use Preact hooks. Bundle them into the SSR build so
+      // they share Preact's hook state with PreactPress' bundled renderer.
+      noExternal: ["@kamod-ch/brand"],
+    },
+  },
   head: [
     ...docsFaviconHeadLinks(siteBase),
     ["link", { rel: "stylesheet", href: publicUrl("styles/logo.css") }],
