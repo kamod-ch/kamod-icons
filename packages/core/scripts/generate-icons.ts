@@ -173,10 +173,15 @@ function buildComponentSource(
   rootAttributes: { fill: string; stroke?: string },
   indentedChildren: string,
   typesImportPath: string,
+  setName: string,
 ): string {
   const strokeAttribute = rootAttributes.stroke ? `\n      stroke="${rootAttributes.stroke}"` : "";
+  const iconmindStrokeAttributes =
+    setName === "iconmind"
+      ? `\n      strokeWidth={2}\n      strokeLinecap="round"\n      strokeLinejoin="round"`
+      : "";
 
-  return `import type { IconProps } from "${typesImportPath}";\n\nexport function ${componentName}({\n  size = 24,\n  title,\n  ...props\n}: IconProps) {\n  return (\n    <svg\n      width={size}\n      height={size}\n      viewBox="${viewBox}"\n      fill="${rootAttributes.fill}"${strokeAttribute}\n      aria-hidden={title ? undefined : true}\n      role={title ? "img" : undefined}\n      {...props}\n    >\n      {title ? <title>{title}</title> : null}${indentedChildren ? `\n${indentedChildren}` : ""}\n    </svg>\n  );\n}\n`;
+  return `import type { IconProps } from "${typesImportPath}";\n\nexport function ${componentName}({\n  size = 24,\n  title,\n  ...props\n}: IconProps) {\n  return (\n    <svg\n      width={size}\n      height={size}\n      viewBox="${viewBox}"\n      fill="${rootAttributes.fill}"${strokeAttribute}${iconmindStrokeAttributes}\n      aria-hidden={title ? undefined : true}\n      role={title ? "img" : undefined}\n      {...props}\n    >\n      {title ? <title>{title}</title> : null}${indentedChildren ? `\n${indentedChildren}` : ""}\n    </svg>\n  );\n}\n`;
 }
 
 async function generateIcon(source: SvgSource, outSetDir: string, setName: string): Promise<string> {
@@ -206,7 +211,14 @@ async function generateIcon(source: SvgSource, outSetDir: string, setName: strin
         .join("\n")
     : "";
 
-  const component = buildComponentSource(componentName, viewBox, rootAttributes, indentedChildren, typesImportPath);
+  const component = buildComponentSource(
+    componentName,
+    viewBox,
+    rootAttributes,
+    indentedChildren,
+    typesImportPath,
+    setName,
+  );
 
   await writeFile(path.join(outSetDir, `${componentName}.tsx`), component);
   return componentName;

@@ -1,0 +1,26 @@
+import type { IconProps } from "../../shared/types";
+
+export function SignLanguageIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="M4 21v-8a2 2 0 0 1 4 0V9a2 2 0 0 1 4 0v6m8 6v-8a2 2 0 0 0-4 0V9a2 2 0 0 0-4 0"/>
+    </svg>
+  );
+}

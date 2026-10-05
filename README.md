@@ -23,7 +23,7 @@
 
 Monorepo for `@kamod-ch/icons` and the PreactPress documentation site.
 
-`@kamod-ch/icons` is a lightweight, tree-shakeable icon package for Preact, Kamod UI, PreactPress and other modern Preact apps. Icons are exported as typed Preact components and are grouped by stable subpath exports such as `@kamod-ch/icons/shadcn`.
+`@kamod-ch/icons` is a lightweight, tree-shakeable icon package for Preact, Kamod UI, PreactPress and other modern Preact apps. Icons are exported as typed Preact components and are grouped by stable subpath exports such as `@kamod-ch/icons/shadcn` and `@kamod-ch/icons/iconmind`.
 
 ## Structure
 

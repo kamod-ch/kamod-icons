@@ -53,7 +53,7 @@ export function variantLabel(variant: string): string {
   return variant.charAt(0).toUpperCase() + variant.slice(1);
 }
 
-export const STROKE_SETS = new Set(["lucide", "shadcn", "tabler", "heroicons", "iconoir", "reicon"]);
+export const STROKE_SETS = new Set(["lucide", "shadcn", "tabler", "heroicons", "iconoir", "iconmind", "reicon"]);
 
 export function setSupportsStroke(setId: string, variant: string): boolean {
   if (setId === "heroicons" && variant === "solid") return false;

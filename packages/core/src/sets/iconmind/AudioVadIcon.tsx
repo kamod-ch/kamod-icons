@@ -1,0 +1,26 @@
+import type { IconProps } from "../../shared/types";
+
+export function AudioVadIcon({
+  size = 24,
+  title,
+  ...props
+}: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden={title ? undefined : true}
+      role={title ? "img" : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path d="M14 4h5a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h5M7 17v4l4-4m-5.5-6.5h3"/><path d="M9.5 12.5 12 10l2.5 2.5m1-2h3"/>
+    </svg>
+  );
+}

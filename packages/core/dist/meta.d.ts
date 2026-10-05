@@ -88,6 +88,20 @@ declare const iconSources: {
         readonly syncedAt: "2026-07-03";
         readonly iconCount: 1671;
     };
+    readonly iconmind: {
+        readonly label: "IconMind";
+        readonly exportPath: "@kamod-ch/icons/iconmind";
+        readonly upstream: {
+            readonly type: "npm";
+            readonly package: "@iconmind/icons";
+            readonly version: "0.8.1";
+            readonly repository: "https://github.com/iconmind/iconmind";
+            readonly license: "MIT";
+            readonly note: "The 5,287 outline-regular cells are exposed as Kamod Preact components. IconMind also publishes duotone and alternate stroke-weight cells upstream.";
+        };
+        readonly syncedAt: "2026-10-05";
+        readonly iconCount: 5287;
+    };
     readonly reicon: {
         readonly label: "Reicon";
         readonly exportPath: "@kamod-ch/icons/reicon/{variant}";

@@ -143,6 +143,49 @@ async function syncIconoir(): Promise<void> {
   console.log(`Synced iconoir: ${regularCopied} regular, ${solidCopied} solid`);
 }
 
+async function syncIconmind(): Promise<void> {
+  const iconmindRoot = resolvePackageRoot("@iconmind/icons");
+  const iconsRoot = path.join(iconmindRoot, "icons");
+  const targetDir = path.join(rawRoot, "iconmind");
+  const categories = await readdir(iconsRoot, { withFileTypes: true });
+  const seenNames = new Set<string>();
+  const seenComponentNames = new Set<string>();
+  let copied = 0;
+
+  await mkdir(targetDir, { recursive: true });
+  await cleanSvgFiles(targetDir);
+
+  for (const category of categories
+    .filter((entry) => entry.isDirectory())
+    .sort((left, right) => left.name.localeCompare(right.name))) {
+    const categoryDir = path.join(iconsRoot, category.name);
+    const icons = await readdir(categoryDir, { withFileTypes: true });
+
+    for (const icon of icons
+      .filter((entry) => entry.isDirectory())
+      .sort((left, right) => left.name.localeCompare(right.name))) {
+      if (seenNames.has(icon.name)) {
+        throw new Error(`Duplicate IconMind icon name: ${icon.name}`);
+      }
+
+      const componentKey = icon.name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+      const targetName = seenComponentNames.has(componentKey)
+        ? `${icon.name}-${category.name}`
+        : icon.name;
+      const sourcePath = path.join(categoryDir, icon.name, "outline-regular.svg");
+      const svg = await readFile(sourcePath, "utf8");
+      const metadata = `<!-- category: ${category.name}\ntags: [${icon.name.split("-").join(", ")}] -->\n`;
+
+      await writeFile(path.join(targetDir, `${targetName}.svg`), `${metadata}${svg}`);
+      seenNames.add(icon.name);
+      seenComponentNames.add(componentKey);
+      copied += 1;
+    }
+  }
+
+  console.log(`Synced iconmind: ${copied} outline regular icons`);
+}
+
 async function findNamedDir(rootDir: string, dirName: string): Promise<string | null> {
   const direct = path.join(rootDir, dirName);
   const directEntries = await readdir(direct, { withFileTypes: true }).catch(() => null);
@@ -212,6 +255,7 @@ const syncHandlers: Record<string, () => Promise<void>> = {
   shadcn: syncShadcn,
   tabler: syncTabler,
   iconoir: syncIconoir,
+  iconmind: syncIconmind,
   reicon: syncReicon,
 };
 

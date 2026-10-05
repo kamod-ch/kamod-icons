@@ -20,6 +20,8 @@
     "heroicons",
     "tabler",
     "iconoir",
+    "iconmind",
+    "ai-icons",
     "reicon",
     "shadcn",
     "svg-icons",
@@ -99,6 +101,10 @@
       "types": "./dist/sets/iconoir/solid/index.d.ts",
       "import": "./dist/sets/iconoir/solid/index.js"
     },
+    "./iconmind": {
+      "types": "./dist/sets/iconmind/index.d.ts",
+      "import": "./dist/sets/iconmind/index.js"
+    },
     "./reicon/outline": {
       "types": "./dist/sets/reicon/outline/index.d.ts",
       "import": "./dist/sets/reicon/outline/index.js"
@@ -114,7 +120,7 @@
     "icons:meta": "tsx scripts/generate-meta.ts",
     "animated:meta": "tsx scripts/generate-animated-meta.ts",
     "animated:meta:check": "tsx scripts/generate-animated-meta.ts && git diff --exit-code -- src/animated/lucide/index.ts src/animated/lucide/animated-icons.meta.ts src/animated/lucide/animated-icons.catalog.ts src/animated/lucide/animated-icons.registry.ts",
-    "build": "pnpm run icons:meta && pnpm run animated:meta && tsup",
+    "build": "pnpm run icons:meta && pnpm run animated:meta && NODE_OPTIONS=--max-old-space-size=8192 tsup",
     "dev": "tsup --watch",
     "clean": "rm -rf dist",
     "lint": "oxlint .",
@@ -137,6 +143,7 @@
     "access": "public"
   },
   "devDependencies": {
+    "@iconmind/icons": "0.8.1",
     "@playwright/test": "^1.63.0",
     "@tabler/icons": "3.48.0",
     "@types/node": "^26.6.4",
