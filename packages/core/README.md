@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kamod-ch/kamod-icons/main/.github/assets/logo-kamod-icons-dark.svg" alt="Kamod Icons" width="280" />
+  <img src="assets/logo-kamod-icons-dark.svg" alt="Kamod Icons" width="280" />
 </p>
 
 <p align="center">

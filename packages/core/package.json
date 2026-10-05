@@ -49,6 +49,7 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
+    "assets",
     "dist",
     "README.md",
     "ATTRIBUTION.md",
