@@ -2,6 +2,25 @@
 
 All notable changes to `@kamod-ch/icons` are documented here.
 
+## [2.0.0] - 2026-10-05
+
+### Added
+
+- 5,287 IconMind outline-regular icons under `@kamod-ch/icons/iconmind`.
+- Upstream sync support, source metadata, attribution, and documentation catalog integration for IconMind.
+- 24 preview animated Lucide components under `@kamod-ch/icons/lucide/animated`.
+- Interaction triggers, group control, reduced-motion handling, browser tests, and bundle budgets for animated icons.
+
+### Changed
+
+- Refined package documentation with clearer installation, import, accessibility, metadata, and development guidance.
+- Standardized the README header on one Kamod Icons logo.
+
+### Notes
+
+- Animated icons remain a preview API and are isolated from the root and static Lucide entry points.
+- Preact 11 or newer is required.
+
 ## [1.1.0] - 2026-09-04
 
 ### Added

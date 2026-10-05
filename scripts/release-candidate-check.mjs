@@ -6,7 +6,7 @@ import { spawnSync } from "node:child_process";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = resolve(fileURLToPath(new URL("../..", import.meta.url)));
+const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const core = resolve(root, "packages/core");
 const continueOnFail = process.argv.includes("--continue");
 

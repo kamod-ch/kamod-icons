@@ -1,6 +1,5 @@
 <p align="center">
-  <img src=".github/assets/logo-kamod-icons-dark.svg#gh-light-mode-only" alt="Kamod Icons" width="280" />
-  <img src=".github/assets/logo-kamod-icons-light.svg#gh-dark-mode-only" alt="Kamod Icons" width="280" />
+  <img src=".github/assets/logo-kamod-icons-dark.svg" alt="Kamod Icons" width="280" />
 </p>
 
 <p align="center">
@@ -11,80 +10,78 @@
 </p>
 
 <p align="center">
-  <strong><a href="https://kamod-ch.github.io/kamod-icons/">Live docs</a></strong> ·
+  <strong><a href="https://kamod-ch.github.io/kamod-icons/">Documentation</a></strong> ·
   <strong><a href="https://www.npmjs.com/package/@kamod-ch/icons">npm</a></strong> ·
-  <strong><a href="https://github.com/kamod-ch/kamod-icons">GitHub</a></strong> ·
   <strong><a href="https://github.com/kamod-ch/kamod-icons/issues">Issues</a></strong>
 </p>
 
-> If Kamod Icons saves you time, **[star the repo](https://github.com/kamod-ch/kamod-icons)** — it helps others discover the project.
-
 # Kamod Icons
 
-Monorepo for `@kamod-ch/icons` and the PreactPress documentation site.
+Monorepo for [`@kamod-ch/icons`](https://www.npmjs.com/package/@kamod-ch/icons), a lightweight and tree-shakeable SVG icon library for Preact, and its PreactPress documentation.
 
-`@kamod-ch/icons` is a lightweight, tree-shakeable icon package for Preact, Kamod UI, PreactPress and other modern Preact apps. Icons are exported as typed Preact components and are grouped by stable subpath exports such as `@kamod-ch/icons/shadcn` and `@kamod-ch/icons/iconmind`.
+The package provides typed Preact components through stable subpath exports for Shadcn, Lucide, Heroicons, Tabler, Iconoir, IconMind, and Reicon. Animated Lucide icons are available through a separate preview entry point.
 
-## Structure
+## Quick start
 
-```txt
-packages/core/   # @kamod-ch/icons package, generator, raw SVGs and source icons
-packages/docs/     # PreactPress documentation site
+```bash
+npm install @kamod-ch/icons preact
 ```
 
-## Install
+```tsx
+import { SearchIcon } from "@kamod-ch/icons/shadcn";
 
-Install dependencies from the repository root:
+export function SearchButton() {
+  return <SearchIcon size={20} title="Search" />;
+}
+```
+
+See the [package README](packages/core/README.md) for all icon sets, accessibility guidance, and animated-icon usage.
+
+## Repository structure
+
+```text
+packages/core/  # @kamod-ch/icons, SVG sources, generator, tests, and build output
+packages/docs/  # PreactPress documentation site
+scripts/        # release and repository automation
+```
+
+## Development
+
+Requires Node.js and pnpm.
 
 ```bash
 pnpm install
+pnpm build
 ```
 
-The root package uses pnpm workspaces for `packages/*` and `docs`.
-
-## Commands
+Useful commands:
 
 ```bash
-pnpm run build          # build icons, then build the PreactPress docs
-pnpm run build:icons    # build only @kamod-ch/icons
-pnpm run build:docs     # build only the docs site
-pnpm run dev:docs       # start PreactPress locally
-pnpm run dev:icons      # watch-build the icon package
-pnpm run icons:sync     # copy upstream SVGs and update icon-sources.json
-pnpm run icons:generate # generate Preact components from raw SVGs
-pnpm run check:docs     # run PreactPress checks
-pnpm run preview:docs   # preview the built docs
-pnpm run clean          # remove icon dist and docs dist
+pnpm build:icons       # build @kamod-ch/icons
+pnpm build:docs        # build the documentation site
+pnpm dev:icons         # watch the icon package
+pnpm docs:dev          # start the local documentation site
+pnpm docs:preview      # preview the built documentation
+pnpm icons:sync        # sync tracked upstream SVG packages
+pnpm icons:generate    # generate typed Preact components
+pnpm test              # run package tests
+pnpm typecheck         # run TypeScript checks
+pnpm release:check     # build packages and validate the docs
 ```
 
-## Local docs
+## Publishing
+
+The workspace root is private and cannot be published. Releases publish only `packages/core` as `@kamod-ch/icons`.
 
 ```bash
-pnpm install
-pnpm run dev:docs
+pnpm pack:core
+pnpm publish:core
 ```
 
-The docs live in `packages/docs/icons/` and are configured in `packages/docs/.preactpress/config.ts`.
+## License and attribution
 
-## Build everything
-
-```bash
-pnpm run build
-```
-
-This runs:
-
-1. `pnpm run build:icons`
-2. `pnpm run build:docs`
-
-The docs build depends on the icon package build because the package exports point to `packages/core/dist/*`.
+Kamod Icons is available under the [MIT License](LICENSE). Each bundled icon set retains its upstream license; see [`packages/core/ATTRIBUTION.md`](packages/core/ATTRIBUTION.md).
 
 ---
 
-
-
-Built by Klaus Zahiragic  | Kamod GmbH
-
-[Website](https://www.kamod.ch) ·
-[LinkedIn](https://www.linkedin.com/in/klauszahiragic/)
-
+Built by [Klaus Zahiragic](https://www.linkedin.com/in/klauszahiragic/) · [Kamod GmbH](https://www.kamod.ch)
