@@ -14,13 +14,13 @@
     "preview": "preactpress preview"
   },
   "dependencies": {
-    "@kamod-ch/brand": "^0.1.0",
+    "@kamod-ch/brand": "^0.1.12",
     "@kamod-ch/icons": "file:../core",
-    "preact": ">=10"
+    "preact": "^11.0.0"
   },
   "devDependencies": {
-    "@kamod-ch/preactpress": "^2.1.0",
-    "tsx": "^4.22.4",
+    "@kamod-ch/preactpress": "^3.0.1",
+    "tsx": "^4.23.15",
     "typescript": "~5.9.3"
   }
 }

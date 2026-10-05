@@ -9,7 +9,7 @@ import { createTriggerController } from "./triggers";
 import type { AnimatedIconProps, AnimationController } from "./types";
 
 export type UseAnimatedIconResult = {
-  svgRef: RefObject<SVGSVGElement>;
+  svgRef: RefObject<SVGSVGElement | null>;
   svgProps: Record<string, unknown>;
 };
 

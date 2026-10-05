@@ -2,7 +2,7 @@ import type { ComponentChildren, RefObject } from "preact";
 import type { IconProps } from "../../shared/types";
 
 type AnimatedSvgShellProps = IconProps & {
-  svgRef: RefObject<SVGSVGElement>;
+  svgRef: RefObject<SVGSVGElement | null>;
   svgProps: Record<string, unknown>;
   overflow?: "visible" | "hidden";
   children: ComponentChildren;
