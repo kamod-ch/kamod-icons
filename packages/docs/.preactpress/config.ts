@@ -35,9 +35,10 @@ export default defineConfig({
   },
   vite: {
     ssr: {
-      // Brand components use Preact hooks. Bundle them into the SSR build so
-      // they share Preact's hook state with PreactPress' bundled renderer.
-      noExternal: ["@kamod-ch/brand"],
+      // Keep every hook-using package in the same SSR bundle. If PreactPress'
+      // client helpers remain external while Brand pulls Preact into the
+      // bundle, the two Preact instances have separate hook state.
+      noExternal: ["@kamod-ch/brand", "@kamod-ch/preactpress"],
     },
   },
   head: [
