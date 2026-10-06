@@ -36,7 +36,7 @@
     "url": "git+https://github.com/kamod-ch/kamod-icons.git"
   },
   "type": "module",
-  "packageManager": "pnpm@11.8.0",
+  "packageManager": "pnpm@12.9.1",
   "workspaces": [
     "packages/*"
   ],
