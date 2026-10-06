@@ -14,7 +14,7 @@
     "preview": "preactpress preview"
   },
   "dependencies": {
-    "@kamod-ch/brand": "^0.3.1",
+    "@kamod-ch/brand": "^0.4.0",
     "@kamod-ch/icons": "file:../core",
     "preact": "^11.0.0"
   },
