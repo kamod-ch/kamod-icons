@@ -1,6 +1,6 @@
 import * as preact from 'preact';
 import { ComponentChildren, CSSProperties } from 'preact';
-import { I as IconProps } from '../../types-Cm-1hxkn.js';
+import { IconProps } from '../../index.js';
 
 type ReducedMotionMode = "system" | "always" | "never";
 type TriggerTarget = "self" | "parent" | `closest:${string}`;
@@ -167,4 +167,5 @@ type LoaderCircleAnimatedVariant = "spin";
 
 declare function LoaderCircleAnimatedIcon(props: AnimatedIconProps<LoaderCircleAnimatedVariant>): preact.JSX.Element;
 
-export { AnimateIcon, type AnimateIconProps, type AnimatedIconProps, ArrowLeftAnimatedIcon, type ArrowLeftAnimatedVariant, ArrowRightAnimatedIcon, type ArrowRightAnimatedVariant, BellAnimatedIcon, type BellAnimatedVariant, CheckAnimatedIcon, type CheckAnimatedVariant, ChevronDownAnimatedIcon, type ChevronDownAnimatedVariant, ChevronUpAnimatedIcon, type ChevronUpAnimatedVariant, CopyAnimatedIcon, type CopyAnimatedVariant, DownloadAnimatedIcon, type DownloadAnimatedVariant, EyeAnimatedIcon, type EyeAnimatedVariant, EyeOffAnimatedIcon, type EyeOffAnimatedVariant, HeartAnimatedIcon, type HeartAnimatedVariant, LoaderCircleAnimatedIcon, type LoaderCircleAnimatedVariant, LockAnimatedIcon, type LockAnimatedVariant, LockOpenAnimatedIcon, type LockOpenAnimatedVariant, MenuAnimatedIcon, type MenuAnimatedVariant, MinusAnimatedIcon, type MinusAnimatedVariant, PlayAnimatedIcon, type PlayAnimatedVariant, PlusAnimatedIcon, type PlusAnimatedVariant, type ReducedMotionMode, RefreshCwAnimatedIcon, type RefreshCwAnimatedVariant, SearchAnimatedIcon, type SearchAnimatedVariant, SettingsAnimatedIcon, type SettingsAnimatedVariant, Trash2AnimatedIcon, type Trash2AnimatedVariant, type TriggerTarget, UploadAnimatedIcon, type UploadAnimatedVariant, XAnimatedIcon, type XAnimatedVariant };
+export { AnimateIcon, ArrowLeftAnimatedIcon, ArrowRightAnimatedIcon, BellAnimatedIcon, CheckAnimatedIcon, ChevronDownAnimatedIcon, ChevronUpAnimatedIcon, CopyAnimatedIcon, DownloadAnimatedIcon, EyeAnimatedIcon, EyeOffAnimatedIcon, HeartAnimatedIcon, LoaderCircleAnimatedIcon, LockAnimatedIcon, LockOpenAnimatedIcon, MenuAnimatedIcon, MinusAnimatedIcon, PlayAnimatedIcon, PlusAnimatedIcon, RefreshCwAnimatedIcon, SearchAnimatedIcon, SettingsAnimatedIcon, Trash2AnimatedIcon, UploadAnimatedIcon, XAnimatedIcon };
+export type { AnimateIconProps, AnimatedIconProps, ArrowLeftAnimatedVariant, ArrowRightAnimatedVariant, BellAnimatedVariant, CheckAnimatedVariant, ChevronDownAnimatedVariant, ChevronUpAnimatedVariant, CopyAnimatedVariant, DownloadAnimatedVariant, EyeAnimatedVariant, EyeOffAnimatedVariant, HeartAnimatedVariant, LoaderCircleAnimatedVariant, LockAnimatedVariant, LockOpenAnimatedVariant, MenuAnimatedVariant, MinusAnimatedVariant, PlayAnimatedVariant, PlusAnimatedVariant, ReducedMotionMode, RefreshCwAnimatedVariant, SearchAnimatedVariant, SettingsAnimatedVariant, Trash2AnimatedVariant, TriggerTarget, UploadAnimatedVariant, XAnimatedVariant };

@@ -120,4 +120,5 @@ declare const iconSources: {
 };
 type IconSourceName = keyof typeof iconSources;
 
-export { type IconSourceName, type IconSourceSet, type IconSourceUpstream, iconSources };
+export { iconSources };
+export type { IconSourceName, IconSourceSet, IconSourceUpstream };

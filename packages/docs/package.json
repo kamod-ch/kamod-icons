@@ -16,7 +16,7 @@
   "dependencies": {
     "@kamod-ch/brand": "^0.4.0",
     "@kamod-ch/icons": "file:../core",
-    "preact": "^11.0.0"
+    "preact": "^11.0.1"
   },
   "devDependencies": {
     "@kamod-ch/preactpress": "^3.0.1",

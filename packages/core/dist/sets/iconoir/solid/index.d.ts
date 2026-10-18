@@ -1,5 +1,5 @@
 import * as preact from 'preact';
-import { I as IconProps } from '../../../types-Cm-1hxkn.js';
+import { IconProps } from '../../../index.js';
 
 declare function AdobeAfterEffectsIcon({ size, title, ...props }: IconProps): preact.JSX.Element;
 
