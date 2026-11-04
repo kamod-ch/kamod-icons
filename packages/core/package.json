@@ -43,7 +43,7 @@
     "developer-tools",
     "shadcn"
   ],
-  "packageManager": "pnpm@12.9.1",
+  "packageManager": "pnpm@12.17.0",
   "type": "module",
   "sideEffects": false,
   "module": "./dist/index.js",
@@ -144,24 +144,24 @@
     "access": "public"
   },
   "devDependencies": {
-    "@iconmind/icons": "0.8.1",
+    "@iconmind/icons": "0.8.4",
     "@playwright/test": "^1.64.1",
-    "@tabler/icons": "3.49.0",
-    "@types/node": "^26.6.5",
+    "@tabler/icons": "3.50.0",
+    "@types/node": "^26.6.6",
     "esbuild": "^0.28.2",
     "heroicons": "2.2.0",
-    "iconoir": "7.12.1",
+    "iconoir": "7.12.2",
     "jsdom": "^30.1.3",
-    "lucide": "1.59.0",
-    "lucide-static": "1.59.0",
-    "oxfmt": "^0.73.0",
-    "preact": "^11.0.1",
-    "preact-render-to-string": "^6.8.1",
+    "lucide": "1.68.0",
+    "lucide-static": "1.68.0",
+    "oxfmt": "^0.76.0",
+    "preact": "^11.1.1",
+    "preact-render-to-string": "^6.8.2",
     "reicon": "1.2.5",
     "svgo": "^4.1.0",
     "tsup": "^9.0.0",
     "tsx": "^4.23.15",
-    "typescript": "~5.9.3",
-    "vitest": "^5.0.5"
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.0"
   }
 }
