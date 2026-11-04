@@ -16,11 +16,11 @@
   "dependencies": {
     "@kamod-ch/brand": "^0.4.0",
     "@kamod-ch/icons": "file:../core",
-    "preact": "^11.0.1"
+    "preact": "^11.1.1"
   },
   "devDependencies": {
-    "@kamod-ch/preactpress": "^3.0.1",
+    "@kamod-ch/preactpress": "^3.3.0",
     "tsx": "^4.23.15",
-    "typescript": "~5.9.3"
+    "typescript": "~6.0.3"
   }
 }
