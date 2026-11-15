@@ -21,6 +21,8 @@ export default function IconCatalogBrowser() {
     availableVariants,
     filteredIcons,
     categories,
+    iconColor,
+    pickerColor,
   } = useIconCatalog();
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const { visibleItems, page, totalPages, totalItems, startIndex, endIndex, setPage } =
@@ -156,7 +158,7 @@ export default function IconCatalogBrowser() {
             <span>Color</span>
             <input
               type="color"
-              value={filters.color}
+              value={pickerColor}
               onInput={(event) => updateFilters({ color: (event.currentTarget as HTMLInputElement).value })}
             />
           </label>
@@ -213,7 +215,7 @@ export default function IconCatalogBrowser() {
             icon={icon}
             size={filters.size}
             stroke={filters.stroke}
-            color={filters.color}
+            color={iconColor}
             strokeEnabled={strokeEnabled}
             copiedId={copiedId}
             onCopy={copyImport}

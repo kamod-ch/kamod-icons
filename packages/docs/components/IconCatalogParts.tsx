@@ -13,11 +13,11 @@ type IconSvgProps = {
   icon: CatalogIcon;
   size: number;
   stroke: number;
-  color: string;
+  color: string | null;
   strokeEnabled: boolean;
 };
 
-function applySvgPresentation(svgText: string, size: number, stroke: number, color: string, strokeEnabled: boolean) {
+function applySvgPresentation(svgText: string, size: number, stroke: number, color: string | null, strokeEnabled: boolean) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(svgText, "image/svg+xml");
   const svg = doc.querySelector("svg");
@@ -25,7 +25,7 @@ function applySvgPresentation(svgText: string, size: number, stroke: number, col
 
   svg.setAttribute("width", String(size));
   svg.setAttribute("height", String(size));
-  svg.style.color = color;
+  if (color) svg.style.color = color;
 
   if (strokeEnabled) {
     svg.querySelectorAll("[stroke]").forEach((node) => {
@@ -90,7 +90,7 @@ type IconCatalogCellProps = {
   icon: CatalogIcon;
   size: number;
   stroke: number;
-  color: string;
+  color: string | null;
   strokeEnabled: boolean;
   copiedId: string | null;
   onCopy: (icon: CatalogIcon) => void;

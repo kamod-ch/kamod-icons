@@ -294,6 +294,7 @@
 .ki-catalog-icon-svg,
 .ki-catalog-icon-svg svg {
   display: block;
+  color: var(--ki-text);
 }
 
 .ki-catalog-icon-fallback {

@@ -16,6 +16,9 @@ export type IconCatalogFilters = {
   color: string;
 };
 
+const LIGHT_ICON_COLOR = "#1f2937";
+const DARK_ICON_COLOR = "#f3f6fb";
+
 const DEFAULT_FILTERS: IconCatalogFilters = {
   setId: "tabler",
   variant: "outline",
@@ -23,8 +26,39 @@ const DEFAULT_FILTERS: IconCatalogFilters = {
   category: "All",
   size: 32,
   stroke: 2,
-  color: "#1f2937",
+  color: LIGHT_ICON_COLOR,
 };
+
+function readThemeIconColor(): string {
+  if (typeof document === "undefined") return LIGHT_ICON_COLOR;
+  const root = document.documentElement;
+  const explicit = root.getAttribute("data-theme");
+  const dark = explicit === "dark" || (explicit !== "light" && root.classList.contains("dark"));
+  return dark ? DARK_ICON_COLOR : LIGHT_ICON_COLOR;
+}
+
+function useThemeIconColor() {
+  const [themeColor, setThemeColor] = useState(LIGHT_ICON_COLOR);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const sync = () => {
+      const next = readThemeIconColor();
+      setThemeColor((current) => (current === next ? current : next));
+    };
+    const observer = new MutationObserver(sync);
+    observer.observe(root, { attributes: true, attributeFilter: ["data-theme", "class"] });
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    media.addEventListener("change", sync);
+    sync();
+    return () => {
+      observer.disconnect();
+      media.removeEventListener("change", sync);
+    };
+  }, []);
+
+  return themeColor;
+}
 
 function debounce<T extends (value: string) => void>(fn: T, delay: number) {
   let timer: ReturnType<typeof setTimeout> | undefined;
@@ -38,6 +72,8 @@ export function useIconCatalog() {
   const [catalog, setCatalog] = useState<IconCatalog | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [filters, setFilters] = useState<IconCatalogFilters>(DEFAULT_FILTERS);
+  const [colorFollowsTheme, setColorFollowsTheme] = useState(true);
+  const themeColor = useThemeIconColor();
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const debouncedSetSearch = useRef(debounce((value: string) => setDebouncedSearch(value), 180)).current;
 
@@ -88,6 +124,7 @@ export function useIconCatalog() {
   }, [activeSet]);
 
   function updateFilters(patch: Partial<IconCatalogFilters>) {
+    if (patch.color !== undefined) setColorFollowsTheme(false);
     setFilters((current) => ({ ...current, ...patch }));
   }
 
@@ -100,5 +137,7 @@ export function useIconCatalog() {
     availableVariants,
     filteredIcons,
     categories,
+    iconColor: colorFollowsTheme ? null : filters.color,
+    pickerColor: colorFollowsTheme ? themeColor : filters.color,
   };
 }
