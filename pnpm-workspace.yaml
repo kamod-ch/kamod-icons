@@ -2,6 +2,12 @@ packages:
   - "packages/*"
 allowBuilds:
   esbuild: true
+packageExtensions:
+  tsup:
+    dependencies:
+      typescript: "npm:@typescript/typescript6@6.0.2"
+overrides:
+  "tsup>typescript:peer": "-"
 minimumReleaseAgeExclude:
   - '@kamod-ch/preactpress'
   - '@types/node@26.1.0'

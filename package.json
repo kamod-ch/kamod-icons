@@ -36,14 +36,15 @@
     "url": "git+https://github.com/kamod-ch/kamod-icons.git"
   },
   "type": "module",
-  "packageManager": "pnpm@12.17.0",
+  "packageManager": "pnpm@12.21.0+sha512.66fd8278ee28935ce951792d34367ff3af5c432a2756445823029533835b8da529bbe0be5130afd56ed0713fb8789e47bad82d93bd5ae2fe54b15562d6276ef0",
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
     "@kamod-ch/brand": "^0.4.0",
-    "oxfmt": "^0.76.0",
-    "oxlint": "^1.91.0"
+    "@typescript/typescript6": "^6.0.2",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.93.0"
   },
   "scripts": {
     "prepublishOnly": "node -e \"console.error('Do not publish the workspace root. Use: pnpm publish:core'); process.exit(1)\"",
