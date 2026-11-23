@@ -44,8 +44,8 @@
     "@changesets/cli": "^3.0.3",
     "@kamod-ch/brand": "^0.4.0",
     "@typescript/typescript6": "^6.0.2",
-    "oxfmt": "^0.78.0",
-    "oxlint": "^1.93.0"
+    "oxfmt": "^0.79.0",
+    "oxlint": "^1.94.0"
   },
   "scripts": {
     "prepublishOnly": "node -e \"console.error('Do not publish the workspace root. Use: pnpm publish:core'); process.exit(1)\"",
