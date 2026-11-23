@@ -154,7 +154,7 @@
     "jsdom": "^31.0.1",
     "lucide": "1.73.0",
     "lucide-static": "1.73.0",
-    "oxfmt": "^0.78.0",
+    "oxfmt": "^0.79.0",
     "preact": "^11.2.0",
     "preact-render-to-string": "^6.8.3",
     "reicon": "1.2.5",
@@ -162,6 +162,6 @@
     "tsup": "^9.0.0",
     "tsx": "^4.23.15",
     "typescript": "~7.0.2",
-    "vitest": "^5.1.0"
+    "vitest": "^5.1.1"
   }
 }
