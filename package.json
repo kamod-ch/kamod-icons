@@ -41,6 +41,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@changesets/cli": "^3.0.3",
     "@kamod-ch/brand": "^0.4.0",
     "@typescript/typescript6": "^6.0.2",
     "oxfmt": "^0.78.0",
@@ -61,6 +62,8 @@
     "brand:readme": "kamod-brand-readme --product Icons --output .github/assets",
     "pack:core": "pnpm --filter @kamod-ch/icons exec npm pack --dry-run",
     "publish:core": "pnpm --filter @kamod-ch/icons publish --access public",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
     "release:check": "pnpm build && pnpm check:docs",
     "release:rc-check": "node ./scripts/release-candidate-check.mjs",
     "release:publish": "pnpm --filter @kamod-ch/icons publish --access public --provenance --no-git-checks",
